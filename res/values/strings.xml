@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 DarkKat
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">DarkKat Settings</string>
+    <string name="settings_title">Settings</string>
+
+    <!-- Global used -->
+    <string name="reset">Reset</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">cancel</string>
+    <string name="dlg_dslv_reset_message">Reset all entries to default?</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or DarkKat default?</string>
+    <string name="dlg_reset_colors_message">Reset colors to\nAndroid- or DarkKat default?</string>
+    <string name="dlg_reset_theme_default_colors_message">Reset colors to theme default?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_darkkat">DarkKat</string>
+    <string name="action_show_detailed_weather_view_title">Show detailed weather view</string>
+    <string name="lock_screen_title">Lock screen</string>
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_expanded_title">Status bar expanded</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="weather_title">Weather</string>
+    <string name="qs_title">Quick settings</string>
+    <string name="detailed_weather_view_title">Detailed weather view</string>
+    <string name="weather_service_missing_summary">\'DK Weather Service\' is not installed.\nTo use the weather feature, the app DKWeatherService \'DK Weather Service\' has to be installed</string>
+    <string name="weather_service_disabled_summary">\'DK Weather Service\' is disabled.\nTo use the weather feature, enable the app DKWeatherService \'DK Weather Service\', and reboot your phone</string>
+    <string name="weather_service_disabled_tablet_summary">\'DK Weather Service\' is disabled.\nTo use the weather feature, enable the app DKWeatherService \'DK Weather Service\', and reboot your tablet</string>
+    <string name="customize_title">Customize</string>
+    <string name="options_title">Options</string>
+    <string name="show_title">Show</string>
+    <string name="show_on_lock_screen_title">Show on lock screen</string>
+    <string name="hide_title">Hide</string>
+    <string name="always_title">Always</string>
+    <string name="colors_title">Colors</string>
+    <string name="use_theme_colors_title">Use theme colors</string>
+    <string name="use_theme_colors_summary">Enable to use colors from the current theme, disable to customize the colors</string>
+    <string name="colors_general_title">Colors general</string>
+    <string name="colors_general_dark_mode_title">Colors general (light status bar)</string>
+    <string name="colors_battery_title">Colors battery status</string>
+    <string name="colors_battery_dark_mode_title">Colors battery status (light status bar)</string>
+    <string name="colors_background_title">Background colors</string>
+    <string name="colors_accent_title">Accent color</string>
+    <string name="colors_text_title">Text colors</string>
+    <string name="colors_icon_title">Icon colors</string>
+    <string name="colors_ripple_title">Ripple effect colors</string>
+    <string name="type_title">Type</string>
+    <string name="type_text_icon">Text &amp; icon</string>
+    <string name="background_title">Background</string>
+    <string name="primary_background_title">Primary background</string>
+    <string name="secondary_background_title">Secondary background</string>
+    <string name="accent_title">Accent</string>
+    <string name="text_title">Text</string>
+    <string name="text_charge_icon_title">Percentage text &amp; charging indicator</string>
+    <string name="icon_title">Icon</string>
+    <string name="ripple_title">Ripple effect</string>
+    <string name="action_bar_title">Action bar</string>
+    <string name="content_title">Content</string>
+    <string name="cards_title">Cards</string>
+    <string name="normal_title">Normal</string>
+    <string name="hidden_title">Hidden</string>
+    <string name="position_title">Position</string>
+    <string name="position_right_title">Right</string>
+    <string name="position_centered_title">Centered</string>
+    <string name="weather_icon_monochrome_title">Monochrome</string>
+    <string name="weather_icon_colored_title">Colored</string>
+    <string name="weather_icon_vclouds_title">VClouds</string>
+    <string name="notification_icons_title">Notification icons</string>
+    <string name="number_of_notification_icons_title">Number of notification icons</string>
+    <string name="one_title">1</string>
+    <string name="two_title">2</string>
+    <string name="three_title">3</string>
+    <string name="four_title">4</string>
+    <string name="five_title">5</string>
+    <string name="six_title">6</string>
+    <string name="seven_title">7</string>
+    <string name="eight_title">8</string>
+
+    <string name="card_title">User interface</string>
+    <string name="card_sub_title">Theme &amp; colors</string>
+    <string name="card_action_button_1_title">Action 1</string>
+    <string name="card_action_button_2_title">Action 2</string>
+
+    <!-- Categories -->
+    <string name="category_ui_title">User interface</string>
+
+    <!-- Tiles-->
+    <string name="theme_colors_settings_title">Theme &amp; colors</string>
+    <string name="button_settings_title">Buttons</string>
+    <!-- Headers end -->
+
+    <!-- Theme & colors -->
+    <string name="theme_title">Theme</string>
+    <string name="theme_summary">%s</string>
+    <string name="theme_darkkat_title">DarkKat</string>
+    <string name="theme_material_light_title">Material Light</string>
+    <string name="theme_blackout_title">Blackout</string>
+    <string name="theme_auto_title">Auto day night</string>
+    <string name="auto_night_mode_title">Night theme</string>
+    <string name="auto_night_mode_summary">%s</string>
+    <string name="colors_detailed_weather_view_summary">Choose the colors to colorize the detailed weather view</string>
+    <string name="colors_status_bar_summary">Choose the colors to colorize the text and icons in the status bar</string>
+    <string name="colors_status_bar_expanded_summary">Choose the colors to colorize the content in the status bar expanded</string>
+    <string name="colors_notification_summary">Choose the colors to colorize the notifications</string>
+
+    <!-- Notifications -->
+    <string name="colors_notification_cat_dismiss_all">No notifications &amp; Dismiss all</string>
+
+    <!-- Theme & colors end -->
+
+    <!-- Weather -->
+
+    <!-- Weather settings -->
+    <string name="weather_config_title">Configuration</string>
+    <string name="weather_config_summary">Configure the weather</string>
+    <string name="weather_detailed_weather_view_settings_summary">Choose how to display the detailed weather view</string>
+
+    <!-- Detailed weather view settings -->
+    <string name="detailed_weather_show_location_title">Show location</string>
+    <string name="detailed_weather_show_location_summary">Enable to show the location</string>
+    <string name="detailed_weather_condition_icon_title">Condition icon</string>
+    <!-- Weather end -->
+
+    <!-- Lock screen -->
+    <string name="lock_screen_show_visualizer_title">Show music visualizer</string>
+    <string name="lock_screen_show_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
+
+    <!-- Status bar -->
+
+    <!-- Status bar settings -->
+    <string name="status_bar_weather_settings_summary">Choose how to display the weather in the status bar</string>
+    <string name="status_bar_network_traffic_settings_title">Network traffic</string>
+    <string name="status_bar_network_traffic_settings_summary">Choose how to display the network traffic in the status bar</string>
+    <string name="status_bar_clock_date_settings_title">Clock &amp; date</string>
+    <string name="status_bar_clock_date_settings_summary">Choose how to display the clock &amp; date in the status bar</string>
+    <string name="status_bar_ticker_settings_title">Ticker</string>
+    <string name="status_bar_ticker_settings_summary">Show&#47;hide the ticker in the status bar</string>
+
+    <!-- Weather settings -->
+    <string name="weather_show_summary">Enable to show the weather</string>
+    <string name="weather_hide_weather_summary">Enable to choose a number of visible notification icons to hide the weather on the status bar</string>
+
+    <!-- Network traffic settings -->
+    <string name="network_traffic_cat_style_title">Style</string>
+    <string name="network_traffic_cat_visibility_title">Visibility</string>
+    <string name="network_traffic_show_summary">Enable to show the network traffic</string>
+    <string name="network_traffic_show_on_lock_screen_summary">Enable to show the network traffic on lock screen</string>
+    <string name="network_traffic_activity_title">Activity</string>
+    <string name="network_traffic_activity_in">Incoming</string>
+    <string name="network_traffic_activity_out">Outgoing</string>
+    <string name="network_traffic_activity_in_out">Incoming &amp; Outgoing</string>
+    <string name="network_traffic_bit_byte_title">Show bit values</string>
+    <string name="network_traffic_bit_byte_summary">Enable to show the values in bit instead of byte</string>
+    <string name="network_traffic_hide_traffic_title">Hide the indicator</string>
+    <string name="network_traffic_hide_traffic_summary">Enable to hide the indicator if the current network speed matches or is below the threshold</string>
+    <string name="network_traffic_threshold_title">Threshold</string>
+    <string name="network_traffic_threshold_summary">The traffic indicator will be hidden, if the current network speed is %1$s</string>
+    <string name="network_traffic_threshold_no_traffic_summary">The traffic indicator will be hidden, if there is no traffic</string>
+    <string name="network_traffic_threshold_dlg_title">Choose a threshold to hide the traffic indicator</string>
+    <string name="network_traffic_threshold_0">No traffic</string>
+    <string name="network_traffic_threshold_bit_80">80 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_160">160 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_240">240 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_320">320 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_400">400 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_480">480 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_560">560 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_640">640 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_720">720 kbit/s or below</string>
+    <string name="network_traffic_threshold_bit_800">800 kKbit/s or below</string>
+    <string name="network_traffic_threshold_byte_10">10 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_20">20 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_30">30 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_40">40 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_50">50 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_60">60 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_70">70 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_80">80 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_90">90 kB/s or below</string>
+    <string name="network_traffic_threshold_byte_100">100 kB/s or below</string>
+    <string name="network_traffic_icon_as_indicator_title">Icon indicates activity</string>
+    <string name="network_traffic_icon_as_indicator_summary">Enable to use the icon as activity indicator, disable to hide the icon if the current network speed matches or is below the threshold</string>
+
+    <!-- Clock & date settings -->
+    <string name="clock_date_cat_clock_title">Clock</string>
+    <string name="clock_date_cat_date_title">Date</string>
+    <string name="clock_date_show_date_title">Show date</string>
+    <string name="clock_date_show_date_summary">Enable to show the date next to the clock in the status bar</string>
+    <string name="clock_date_show_seconds_title">Show seconds</string>
+    <string name="clock_date_show_seconds_summary">Enable to show clock with seconds in the status bar</string>
+    <string name="clock_date_am_pm_title">AM&#47;PM style</string>
+    <string name="clock_date_am_pm_disabled_summary">24-hour format is enabled</string>
+    <string name="clock_date_am_pm_small">Small</string>
+    <string name="clock_date_date_size_title">Size</string>
+    <string name="clock_date_date_size_summary">Enabe to display the date small sized</string>
+    <string name="clock_date_date_style_title">Style</string>
+    <string name="clock_date_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_date_format_title">Date format</string>
+    <string name="clock_date_date_custom_java_format">Custom java format</string>
+    <string name="clock_date_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_date_string_edittext_summary">Enter string</string>
+
+    <!-- Ticker settings -->
+    <string name="ticker_show_summary">Enable to show the ticker in the status bar</string>
+    <!-- Status bar end -->
+
+    <!-- Status bar expanded -->
+
+    <!-- Status bar expanded settings -->
+    <string name="status_bar_expanded_qs_settings_summary">Choose how to display the Quick Settings</string>
+
+    <!-- QS settings -->
+    <string name="qs_cat_portrait_title">Portrait</string>
+    <string name="qs_cat_landscape_title">Landscape</string>
+    <string name="qs_rows_title">Rows</string>
+    <string name="qs_columns_title">Columns</string>
+    <!-- Status bar expanded end -->
+</resources>
