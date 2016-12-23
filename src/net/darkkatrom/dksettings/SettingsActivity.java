@@ -35,7 +35,6 @@ import net.darkkatrom.dksettings.fragments.statusbar.TickerSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.StatusBarWeatherSettings;
 import net.darkkatrom.dksettings.fragments.statusbarexpanded.QSSettings;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsDetailedWeatherView;
-import net.darkkatrom.dksettings.fragments.themecolors.ColorsNotification;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBarExpanded;
 import net.darkkatrom.dksettings.fragments.weather.DetailedWeatherViewSettings;
@@ -59,7 +58,6 @@ public class SettingsActivity extends PreferenceActivity {
         StatusBarWeatherSettings.class.getName(),
         QSSettings.class.getName(),
         ColorsDetailedWeatherView.class.getName(),
-        ColorsNotification.class.getName(),
         ColorsStatusBar.class.getName(),
         ColorsStatusBarExpanded.class.getName(),
         DetailedWeatherViewSettings.class.getName(),
