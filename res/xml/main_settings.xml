@@ -46,10 +46,10 @@
             android:fragment="net.darkkatrom.dksettings.fragments.StatusBarSettings" />
 
         <PreferenceScreen
-            android:key="status_bar_expanded_settings"
-            android:title="@string/status_bar_expanded_title"
-            android:icon="@drawable/ic_settings_status_bar_expanded"
-            android:fragment="net.darkkatrom.dksettings.fragments.StatusBarExpandedSettings" />
+            android:key="quick_settings"
+            android:title="@string/qs_title"
+            android:icon="@drawable/ic_settings_quick_settings"
+            android:fragment="net.darkkatrom.dksettings.fragments.QuickSettings" />
 
     </PreferenceCategory>
 <!--

@@ -26,14 +26,15 @@ import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
 import net.darkkatrom.dksettings.fragments.MainSettings;
 import net.darkkatrom.dksettings.fragments.StatusBarSettings;
-import net.darkkatrom.dksettings.fragments.StatusBarExpandedSettings;
+import net.darkkatrom.dksettings.fragments.QuickSettings;
 import net.darkkatrom.dksettings.fragments.ThemeColorsSettings;
 import net.darkkatrom.dksettings.fragments.WeatherSettings;
+import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsBar;
+import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsPanel;
 import net.darkkatrom.dksettings.fragments.statusbar.ClockDateSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.NetworkTrafficSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.TickerSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.StatusBarWeatherSettings;
-import net.darkkatrom.dksettings.fragments.statusbarexpanded.QSSettings;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsDetailedWeatherView;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBarExpanded;
@@ -49,14 +50,15 @@ public class SettingsActivity extends PreferenceActivity {
         LockScreenSettings.class.getName(),
         MainSettings.class.getName(),
         StatusBarSettings.class.getName(),
-        StatusBarExpandedSettings.class.getName(),
+        QuickSettings.class.getName(),
         ThemeColorsSettings.class.getName(),
         WeatherSettings.class.getName(),
         ClockDateSettings.class.getName(),
         NetworkTrafficSettings.class.getName(),
         TickerSettings.class.getName(),
         StatusBarWeatherSettings.class.getName(),
-        QSSettings.class.getName(),
+        QuickSettingsBar.class.getName(),
+        QuickSettingsPanel.class.getName(),
         ColorsDetailedWeatherView.class.getName(),
         ColorsStatusBar.class.getName(),
         ColorsStatusBarExpanded.class.getName(),

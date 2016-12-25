@@ -21,12 +21,12 @@ import android.os.Bundle;
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
 
-public class StatusBarExpandedSettings extends SettingsBaseFragment {
+public class QuickSettings extends SettingsBaseFragment { 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.status_bar_expanded_settings);
+        addPreferencesFromResource(R.xml.quick_settings);
     }
 }
