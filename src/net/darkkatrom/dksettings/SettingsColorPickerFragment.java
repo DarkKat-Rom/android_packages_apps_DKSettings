@@ -36,7 +36,7 @@ public class SettingsColorPickerFragment extends SettingsBaseFragment {
             if (extras != null && extras.getInt(extraNewColor) != 0) {
                 String extraPrefKey = ColorPickerPreference.PREFERENCE_KEY;
                 ((ColorPickerPreference) findPreference(extras.getString(extraPrefKey)))
-                        .setNewColor(extras.getInt(extraNewColor), true);
+                        .setNewColor(extras.getInt(extraNewColor));
             }
         }
     }
