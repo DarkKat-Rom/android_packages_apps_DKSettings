@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 DarkKat
+<!-- Copyright (C) 2017 Darkkat
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,17 +16,16 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/lock_screen_title">
+    android:title="@string/navigation_bar_title">
 
-    <SwitchPreference
-        android:key="lock_screen_show_visualizer"
-        android:title="@string/lock_screen_show_visualizer_title"
-        android:summary="@string/lock_screen_show_visualizer_summary"
-        android:persistent="false" />
+         <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
+            android:key="colors_navigation_bar_icon_color"
+            android:title="@string/icon_title"
+            android:defaultValue="#ffffffff" />
 
-    <PreferenceScreen
-        android:key="lock_screen_battery_info_settings"
-        android:title="@string/lock_screen_battery_info_settings_title"
-        android:summary="@string/lock_screen_battery_info_settings_summary"
-        android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.BatteryInfoSettings" />
+         <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
+            android:key="colors_navigation_bar_ripple_color"
+            android:title="@string/ripple_title"
+            android:defaultValue="#ffffffff" />
+
 </PreferenceScreen>

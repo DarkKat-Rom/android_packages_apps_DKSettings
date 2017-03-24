@@ -30,4 +30,21 @@
         android:summary="@string/quick_settings_panel_summary"
         android:fragment="net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsPanel" />
 
+    <ListPreference
+        android:key="quick_settings_brightness_slider_visibility"
+        android:title="@string/quick_settings_brightness_slider_visibility_title"
+        android:entries="@array/quick_settings_brightness_slider_visibility_entries"
+        android:entryValues="@array/quick_settings_brightness_slider_visibility_values" />
+
+    <PreferenceCategory
+        android:key="quick_settings_cat_tiles"
+        android:title="@string/quick_settings_cat_tiles_title">
+
+        <PreferenceScreen
+            android:key="quick_settings_tile_battery"
+            android:title="@string/quick_settings_tile_battery_title"
+            android:summary="@string/quick_settings_tile_battery_summary"
+            android:fragment="net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsTileBattery" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

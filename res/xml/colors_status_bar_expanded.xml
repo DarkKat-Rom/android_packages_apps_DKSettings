@@ -52,4 +52,15 @@
         android:key="colors_status_bar_expanded_ripple_color"
         android:title="@string/ripple_title"
         android:defaultValue="#33ffffff" />
+
+    <PreferenceCategory
+        android:key="colors_status_bar_expanded_cat_colors_battery"
+        android:title="@string/battery_meter_title">
+
+        <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
+            android:key="colors_status_bar_expanded_battery_text_color"
+            android:title="@string/text_charge_icon_title"
+            android:defaultValue="#ffffffff" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -23,19 +23,29 @@ import android.preference.PreferenceFragment;
 
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
+import net.darkkatrom.dksettings.fragments.BuildInfo;
+import net.darkkatrom.dksettings.fragments.ButtonSettings;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
-import net.darkkatrom.dksettings.fragments.MainSettings;
-import net.darkkatrom.dksettings.fragments.StatusBarSettings;
 import net.darkkatrom.dksettings.fragments.QuickSettings;
+import net.darkkatrom.dksettings.fragments.RecentsSettings;
+import net.darkkatrom.dksettings.fragments.SettingsFragment;
+import net.darkkatrom.dksettings.fragments.StatusBarSettings;
 import net.darkkatrom.dksettings.fragments.ThemeColorsSettings;
 import net.darkkatrom.dksettings.fragments.WeatherSettings;
+import net.darkkatrom.dksettings.fragments.buildinfo.DarkKat;
+import net.darkkatrom.dksettings.fragments.button.PowerMenuSettings;
+import net.darkkatrom.dksettings.fragments.lockscreen.BatteryInfoSettings;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsBar;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsPanel;
+import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsTileBattery;
+import net.darkkatrom.dksettings.fragments.statusbar.BatteryMeterSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.ClockDateSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.NetworkTrafficSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.TickerSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.StatusBarWeatherSettings;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsDetailedWeatherView;
+import net.darkkatrom.dksettings.fragments.themecolors.ColorsNavigationBar;
+import net.darkkatrom.dksettings.fragments.themecolors.ColorsRecents;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBarExpanded;
 import net.darkkatrom.dksettings.fragments.weather.DetailedWeatherViewSettings;
@@ -46,23 +56,33 @@ import java.util.List;
 public class SettingsActivity extends PreferenceActivity {
 
     private static final String[] ENTRY_FRAGMENTS = {
-        ColorPickerFragment.class.getName(),
-        LockScreenSettings.class.getName(),
-        MainSettings.class.getName(),
-        StatusBarSettings.class.getName(),
-        QuickSettings.class.getName(),
-        ThemeColorsSettings.class.getName(),
-        WeatherSettings.class.getName(),
+        BatteryInfoSettings.class.getName(),
+        BatteryMeterSettings.class.getName(),
+        BuildInfo.class.getName(),
+        ButtonSettings.class.getName(),
         ClockDateSettings.class.getName(),
-        NetworkTrafficSettings.class.getName(),
-        TickerSettings.class.getName(),
-        StatusBarWeatherSettings.class.getName(),
-        QuickSettingsBar.class.getName(),
-        QuickSettingsPanel.class.getName(),
+        ColorPickerFragment.class.getName(),
         ColorsDetailedWeatherView.class.getName(),
+        ColorsNavigationBar.class.getName(),
+        ColorsRecents.class.getName(),
         ColorsStatusBar.class.getName(),
         ColorsStatusBarExpanded.class.getName(),
+        DarkKat.class.getName(),
         DetailedWeatherViewSettings.class.getName(),
+        LockScreenSettings.class.getName(),
+        NetworkTrafficSettings.class.getName(),
+        PowerMenuSettings.class.getName(),
+        QuickSettings.class.getName(),
+        QuickSettingsBar.class.getName(),
+        QuickSettingsPanel.class.getName(),
+        QuickSettingsTileBattery.class.getName(),
+        RecentsSettings.class.getName(),
+        SettingsFragment.class.getName(),
+        StatusBarSettings.class.getName(),
+        StatusBarWeatherSettings.class.getName(),
+        ThemeColorsSettings.class.getName(),
+        TickerSettings.class.getName(),
+        WeatherSettings.class.getName()
     };
 
     @Override
@@ -71,7 +91,7 @@ public class SettingsActivity extends PreferenceActivity {
 
         if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
             getFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new MainSettings())
+                    .replace(android.R.id.content, new SettingsFragment())
                     .commit();
         }
     }

@@ -32,6 +32,8 @@
     <string name="lock_screen_title">Lock screen</string>
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_expanded_title">Status bar expanded</string>
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="recents_title">Recents</string>
     <string name="notifications_title">Notifications</string>
     <string name="weather_title">Weather</string>
     <string name="qs_title">Quick settings</string>
@@ -41,10 +43,40 @@
     <string name="weather_service_disabled_tablet_summary">\'DK Weather Service\' is disabled.\nTo use the weather feature, enable the app DKWeatherService \'DK Weather Service\', and reboot your tablet</string>
     <string name="customize_title">Customize</string>
     <string name="options_title">Options</string>
+    <string name="battery_meter_title">Battery meter</string>
+    <string name="battery_meter_settings_summary">Customize the battery meter</string>
+    <string name="battery_meter_cat_circle_dotted_title">Circle dotted</string>
+    <string name="battery_meter_cat_text_charge_icon_title">Percentage text &amp; charging indicator</string>
+    <string name="battery_meter_type_title">Meter type</string>
+    <string name="battery_meter_type_icon_portrait_title">Battery portrait</string>
+    <string name="battery_meter_type_icon_landscape_left_title">Battery landscape left</string>
+    <string name="battery_meter_type_icon_landscape_right_title">Battery landscape right</string>
+    <string name="battery_meter_type_circle_title">Circle</string>
+    <string name="battery_meter_type_arcs_title">Arcs</string>
+    <string name="battery_meter_type_text_only_title">Text only</string>
+    <string name="battery_meter_show_text_title">Show percentage text</string>
+    <string name="battery_meter_show_text_summary">Enable to show the percentage text</string>
+    <string name="battery_meter_circle_dot_interval_title">Interval</string>
+    <string name="battery_meter_circle_dot_length_title">Length</string>
+    <string name="battery_meter_circle_dot_no_dot_summary">The circle won\'t be shown dotted</string>
+    <string name="battery_meter_circle_dot_no_dot">No dots</string>
+    <string name="battery_meter_circle_dot_1">1</string>
+    <string name="battery_meter_circle_dot_2">2</string>
+    <string name="battery_meter_circle_dot_3">3</string>
+    <string name="battery_meter_circle_dot_4">4</string>
+    <string name="battery_meter_circle_dot_5">5</string>
+    <string name="battery_meter_circle_dot_6">6</string>
+    <string name="battery_meter_circle_dot_7">7</string>
+    <string name="battery_meter_circle_dot_8">8</string>
+    <string name="battery_meter_circle_dot_9">9</string>
+    <string name="battery_meter_circle_dot_10">10</string>
+    <string name="battery_meter_cut_out_title">Cut out</string>
+    <string name="battery_meter_cut_out_summary">Enable to cut the percentage-text/charging-indicator out of the battery icon, if the battery fill overlaps the percentage-text/charging-indicator.</string>
     <string name="show_title">Show</string>
     <string name="show_on_lock_screen_title">Show on lock screen</string>
     <string name="hide_title">Hide</string>
     <string name="always_title">Always</string>
+    <string name="never_title">Never</string>
     <string name="colors_title">Colors</string>
     <string name="use_theme_colors_title">Use theme colors</string>
     <string name="use_theme_colors_summary">Enable to use colors from the current theme, disable to customize the colors</string>
@@ -95,12 +127,13 @@
     <string name="card_action_button_2_title">Action 2</string>
 
     <!-- Categories -->
-    <string name="category_ui_title">User interface</string>
+    <string name="settings_category_ui_title">User interface</string>
+    <string name="settings_category_device_title">Device</string>
+    <string name="settings_category_about_software_title">Software Info</string>
 
-    <!-- Tiles-->
+    <!-- Main settings-->
     <string name="theme_colors_settings_title">Theme &amp; colors</string>
     <string name="button_settings_title">Buttons</string>
-    <!-- Headers end -->
 
     <!-- Theme & colors -->
     <string name="theme_title">Theme</string>
@@ -114,6 +147,17 @@
     <string name="colors_detailed_weather_view_summary">Choose the colors to colorize the detailed weather view</string>
     <string name="colors_status_bar_summary">Choose the colors to colorize the text and icons in the status bar</string>
     <string name="colors_status_bar_expanded_summary">Choose the colors to colorize the content in the status bar expanded</string>
+    <string name="colors_navigation_bar_summary">Choose the colors to colorize the icons and ripple effect in the status bar</string>
+    <string name="colors_recents_summary">Choose the colors to colorize the Recents</string>
+
+    <!-- Recents colors -->
+    <string name="colors_slim_recents_cat_panel_title">\'SlimRoms\' recents panel</string>
+    <string name="colors_slim_recents_cat_card_title">\'SlimRoms\' recents card</string>
+    <string name="colors_slim_recents_cat_card_header_title">\'SlimRoms\' recents card header</string>
+    <string name="colors_slim_recents_cat_card_action_title">\'SlimRoms\' recents card action</string>
+    <string name="colors_slim_recents_card_use_auto_colors_title">Card auto colors</string>
+    <string name="colors_slim_recents_card_use_auto_colors_summary">When enabled, and the app contains a primary color, this color will be set as the card background,\nand all other card colors will be set related to the card background automatically.</string>
+    <string name="colors_slim_recents_panel_empty_icon_title">Empty panel icon</string>
     <!-- Theme & colors end -->
 
     <!-- Weather -->
@@ -132,6 +176,19 @@
     <!-- Lock screen -->
     <string name="lock_screen_show_visualizer_title">Show music visualizer</string>
     <string name="lock_screen_show_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
+    <string name="lock_screen_battery_info_settings_title">Battery info</string>
+    <string name="lock_screen_battery_info_settings_summary">Choose how to display the battery info on the lock screen</string>
+
+    <!-- battery info -->
+    <string name="lock_screen_show_battery_info_title">Show battery info</string>
+    <string name="lock_screen_show_battery_info_summary">Enable to show battery info on the lock screen</string>
+    <string name="lock_screen_show_battery_temp_title">Show battery temperature</string>
+    <string name="lock_screen_show_battery_temp_summary">Enable to show the battery temperature on the lock screen</string>
+    <string name="lock_screen_show_battery_charging_info_title">Show battery charging info</string>
+    <string name="lock_screen_show_battery_charging_info_summary">Enable to show battery charging info on the lock screen</string>
+    <string name="lock_screen_show_advanced_battery_charging_info_title">Show advanced battery charging info</string>
+    <string name="lock_screen_show_advanced_battery_charging_info_summary">Enable to show advanced battery charging info on the lock screen.\n(Some values may not be available, until the device has been charged some time.\nValues in brackets displaying the maximum supported values of the charger or battery.)</string>
+    <!-- Lock screen end -->
 
     <!-- Status bar -->
 
@@ -209,15 +266,28 @@
     <string name="clock_date_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="clock_date_date_string_edittext_summary">Enter string</string>
 
+    <!-- Status bar battery meter settings -->
+    <string name="battery_meter_cat_bar_title">Bar</string>
+    <string name="battery_meter_cat_charge_animation_title">Charging animation</string>
+    <string name="battery_meter_show_battery_bar_summary">Enable to show the bar</string>
+    <string name="battery_meter_show_battery_bar_on_lock_screen_summary">Enable to show the bar on lock screen</string>
+    <string name="battery_meter_show_charge_animation_summary">Enable to show the charging animation</string>
+
     <!-- Ticker settings -->
     <string name="ticker_show_summary">Enable to show the ticker in the status bar</string>
     <!-- Status bar end -->
 
     <!-- Quick Settings -->
+    <string name="quick_settings_cat_tiles_title">Tiles</string>
     <string name="quick_settings_bar_title">Bar</string>
     <string name="quick_settings_bar_summary">Choose how to display the quick settings bar</string>
     <string name="quick_settings_panel_title">Panel</string>
     <string name="quick_settings_panel_summary">Choose how to display the quick settings panel</string>
+    <string name="quick_settings_brightness_slider_visibility_title">Show brightness slider</string>
+    <string name="quick_settings_brightness_slider_visibility_on_bar_title">On the bar only</string>
+    <string name="quick_settings_brightness_slider_visibility_on_panel_title">On the panel only</string>
+    <string name="quick_settings_tile_battery_title">Battery</string>
+    <string name="quick_settings_tile_battery_summary">Choose how to display the battery tile in the quick settings</string>
 
     <!-- Quick Settings bar -->
     <string name="qs_bar_enable_scroll_title">Enable scroll</string>
@@ -229,4 +299,57 @@
     <string name="qs_panel_rows_title">Rows</string>
     <string name="qs_panel_columns_title">Columns</string>
     <!-- Quick Settings end -->
+
+    <!-- Recents settings -->
+    <string name="recents_cat_appearance_title">Appearance</string>
+    <string name="recents_cat_apps_title">Apps</string>
+    <string name="recents_use_slim_recents_title">\'SlimRoms\' Recents</string>
+    <string name="recents_use_slim_recents_summary">Enable to use \'SlimRoms\' Recents view instead of the default recents view</string>
+    <string name="slim_recents_thumbnail_aspect_ratio_title">Thumbnail aspect ratio</string>
+    <string name="slim_recents_thumbnail_aspect_ratio_1_1">1 : 1</string>
+    <string name="slim_recents_thumbnail_aspect_ratio_5_4">5 : 4</string>
+    <string name="slim_recents_thumbnail_aspect_ratio_4_3">4 : 3</string>
+    <string name="slim_recents_thumbnail_aspect_ratio_16_9">16 : 9</string>
+    <string name="slim_recents_expanded_mode_title">Expanded mode</string>
+    <string name="slim_recents_mode_auto">Auto</string>
+    <string name="slim_recents_expanded_mode_always">Always</string>
+    <string name="slim_recents_expanded_mode_never">Never</string>
+    <string name="slim_recents_show_actions_when_collapsed_title">Show actions when collapsed</string>
+    <string name="slim_recents_show_actions_when_collapsed_summary">Enable to show actions when the card is collapsed.\nActions can always be displayed/hidden on collapsed cards via lonclick</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="slim_recents_lefty_mode_title">Show on the left edge</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="slim_recents_lefty_mode_summary">Show recent apps panel on the left edge</string>
+
+    <string name="slim_recents_only_show_running_tasks_title">Only show running</string>
+    <string name="slim_recents_only_show_running_tasks_summary">Enable to show only apps which are currently running</string>
+    <string name="slim_recents_show_topmost_title">Show topmost task</string>
+    <string name="slim_recents_show_topmost_summary">Enable to show the topmost task</string>
+    <string name="slim_recents_show_topmost_pinning_enabled_summary">Screen pinning is enabled, topmost task will always be shown.</string>
+
+    <!-- Button settings -->
+    <string name="button_power_menu_settings_title">Power menu</string>
+    <string name="button_power_menu_settings_summary">Customize power menu</string>
+
+    <!-- Power menu settings -->
+    <string name="power_menu_show_advanced_reboot_title">Advanced reboot menu</string>
+    <string name="power_menu_show_advanced_reboot_summary">Enable to show advanced options in the reboot menu</string>
+    <!-- Button settings end -->
+
+    <!-- Build info -->
+    <string name="build_info_title">Build info</string>
+    <string name="darkkat_title">Darkkat</string>
+    <string name="darkkat_summary">Show more about the installed %1$s version</string>
+    <string name="android_title">Android</string>
+    <string name="android_summary">Show more about Android, kernel, baseband etc.</string>
+    <string name="android_wifi_only_summary">Show more about Android, kernel etc.</string>
+    <string name="build_info_default">"Unknown"</string>
+
+    <!-- DarkKat -->
+    <string name="darkkat_version_title">Darkkat version</string>
+    <string name="darkkat_build_version_title">Darkkat build version</string>
+    <string name="darkkat_build_type_title">Darkkat build type</string>
+    <string name="darkkat_build_date_title">Darkkat build date</string>
+    <!-- Build info end -->
 </resources>

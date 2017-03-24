@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 DarkKat
+ * Copyright (C) 2017 DarkKat
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,22 +16,17 @@
 
 package net.darkkatrom.dksettings.fragments;
 
-import android.content.ContentResolver;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.SwitchPreference;
-import android.provider.Settings;
 
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
 
-public class MainSettings extends SettingsBaseFragment { 
-
+public class SettingsFragment extends SettingsBaseFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.main_settings);
+        addPreferencesFromResource(R.xml.settings);
     }
 }
