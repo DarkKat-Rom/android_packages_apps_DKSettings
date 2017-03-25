@@ -86,17 +86,6 @@ public class SettingsActivity extends PreferenceActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
-            getFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new SettingsFragment())
-                    .commit();
-        }
-    }
-
-    @Override
     public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
         if (pref instanceof ColorPickerPreference) {
             startPreferencePanel(pref.getFragment(), pref.getExtras(), pref.getTitleRes(),
