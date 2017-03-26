@@ -127,7 +127,7 @@
 
     <!-- Categories -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
-    <string name="settings_category_device_title">Gerät</string>
+    <string name="settings_category_buttons_title">Tasten</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
     <!-- Main settings-->
@@ -323,14 +323,10 @@
     <string name="slim_recents_show_topmost_summary">Aktivieren um den Aktuellen Task anzuzeigen</string>
     <string name="slim_recents_show_topmost_pinning_enabled_summary">Bildschirmfixierung ist aktiviert, der Aktuellen Task wird immer angezeigt.</string>
 
-    <!-- Button settings -->
-    <string name="button_power_menu_settings_title">Ein&#47;Aus-Menü</string>
-    <string name="button_power_menu_settings_summary">Ein&#47;Aus-Menü anpassen</string>
-
-    <!-- Power menu settings -->
+    <!-- Power button settings -->
+    <string name="power_button_settings_title">Ein&#47;Aus-Taste</string>
     <string name="power_menu_show_advanced_reboot_title">Erweitertes Neustart-Menu</string>
     <string name="power_menu_show_advanced_reboot_summary">Aktivieren um erweiterte Optionen im Neustart-Menü anzuzeigen</string>
-    <!-- Button settings end -->
 
     <!-- Build info -->
     <string name="build_info_title">Build-Info</string>

@@ -30,5 +30,117 @@
             android:taskAffinity=""
             android:excludeFromRecents="true" />
 
+        <activity android:name="SettingsActivity$ThemeColorsSettingsActivity"
+                android:icon="@drawable/ic_settings_theme_colors"
+                android:label="@string/theme_colors_settings_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="6">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$WeatherSettingsActivity"
+                android:icon="@drawable/ic_settings_weather"
+                android:label="@string/weather_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="5">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$LockScreenSettingsActivity"
+                android:icon="@drawable/ic_settings_lock_screen"
+                android:label="@string/lock_screen_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="4">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$StatusBarSettingsActivity"
+                android:icon="@drawable/ic_settings_status_bar"
+                android:label="@string/status_bar_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="3">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$QuickSettingsActivity"
+                android:icon="@drawable/ic_settings_quick_settings"
+                android:label="@string/qs_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="2">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$RecentsSettingsActivity"
+                android:icon="@drawable/ic_settings_recents"
+                android:label="@string/recents_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$PowerButtonSettingsActivity"
+                android:icon="@drawable/ic_settings_power_button"
+                android:label="@string/power_button_settings_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.buttons" />
+        </activity>
+
     </application>
 </manifest>
