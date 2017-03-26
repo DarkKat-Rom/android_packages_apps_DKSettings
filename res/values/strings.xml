@@ -128,7 +128,7 @@
 
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
-    <string name="settings_category_device_title">Device</string>
+    <string name="settings_category_buttons_title">Buttons</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
     <!-- Main settings-->
@@ -328,14 +328,10 @@
     <string name="slim_recents_show_topmost_summary">Enable to show the topmost task</string>
     <string name="slim_recents_show_topmost_pinning_enabled_summary">Screen pinning is enabled, topmost task will always be shown.</string>
 
-    <!-- Button settings -->
-    <string name="button_power_menu_settings_title">Power menu</string>
-    <string name="button_power_menu_settings_summary">Customize power menu</string>
-
-    <!-- Power menu settings -->
+    <!-- Power button settings -->
+    <string name="power_button_settings_title">Power button</string>
     <string name="power_menu_show_advanced_reboot_title">Advanced reboot menu</string>
     <string name="power_menu_show_advanced_reboot_summary">Enable to show advanced options in the reboot menu</string>
-    <!-- Button settings end -->
 
     <!-- Build info -->
     <string name="build_info_title">Build info</string>

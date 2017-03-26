@@ -61,14 +61,14 @@ limitations under the License.
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="settings_category_device"
-        android:title="@string/settings_category_device_title">
+        android:key="settings_category_buttons"
+        android:title="@string/settings_category_buttons_title">
 
         <PreferenceScreen
-            android:key="button_settings"
-            android:title="@string/button_settings_title"
-            android:icon="@drawable/ic_settings_buttons"
-            android:fragment="net.darkkatrom.dksettings.fragments.ButtonSettings" />
+            android:key="power_button_settings"
+            android:title="@string/power_button_settings_title"
+            android:icon="@drawable/ic_settings_power_button"
+            android:fragment="net.darkkatrom.dksettings.fragments.PowerButtonSettings" />
 
     </PreferenceCategory>
 

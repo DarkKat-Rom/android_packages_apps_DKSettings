@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.dksettings.fragments.button;
+package net.darkkatrom.dksettings.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ import android.provider.Settings;
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
 
-public class PowerMenuSettings extends SettingsBaseFragment implements
+public class PowerButtonSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String PREF_SHOW_ADVANCED_REBOOT =
@@ -39,7 +39,7 @@ public class PowerMenuSettings extends SettingsBaseFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.power_menu_settings);
+        addPreferencesFromResource(R.xml.power_button_settings);
 
         mResolver = getContentResolver();
 

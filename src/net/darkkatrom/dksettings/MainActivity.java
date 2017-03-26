@@ -24,8 +24,8 @@ import android.preference.PreferenceFragment;
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.fragments.BuildInfo;
-import net.darkkatrom.dksettings.fragments.ButtonSettings;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
+import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.QuickSettings;
 import net.darkkatrom.dksettings.fragments.RecentsSettings;
 import net.darkkatrom.dksettings.fragments.SettingsFragment;
@@ -33,7 +33,6 @@ import net.darkkatrom.dksettings.fragments.StatusBarSettings;
 import net.darkkatrom.dksettings.fragments.ThemeColorsSettings;
 import net.darkkatrom.dksettings.fragments.WeatherSettings;
 import net.darkkatrom.dksettings.fragments.buildinfo.DarkKat;
-import net.darkkatrom.dksettings.fragments.button.PowerMenuSettings;
 import net.darkkatrom.dksettings.fragments.lockscreen.BatteryInfoSettings;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsBar;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsPanel;
@@ -59,7 +58,6 @@ public class MainActivity extends PreferenceActivity {
         BatteryInfoSettings.class.getName(),
         BatteryMeterSettings.class.getName(),
         BuildInfo.class.getName(),
-        ButtonSettings.class.getName(),
         ClockDateSettings.class.getName(),
         ColorPickerFragment.class.getName(),
         ColorsDetailedWeatherView.class.getName(),
@@ -71,7 +69,7 @@ public class MainActivity extends PreferenceActivity {
         DetailedWeatherViewSettings.class.getName(),
         LockScreenSettings.class.getName(),
         NetworkTrafficSettings.class.getName(),
-        PowerMenuSettings.class.getName(),
+        PowerButtonSettings.class.getName(),
         QuickSettings.class.getName(),
         QuickSettingsBar.class.getName(),
         QuickSettingsPanel.class.getName(),
