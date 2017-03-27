@@ -58,9 +58,9 @@ public class WeatherSettings extends SettingsBaseFragment {
 
         if (!isWeatherServiceAvailable) {
             removePreference("weather_detailed_weather_view_settings");
+        } else {
+            setHasOptionsMenu(true);
         }
-
-        setHasOptionsMenu(true);
     }
 
     @Override
