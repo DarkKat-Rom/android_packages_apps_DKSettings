@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -56,6 +57,14 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        refreshSettings();
+    }
+
+    public void refreshSettings() {
+        PreferenceScreen prefs = getPreferenceScreen();
+        if (prefs != null) {
+            prefs.removeAll();
+        }
 
         addPreferencesFromResource(R.xml.lock_screen_battery_info_settings);
 
@@ -64,31 +73,42 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
         PreferenceCategory catAmbientDisplay =
                 (PreferenceCategory) findPreference(PREF_CAT_AMBIENT_DISPLAY);
 
+        boolean showBatteryInfo =Settings.System.getInt(mResolver,
+                Settings.System.LOCK_SCREEN_SHOW_BATTERY_INFO, 0) == 1;
+        boolean showBatteryChargingInfo =Settings.System.getInt(mResolver,
+                Settings.System.LOCK_SCREEN_SHOW_BATTERY_CHARGING_INFO, 0) == 1;
+
         mShowBatteryInfo =
                 (SwitchPreference) findPreference(PREF_SHOW_BATTERY_INFO);
-        mShowBatteryInfo.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.LOCK_SCREEN_SHOW_BATTERY_INFO, 0) == 1);
+        mShowBatteryInfo.setChecked(showBatteryInfo);
         mShowBatteryInfo.setOnPreferenceChangeListener(this);
 
-        mShowBatteryTemp =
-                (SwitchPreference) findPreference(PREF_SHOW_BATTERY_TEMP);
-        mShowBatteryTemp.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.LOCK_SCREEN_SHOW_BATTERY_TEMP, 0) == 1);
-        mShowBatteryTemp.setOnPreferenceChangeListener(this);
+        if (showBatteryInfo) {
+            mShowBatteryTemp =
+                    (SwitchPreference) findPreference(PREF_SHOW_BATTERY_TEMP);
+            mShowBatteryTemp.setChecked(Settings.System.getInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_BATTERY_TEMP, 0) == 1);
+            mShowBatteryTemp.setOnPreferenceChangeListener(this);
+        } else {
+            removePreference(PREF_SHOW_BATTERY_TEMP);
+        }
 
         mShowBatteryChargingInfo =
                 (SwitchPreference) findPreference(PREF_SHOW_BATTERY_CHARGING_INFO);
-        mShowBatteryChargingInfo.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.LOCK_SCREEN_SHOW_BATTERY_CHARGING_INFO, 1) == 1);
+        mShowBatteryChargingInfo.setChecked(showBatteryChargingInfo);
         mShowBatteryChargingInfo.setOnPreferenceChangeListener(this);
 
-        mShowAdvancedBatteryChargingInfo =
-                (SwitchPreference) findPreference(PREF_SHOW_ADVANCED_BATTERY_CHARGING_INFO);
-        mShowAdvancedBatteryChargingInfo.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.LOCK_SCREEN_SHOW_ADVANCED_BATTERY_CHARGING_INFO, 0) == 1);
-        mShowAdvancedBatteryChargingInfo.setOnPreferenceChangeListener(this);
+        if (showBatteryChargingInfo) {
+            mShowAdvancedBatteryChargingInfo =
+                    (SwitchPreference) findPreference(PREF_SHOW_ADVANCED_BATTERY_CHARGING_INFO);
+            mShowAdvancedBatteryChargingInfo.setChecked(Settings.System.getInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_ADVANCED_BATTERY_CHARGING_INFO, 0) == 1);
+            mShowAdvancedBatteryChargingInfo.setOnPreferenceChangeListener(this);
+        } else {
+            removePreference(PREF_SHOW_ADVANCED_BATTERY_CHARGING_INFO);
+        }
 
-        if (isDozeAvailable()) {
+        if (isDozeAvailable() && (showBatteryInfo || showBatteryChargingInfo)) {
             mShowBatteryInfoOnAmbientDisplay =
                     (SwitchPreference) findPreference(PREF_SHOW_ABATTERY_INFO_ON_AMBIENT_DISPLAY);
             mShowBatteryInfoOnAmbientDisplay.setChecked(Settings.System.getInt(mResolver,
@@ -117,6 +137,7 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
             value = (Boolean) objValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_BATTERY_INFO, value ? 1 : 0);
+            refreshSettings();
             return true;
         } else if (preference == mShowBatteryTemp) {
             value = (Boolean) objValue;
@@ -127,6 +148,7 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
             value = (Boolean) objValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_BATTERY_CHARGING_INFO, value ? 1 : 0);
+            refreshSettings();
             return true;
         } else if (preference == mShowAdvancedBatteryChargingInfo) {
             value = (Boolean) objValue;
