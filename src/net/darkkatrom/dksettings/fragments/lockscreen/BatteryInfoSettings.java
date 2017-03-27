@@ -17,10 +17,14 @@
 package net.darkkatrom.dksettings.fragments.lockscreen;
 
 import android.content.ContentResolver;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.text.TextUtils;
 
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
@@ -28,6 +32,8 @@ import net.darkkatrom.dksettings.SettingsBaseFragment;
 public class BatteryInfoSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String PREF_CAT_AMBIENT_DISPLAY =
+            "lock_screen_category_ambient_display";
     private static final String PREF_SHOW_BATTERY_INFO =
             "lock_screen_show_battery_info";
     private static final String PREF_SHOW_BATTERY_TEMP =
@@ -36,11 +42,14 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
             "lock_screen_show_battery_charging_info";
     private static final String PREF_SHOW_ADVANCED_BATTERY_CHARGING_INFO =
             "lock_screen_show_advanced_battery_charging_info";
+    private static final String PREF_SHOW_ABATTERY_INFO_ON_AMBIENT_DISPLAY =
+            "lock_screen_show_battery_info_on_ambient_display";
 
     private SwitchPreference mShowBatteryInfo;
     private SwitchPreference mShowBatteryTemp;
     private SwitchPreference mShowBatteryChargingInfo;
     private SwitchPreference mShowAdvancedBatteryChargingInfo;
+    private SwitchPreference mShowBatteryInfoOnAmbientDisplay;
 
     private ContentResolver mResolver;
 
@@ -51,6 +60,9 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
         addPreferencesFromResource(R.xml.lock_screen_battery_info_settings);
 
         mResolver = getContentResolver();
+
+        PreferenceCategory catAmbientDisplay =
+                (PreferenceCategory) findPreference(PREF_CAT_AMBIENT_DISPLAY);
 
         mShowBatteryInfo =
                 (SwitchPreference) findPreference(PREF_SHOW_BATTERY_INFO);
@@ -75,6 +87,26 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
         mShowAdvancedBatteryChargingInfo.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.LOCK_SCREEN_SHOW_ADVANCED_BATTERY_CHARGING_INFO, 0) == 1);
         mShowAdvancedBatteryChargingInfo.setOnPreferenceChangeListener(this);
+
+        if (isDozeAvailable()) {
+            mShowBatteryInfoOnAmbientDisplay =
+                    (SwitchPreference) findPreference(PREF_SHOW_ABATTERY_INFO_ON_AMBIENT_DISPLAY);
+            mShowBatteryInfoOnAmbientDisplay.setChecked(Settings.System.getInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_BATTERY_INFO_ON_AMBIENT_DISPLAY, 0) == 1);
+            mShowBatteryInfoOnAmbientDisplay.setOnPreferenceChangeListener(this);
+        } else {
+            catAmbientDisplay.removePreference(findPreference(PREF_SHOW_ABATTERY_INFO_ON_AMBIENT_DISPLAY));
+            removePreference(PREF_CAT_AMBIENT_DISPLAY);
+        }
+    }
+
+    private boolean isDozeAvailable() {
+        String name = Build.IS_DEBUGGABLE ? SystemProperties.get("debug.doze.component") : null;
+        if (TextUtils.isEmpty(name)) {
+            name = getActivity().getResources().getString(
+                    com.android.internal.R.string.config_dozeComponent);
+        }
+        return !TextUtils.isEmpty(name);
     }
 
     @Override
@@ -100,6 +132,11 @@ public class BatteryInfoSettings extends SettingsBaseFragment implements
             value = (Boolean) objValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_ADVANCED_BATTERY_CHARGING_INFO, value ? 1 : 0);
+            return true;
+        } else if (preference == mShowBatteryInfoOnAmbientDisplay) {
+            value = (Boolean) objValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_BATTERY_INFO_ON_AMBIENT_DISPLAY, value ? 1 : 0);
             return true;
         }
         return false;

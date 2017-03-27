@@ -37,4 +37,15 @@
         android:key="lock_screen_show_advanced_battery_charging_info"
         android:title="@string/lock_screen_show_advanced_battery_charging_info_title"
         android:summary="@string/lock_screen_show_advanced_battery_charging_info_summary" />
+
+    <PreferenceCategory
+        android:key="lock_screen_category_ambient_display"
+        android:title="@string/ambient_display_title">
+
+        <SwitchPreference
+            android:key="lock_screen_show_battery_info_on_ambient_display"
+            android:title="@string/lock_screen_show_battery_info_title"
+            android:summary="@string/lock_screen_show_battery_info_on_ambient_display_summary" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
