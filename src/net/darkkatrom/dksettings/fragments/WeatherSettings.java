@@ -18,10 +18,12 @@ package net.darkkatrom.dksettings.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.android.internal.util.darkkat.DeviceUtils;
 import com.android.internal.util.darkkat.WeatherHelper;
 import com.android.internal.util.darkkat.WeatherServiceControllerImpl;
 
@@ -35,6 +37,28 @@ public class WeatherSettings extends SettingsBaseFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.weather_settings);
+
+        final boolean isWeatherServiceAvailable =
+                WeatherHelper.isWeatherServiceAvailable(getActivity());
+        final int weatherServiceAvailability = WeatherHelper.getWeatherServiceAvailability(getActivity());
+
+        Preference weatherConfig =
+                findPreference("weather_config");
+
+        if (weatherServiceAvailability == WeatherHelper.PACKAGE_DISABLED) {
+            final CharSequence summary = getResources().getString(DeviceUtils.isPhone(getActivity())
+                    ? R.string.weather_service_disabled_summary
+                    : R.string.weather_service_disabled_tablet_summary);
+            weatherConfig.setSummary(summary);
+        } else if (weatherServiceAvailability == WeatherHelper.PACKAGE_MISSING) {
+            weatherConfig.setSummary(
+                    getResources().getString(R.string.weather_service_missing_summary));
+        }
+        weatherConfig.setEnabled(isWeatherServiceAvailable);
+
+        if (!isWeatherServiceAvailable) {
+            removePreference("weather_detailed_weather_view_settings");
+        }
 
         setHasOptionsMenu(true);
     }
