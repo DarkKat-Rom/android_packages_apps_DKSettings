@@ -146,10 +146,15 @@
     <string name="auto_night_mode_title">Night theme</string>
     <string name="auto_night_mode_summary">%s</string>
     <string name="colors_detailed_weather_view_summary">Choose the colors to colorize the detailed weather view</string>
+    <string name="colors_lock_screen_summary">Choose the colors to colorize the text and icons in the lock screen</string>
     <string name="colors_status_bar_summary">Choose the colors to colorize the text and icons in the status bar</string>
     <string name="colors_status_bar_expanded_summary">Choose the colors to colorize the content in the status bar expanded</string>
     <string name="colors_navigation_bar_summary">Choose the colors to colorize the icons and ripple effect in the status bar</string>
     <string name="colors_recents_summary">Choose the colors to colorize the Recents</string>
+
+    <!-- Lock screen colors -->
+    <string name="colors_lock_screen_colorize_visualizer_title">Colorize music visualizer</string>
+    <string name="colors_lock_screen_colorize_visualizer_summary">Enable to colorize the music visualizer on the lock screen</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\'SlimRoms\' recents panel</string>
