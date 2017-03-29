@@ -43,6 +43,7 @@ import net.darkkatrom.dksettings.fragments.statusbar.NetworkTrafficSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.TickerSettings;
 import net.darkkatrom.dksettings.fragments.statusbar.StatusBarWeatherSettings;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsDetailedWeatherView;
+import net.darkkatrom.dksettings.fragments.themecolors.ColorsLockScreen;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsNavigationBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsRecents;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
@@ -61,6 +62,7 @@ public class MainActivity extends PreferenceActivity {
         ClockDateSettings.class.getName(),
         ColorPickerFragment.class.getName(),
         ColorsDetailedWeatherView.class.getName(),
+        ColorsLockScreen.class.getName(),
         ColorsNavigationBar.class.getName(),
         ColorsRecents.class.getName(),
         ColorsStatusBar.class.getName(),
