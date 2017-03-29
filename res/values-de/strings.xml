@@ -148,12 +148,16 @@
     <string name="colors_lock_screen_summary">Wähle die Farben mit denen Text und Symbole auf dem Sperrbildschirm eingefärbt werden</string>
     <string name="colors_status_bar_summary">Wähle die Farben mit denen Text und Symbole in der Statusleiste eingefärbt werden</string>
     <string name="colors_status_bar_expanded_summary">Wähle die Farben mit denen der Inhalt in der Erweiterten Statusleiste eingefärbt werden</string>
+    <string name="colors_notification_summary">Wähle die Farben mit denen die benachrichtigungen eingefärbt werden</string>
     <string name="colors_navigation_bar_summary">Wähle die Farben mit denen Symbole und Ripple Effekt in der Navigationsleiste eingefärbt werden</string>
     <string name="colors_recents_summary">Wähle die Farben mit denen der Anwendungsverlauf eingefärbt werden</string>
 
     <!-- Lock screen colors -->
     <string name="colors_lock_screen_colorize_visualizer_title">Musik Visualisierung einfärben</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
+
+    <!-- Notifications -->
+    <string name="colors_notification_cat_dismiss_all">keine benachrichtigungen &amp; Alle löschen</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\"SlimRoms\" Anwendungsverlauf Feld</string>
