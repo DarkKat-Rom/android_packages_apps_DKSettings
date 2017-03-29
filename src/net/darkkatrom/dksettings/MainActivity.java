@@ -45,6 +45,7 @@ import net.darkkatrom.dksettings.fragments.statusbar.StatusBarWeatherSettings;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsDetailedWeatherView;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsLockScreen;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsNavigationBar;
+import net.darkkatrom.dksettings.fragments.themecolors.ColorsNotification;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsRecents;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBarExpanded;
@@ -64,6 +65,7 @@ public class MainActivity extends PreferenceActivity {
         ColorsDetailedWeatherView.class.getName(),
         ColorsLockScreen.class.getName(),
         ColorsNavigationBar.class.getName(),
+        ColorsNotification.class.getName(),
         ColorsRecents.class.getName(),
         ColorsStatusBar.class.getName(),
         ColorsStatusBarExpanded.class.getName(),
