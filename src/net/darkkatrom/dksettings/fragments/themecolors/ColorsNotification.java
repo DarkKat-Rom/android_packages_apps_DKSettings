@@ -71,7 +71,7 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
     private ColorPickerPreference mAccentColor;
     private ColorPickerPreference mTextColor;
     private ColorPickerPreference mIconColor;
-    private ColorPickerPreference mRippleColor;
+//    private ColorPickerPreference mRippleColor;
     private ColorPickerPreference mDismissAllColor;
 
     private boolean mCustomizeColors;
@@ -116,9 +116,6 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
                     ThemeHelper.getNotificationPrimaryBgColor(getActivity()));
             mPrimaryBackgroundColor.setOnPreferenceChangeListener(this);
 
-            removePreference(PREF_ICON_COLOR);
-            removePreference(PREF_RIPPLE_COLOR);
-
             mSecondaryBackgroundColor =
                     (ColorPickerPreference) findPreference(PREF_SECONDARY_BACKGROUND_COLOR);
             intColor = NotificationColorHelper.getSecondaryBackgroundColor(getActivity());
@@ -140,22 +137,23 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
 
             mTextColor =
                     (ColorPickerPreference) findPreference(PREF_TEXT_COLOR);
-            intColor = NotificationColorHelper.getTextColor(getActivity());
+            intColor = NotificationColorHelper.getTextColor(getActivity(), true);
             mTextColor.setNewColor(intColor);
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mTextColor.setSummary(hexColor);
-            mTextColor.setResetColor(ThemeHelper.getNotificationTextColor(getActivity()));
+            mTextColor.setResetColor(ThemeHelper.getNotificationTextColor(getActivity(), true));
             mTextColor.setOnPreferenceChangeListener(this);
-/*
+
             mIconColor =
                     (ColorPickerPreference) findPreference(PREF_ICON_COLOR);
-            intColor = NotificationColorHelper.getIconColor(getActivity());
+            intColor = NotificationColorHelper.getIconColor(getActivity(), true);
             mIconColor.setNewColor(intColor);
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mIconColor.setSummary(hexColor);
-            mIconColor.setResetColor(ThemeHelper.getNotificationIconColor(getActivity()));
+            mIconColor.setResetColor(ThemeHelper.getNotificationIconColor(getActivity(), true));
             mIconColor.setOnPreferenceChangeListener(this);
 
+/*
             mRippleColor =
                     (ColorPickerPreference) findPreference(PREF_RIPPLE_COLOR);
             intColor = NotificationColorHelper.getRippleColor(getActivity());
@@ -181,8 +179,9 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
             removePreference(PREF_ACCENT_COLOR);
             removePreference(PREF_TEXT_COLOR);
             removePreference(PREF_ICON_COLOR);
-            removePreference(PREF_RIPPLE_COLOR);
+//            removePreference(PREF_RIPPLE_COLOR);
             catDismissAll.removePreference(findPreference(PREF_DISMISS_ALL_COLOR));
+            removePreference(PREF_CAT_DISMISS_ALL);
         }
 
         getActivity().invalidateOptionsMenu();
@@ -255,7 +254,6 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
                     Settings.System.NOTIFICATION_TEXT_COLOR, intHex);
             refreshSettings();
             return true;
-/*
         } else if (preference == mIconColor) {
             hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
@@ -264,6 +262,7 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
                     Settings.System.NOTIFICATION_ICON_COLOR, intHex);
             refreshSettings();
             return true;
+/*
         } else if (preference == mRippleColor) {
             hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
@@ -272,7 +271,6 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
                     Settings.System.NOTIFICATION_RIPPLE_COLOR, intHex);
             refreshSettings();
             return true;
-        }
  */
         } else if (preference == mDismissAllColor) {
             hex = ColorPickerPreference.convertToARGB(
@@ -329,11 +327,11 @@ public class ColorsNotification extends SettingsColorPickerFragment implements
                                     ThemeHelper.getNotificationAccentColor(getActivity()));
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_TEXT_COLOR,
-                                    ThemeHelper.getNotificationTextColor(getActivity()));
-/*
+                                    ThemeHelper.getNotificationTextColor(getActivity(), true));
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_ICON_COLOR,
-                                    ThemeHelper.getNotificationIconColor(getActivity()));
+                                    ThemeHelper.getNotificationIconColor(getActivity(), true));
+/*
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_RIPPLE_COLOR,
                                     ThemeHelper.getNotificationRippleColor(getActivity()));
