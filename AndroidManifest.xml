@@ -142,5 +142,13 @@
                     android:value="com.android.settings.category.buttons" />
         </activity>
 
+        <receiver
+            android:name=".NotificationReplyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="net.darkkatrom.dksettings.ACTION_NOTIFICATION_REPLY"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

@@ -18,6 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/notifications_title">
 
+    <PreferenceScreen
+        android:key="colors_notification"
+        android:title="@string/notification_test_settings_title"
+        android:summary="@string/notification_test_settings_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.themecolors.NotificationTestSettings" />
+
     <SwitchPreference
         android:key="colors_notification_use_theme_colors"
         android:title="@string/use_theme_colors_title"

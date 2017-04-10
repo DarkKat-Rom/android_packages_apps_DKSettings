@@ -39,6 +39,56 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="notification_test_type_entries">
+        <item>@string/notification_test_type_default_title</item>
+        <item>@string/notification_test_type_text_title</item>
+        <item>@string/notification_test_type_picture_title</item>
+        <item>@string/notification_test_type_inbox_title</item>
+        <item>@string/notification_test_type_messaging_title</item>
+        <item>@string/notification_test_type_media_title</item>
+    </string-array>
+
+    <string-array name="notification_test_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="notification_test_priority_entries">
+        <item>@string/none_title</item>
+        <item>@string/notification_test_priority_min_title</item>
+        <item>@string/notification_test_priority_low_title</item>
+        <item>@string/notification_test_priority_default_title</item>
+        <item>@string/notification_test_priority_high_title</item>
+        <item>@string/notification_test_priority_max_title</item>
+    </string-array>
+
+    <string-array name="notification_test_priority_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="notification_test_number_of_actions_entries">
+        <item>@string/none_title</item>
+        <item>@string/one_title</item>
+        <item>@string/two_title</item>
+        <item>@string/three_title</item>
+    </string-array>
+
+    <string-array name="notification_test_number_of_actions_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
     <string-array name="detailed_weather_condition_icon_entries" >
         <item>@string/weather_icon_monochrome_title</item>
         <item>@string/weather_icon_colored_title</item>
