@@ -78,6 +78,7 @@
     <string name="hide_title">Hide</string>
     <string name="always_title">Always</string>
     <string name="never_title">Never</string>
+    <string name="color_title">Color</string>
     <string name="colors_title">Colors</string>
     <string name="use_theme_colors_title">Use theme colors</string>
     <string name="use_theme_colors_summary">Enable to use colors from the current theme, disable to customize the colors</string>
@@ -113,6 +114,7 @@
     <string name="weather_icon_vclouds_title">VClouds</string>
     <string name="notification_icons_title">Notification icons</string>
     <string name="number_of_notification_icons_title">Number of notification icons</string>
+    <string name="none_title">None</string>
     <string name="one_title">1</string>
     <string name="two_title">2</string>
     <string name="three_title">3</string>
@@ -121,6 +123,7 @@
     <string name="six_title">6</string>
     <string name="seven_title">7</string>
     <string name="eight_title">8</string>
+    <string name="send_title">Send</string>
 
     <string name="card_title">User interface</string>
     <string name="card_sub_title">Theme &amp; colors</string>
@@ -159,6 +162,51 @@
 
     <!-- Notifications -->
     <string name="colors_notification_cat_dismiss_all">No notifications &amp; Dismiss all</string>
+    <string name="notification_test_settings_title">Test notification</string>
+    <string name="notification_test_settings_summary">Configure and show test notifications</string>
+
+    <!-- Notification test -->
+    <string name="notification_test_cat_actions_title">Actions</string>
+    <string name="notification_test_cat_notification_color_title">Notification color</string>
+    <string name="notification_test_list_summary">%s</string>
+    <string name="notification_test_type_title">Type</string>
+    <string name="notification_test_type_default_title">Default</string>
+    <string name="notification_test_type_text_title">Text</string>
+    <string name="notification_test_type_picture_title">Picture</string>
+    <string name="notification_test_type_inbox_title">Inbox</string>
+    <string name="notification_test_type_messaging_title">Message</string>
+    <string name="notification_test_type_media_title">Media</string>
+    <string name="notification_test_priority_title">Priority</string>
+    <string name="notification_test_priority_min_title">Minimal</string>
+    <string name="notification_test_priority_low_title">Low</string>
+    <string name="notification_test_priority_default_title">Default</string>
+    <string name="notification_test_priority_high_title">High</string>
+    <string name="notification_test_priority_max_title">Maximal</string>
+    <string name="notification_test_number_of_actions_title">Number of actions</string>
+    <string name="notification_test_show_emphasized_actions_title">Emphasize actions</string>
+    <string name="notification_test_show_emphasized_actions_summary">Enable to emphasize action buttons. This indicates a full screen notification like receiving an incomming call. The notification will be shown as heads up.</string>
+    <string name="notification_test_show_tombstone_actions_title">Show actions disabled</string>
+    <string name="notification_test_show_tombstone_actions_summary">Enable to show actions disabled. This indicates an action button without an action.</string>
+    <string name="notification_test_show_tombstone_actions_disabled_summary">Actions can\'t be shown disabled, when actions will be shown emphasized,\nor only a reply action will be shown.</string>
+    <string name="notification_test_show_reply_action_title">Show reply action</string>
+    <string name="notification_test_show_reply_action_summary">Enable to show the first action as an reply action.\nOnce the reply text was send, the notification will be updated and displays the reply text.</string>
+
+    <!-- Notification test notification content-->
+    <string name="notification_test_sub_text">Sub text</string>
+    <string name="notification_test_title">Notification title</string>
+    <string name="notification_test_content_text">Content text</string>
+    <string name="notification_test_action_text">Action %1$s</string>
+    <string name="notification_test_action_reply_title">Reply</string>
+    <string name="notification_test_action_reply_hint">Type reply</string>
+    <string name="notification_test_action_replied_title">Reply received</string>
+    <string name="notification_test_action_replied_text">Typed reply: %1$s</string>
+    <string name="notification_test_line_number_text">This is line no. %1$s</string>
+    <string name="notification_test_conversation_title">Conversation title</string>
+    <string name="notification_test_fast_rewind_title">Fast rewind</string>
+    <string name="notification_test_skip_previous_title">Skip previous</string>
+    <string name="notification_test_play_title">Play</string>
+    <string name="notification_test_skip_next_title">Skip next</string>
+    <string name="notification_test_fast_forward_title">Fast forward</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\'SlimRoms\' recents panel</string>

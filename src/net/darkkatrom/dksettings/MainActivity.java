@@ -49,6 +49,7 @@ import net.darkkatrom.dksettings.fragments.themecolors.ColorsNotification;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsRecents;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar;
 import net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBarExpanded;
+import net.darkkatrom.dksettings.fragments.themecolors.NotificationTestSettings;
 import net.darkkatrom.dksettings.fragments.weather.DetailedWeatherViewSettings;
 
 import java.util.ArrayList;
@@ -73,6 +74,7 @@ public class MainActivity extends PreferenceActivity {
         DetailedWeatherViewSettings.class.getName(),
         LockScreenSettings.class.getName(),
         NetworkTrafficSettings.class.getName(),
+        NotificationTestSettings.class.getName(),
         PowerButtonSettings.class.getName(),
         QuickSettings.class.getName(),
         QuickSettingsBar.class.getName(),

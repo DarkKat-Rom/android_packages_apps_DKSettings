@@ -19,6 +19,7 @@
     <string name="settings_title">Einstellungen</string>
 
     <!-- Global used -->
+    <string name="reset">Zurücksetzen</string>
     <string name="dlg_ok">OK</string>
     <string name="dlg_cancel">Abbrechen</string>
     <string name="dlg_dslv_reset_message">Standardeinstellungen wiederherstellen?</string>
@@ -77,6 +78,7 @@
     <string name="hide_title">Verbergen</string>
     <string name="always_title">Immer</string>
     <string name="never_title">Nie</string>
+    <string name="color_title">Farbe</string>
     <string name="colors_title">Farben</string>
     <string name="use_theme_colors_title">Theme Farben benutzen</string>
     <string name="use_theme_colors_summary">Aktivieren um die Farben aus dem aktuellen Theme zu nutzen, deaktivieren um die farben anzupassen</string>
@@ -112,6 +114,7 @@
     <string name="weather_icon_vclouds_title">VClouds</string>
     <string name="notification_icons_title">Benachrichtigungssymbole</string>
     <string name="number_of_notification_icons_title">Anzahl an Benachrichtigungssymbolen</string>
+    <string name="none_title">Keine</string>
     <string name="one_title">1</string>
     <string name="two_title">2</string>
     <string name="three_title">3</string>
@@ -120,6 +123,7 @@
     <string name="six_title">6</string>
     <string name="seven_title">7</string>
     <string name="eight_title">8</string>
+    <string name="send_title">Senden</string>
 
     <string name="card_title">Benutzeroberfläche</string>
     <string name="card_sub_title">Theme &amp; Farben</string>
@@ -157,7 +161,52 @@
     <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
 
     <!-- Notifications -->
-    <string name="colors_notification_cat_dismiss_all">keine benachrichtigungen &amp; Alle löschen</string>
+    <string name="colors_notification_cat_dismiss_all">Keine Benachrichtigungen &amp; Alle löschen</string>
+    <string name="notification_test_settings_title">Benachrichtigung testen</string>
+    <string name="notification_test_settings_summary">Konfiguriere und zeige Test Benachrichtigungen an</string>
+
+    <!-- Notification test -->
+    <string name="notification_test_cat_actions_title">Aktionen</string>
+    <string name="notification_test_cat_notification_color_title">Benachrichtigungsfarbe</string>
+    <string name="notification_test_list_summary">%s</string>
+    <string name="notification_test_type_title">Typ</string>
+    <string name="notification_test_type_default_title">Standard</string>
+    <string name="notification_test_type_text_title">Text</string>
+    <string name="notification_test_type_picture_title">Bild</string>
+    <string name="notification_test_type_inbox_title">Posteing.</string>
+    <string name="notification_test_type_messaging_title">Nachr.</string>
+    <string name="notification_test_type_media_title">Media</string>
+    <string name="notification_test_priority_title">Priorität</string>
+    <string name="notification_test_priority_min_title">Minimal</string>
+    <string name="notification_test_priority_low_title">Niedrig</string>
+    <string name="notification_test_priority_default_title">Standard</string>
+    <string name="notification_test_priority_high_title">Hoch</string>
+    <string name="notification_test_priority_max_title">Maximal</string>
+    <string name="notification_test_number_of_actions_title">Anzahl an Aktionen</string>
+    <string name="notification_test_show_emphasized_actions_title">Aktionen hervorheben</string>
+    <string name="notification_test_show_emphasized_actions_summary">Aktivieren um Aktionsschaltlächen hervorzuheben. Dies weist auf eine Vollbild Benachrichtigung hin, wie z.B. ein eingehender Anruf. Die Benachrichtigung wird als Heads-Up angezeigt.</string>
+    <string name="notification_test_show_tombstone_actions_title">Aktionen deaktiviert anzeigen</string>
+    <string name="notification_test_show_tombstone_actions_summary">Aktivieren um Aktionsschaltlächen deaktiviert anzuzeigen. Dies weist auf Aktionsschaltlächen ohne Aktion hin.</string>
+    <string name="notification_test_show_tombstone_actions_disabled_summary">Die Aktionen können nicht deaktiviert angezeigt werden, wenn Aktionen hervorgeheben werden,\noder nur eine Antworten Aktion angezeigt wird.</string>
+    <string name="notification_test_show_reply_action_title">Antworten Aktion anzeigen</string>
+    <string name="notification_test_show_reply_action_summary">Aktivieren um die erste Aktion als Antworten Aktion anzuzeigen.\nSobald der Antworttext gesendedet wurde, wird die Benachrichtigung aktuallisiert, und zeigt den Antworttext an.</string>
+
+    <!-- Notification test notification content-->
+    <string name="notification_test_sub_text">Untertext</string>
+    <string name="notification_test_title">Benachrichtigungstitel</string>
+    <string name="notification_test_content_text">Inhaltstext</string>
+    <string name="notification_test_action_text">Aktion %1$s</string>
+    <string name="notification_test_action_reply_title">Antworten</string>
+    <string name="notification_test_action_reply_hint">Antwort eingeben</string>
+    <string name="notification_test_action_replied_title">Antwort empfangen</string>
+    <string name="notification_test_action_replied_text">Eingegebene Antwort: %1$s</string>
+    <string name="notification_test_line_number_text">Reihe Nr. %1$s</string>
+    <string name="notification_test_conversation_title">Konversationstitel</string>
+    <string name="notification_test_fast_rewind_title">Schnell zurückspulen</string>
+    <string name="notification_test_skip_previous_title">Voriger Titel</string>
+    <string name="notification_test_play_title">Abspielen</string>
+    <string name="notification_test_skip_next_title">Nächster Titel</string>
+    <string name="notification_test_fast_forward_title">Schnell vorspulen</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\"SlimRoms\" Anwendungsverlauf Feld</string>
