@@ -17,7 +17,6 @@
 
     <!-- General theme -->
     <color name="holo_blue_light">#ff33b5e5</color>
-    <color name="material_teal_500">#ff009688</color>
 
     <!-- Accent color -->
     <color name="theme_accent">@color/holo_blue_light</color>
