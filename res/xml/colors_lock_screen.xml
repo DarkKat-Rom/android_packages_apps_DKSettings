@@ -33,4 +33,15 @@
         android:title="@string/icon_title"
         android:defaultValue="#ffffffff" />
 
+    <PreferenceCategory
+        android:key="colors_lock_screen_cat_ambient_display"
+        android:title="@string/ambient_display_title">
+
+         <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
+            android:key="colors_ambient_display_battery_text_color"
+            android:title="@string/colors_ambient_display_battery_text_color_title"
+            android:defaultValue="#ffffffff" />
+
+	</PreferenceCategory>
+
 </PreferenceScreen>
