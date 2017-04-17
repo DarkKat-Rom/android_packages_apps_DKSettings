@@ -22,11 +22,15 @@ import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -43,6 +47,8 @@ import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 public class ColorsLockScreen extends SettingsColorPickerFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String PREF_CAT_AMBIENT_DISPLAY =
+            "colors_lock_screen_cat_ambient_display";
     private static final String PREF_COLORIZE_VISUALIZER =
             "colors_lock_screen_colorize_visualizer";
     private static final String PREF_TEXT_COLOR =
@@ -78,6 +84,9 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
         addPreferencesFromResource(R.xml.colors_lock_screen);
         mResolver = getContentResolver();
 
+        PreferenceCategory catAmbientDisplay =
+                (PreferenceCategory) findPreference(PREF_CAT_AMBIENT_DISPLAY);
+
         int intColor;
 
         mColorizeVisualizer = (SwitchPreference) findPreference(PREF_COLORIZE_VISUALIZER);
@@ -100,13 +109,27 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
                 ColorConstants.HOLO_BLUE_LIGHT);
         mIconColor.setOnPreferenceChangeListener(this);
 
-        mBatteryTextColor =
-                (ColorPickerPreference) findPreference(PREF_BATTERY_TEXT_COLOR);
-        intColor = LockScreenColorHelper.getAmbientDisplayBatteryTextColor(getActivity());
-        mBatteryTextColor.setNewColor(intColor);
-        mBatteryTextColor.setResetColors(ColorConstants.WHITE,
-                ColorConstants.WHITE);
-        mBatteryTextColor.setOnPreferenceChangeListener(this);
+        if (isDozeAvailable()) {
+            mBatteryTextColor =
+                    (ColorPickerPreference) findPreference(PREF_BATTERY_TEXT_COLOR);
+            intColor = LockScreenColorHelper.getAmbientDisplayBatteryTextColor(getActivity());
+            mBatteryTextColor.setNewColor(intColor);
+            mBatteryTextColor.setResetColors(ColorConstants.WHITE,
+                    ColorConstants.WHITE);
+            mBatteryTextColor.setOnPreferenceChangeListener(this);
+        } else {
+            catAmbientDisplay.removePreference(findPreference(PREF_BATTERY_TEXT_COLOR));
+            removePreference(PREF_CAT_AMBIENT_DISPLAY);
+        }
+    }
+
+    private boolean isDozeAvailable() {
+        String name = Build.IS_DEBUGGABLE ? SystemProperties.get("debug.doze.component") : null;
+        if (TextUtils.isEmpty(name)) {
+            name = getActivity().getResources().getString(
+                    com.android.internal.R.string.config_dozeComponent);
+        }
+        return !TextUtils.isEmpty(name);
     }
 
     @Override
