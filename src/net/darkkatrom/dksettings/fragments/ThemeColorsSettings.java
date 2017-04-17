@@ -31,6 +31,7 @@ import com.android.internal.util.darkkat.WeatherHelper;
 
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
+import net.darkkatrom.dksettings.SettingsActivity;
 
 public class ThemeColorsSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
@@ -96,6 +97,10 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
                     getResources().getString(R.string.weather_service_missing_summary));
         }
         detailedWeather.setEnabled(isWeatherServiceAvailable);
+
+        if (getActivity() instanceof SettingsActivity) {
+            removePreference("colors_notification");
+        }
     }
 
     @Override
