@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017 DarkKat
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/battery_meter_title">
+
+    <ListPreference
+        android:key="ambient_display_battery_meter_type"
+        android:title="@string/battery_meter_type_title"
+        android:entries="@array/ambient_display_battery_meter_type_entries"
+        android:entryValues="@array/ambient_display_battery_meter_type_values" />
+
+    <SwitchPreference
+        android:key="ambient_display_battery_meter_show_text"
+        android:title="@string/battery_meter_show_text_title"
+        android:summary="@string/battery_meter_show_text_summary" />
+
+    <PreferenceCategory
+        android:key="ambient_display_battery_meter_cat_circle_dotted"
+        android:title="@string/battery_meter_cat_circle_dotted_title">
+
+        <ListPreference
+            android:key="ambient_display_battery_meter_circle_dot_interval"
+            android:title="@string/battery_meter_circle_dot_interval_title"
+            android:entries="@array/ambient_display_battery_meter_circle_dot_entries"
+            android:entryValues="@array/ambient_display_battery_meter_circle_dot_values" />
+
+        <ListPreference
+            android:key="ambient_display_battery_meter_circle_dot_length"
+            android:title="@string/battery_meter_circle_dot_length_title"
+            android:entries="@array/ambient_display_battery_meter_circle_dot_entries"
+            android:entryValues="@array/ambient_display_battery_meter_circle_dot_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ambient_display_battery_meter_cat_text"
+        android:title="@string/text_title">
+
+        <SwitchPreference
+            android:key="ambient_display_battery_meter_cut_out_text"
+            android:title="@string/battery_meter_cut_out_title"
+            android:summary="@string/ambient_display_battery_meter_cut_out_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

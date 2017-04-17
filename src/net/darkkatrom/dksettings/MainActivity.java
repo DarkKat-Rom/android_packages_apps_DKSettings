@@ -33,6 +33,7 @@ import net.darkkatrom.dksettings.fragments.StatusBarSettings;
 import net.darkkatrom.dksettings.fragments.ThemeColorsSettings;
 import net.darkkatrom.dksettings.fragments.WeatherSettings;
 import net.darkkatrom.dksettings.fragments.buildinfo.DarkKat;
+import net.darkkatrom.dksettings.fragments.lockscreen.AmbientDisplayBatteryMeterSettings;
 import net.darkkatrom.dksettings.fragments.lockscreen.BatteryInfoSettings;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsBar;
 import net.darkkatrom.dksettings.fragments.quicksettings.QuickSettingsPanel;
@@ -56,6 +57,7 @@ import java.util.List;
 public class MainActivity extends PreferenceActivity {
 
     private static final String[] ENTRY_FRAGMENTS = {
+        AmbientDisplayBatteryMeterSettings.class.getName(),
         BatteryInfoSettings.class.getName(),
         BatteryMeterSettings.class.getName(),
         BuildInfo.class.getName(),

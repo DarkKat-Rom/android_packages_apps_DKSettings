@@ -43,9 +43,15 @@
         android:title="@string/ambient_display_title">
 
         <SwitchPreference
-            android:key="lock_screen_show_battery_info_on_ambient_display"
+            android:key="ambient_display_show_battery_info"
             android:title="@string/lock_screen_show_battery_info_title"
-            android:summary="@string/lock_screen_show_battery_info_on_ambient_display_summary" />
+            android:summary="@string/ambient_display_show_battery_info_summary" />
+
+        <PreferenceScreen
+            android:key="ambient_display_battery_meter"
+            android:title="@string/battery_meter_title"
+            android:summary="@string/ambient_display_battery_meter_summary"
+            android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.AmbientDisplayBatteryMeterSettings" />
 
     </PreferenceCategory>
 </PreferenceScreen>

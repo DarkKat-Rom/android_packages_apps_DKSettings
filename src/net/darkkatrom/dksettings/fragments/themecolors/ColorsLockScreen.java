@@ -49,6 +49,8 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
             "colors_lock_screen_text_color";
     private static final String PREF_ICON_COLOR =
             "colors_lock_screen_icon_color";
+    private static final String PREF_BATTERY_TEXT_COLOR =
+            "colors_ambient_display_battery_text_color";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET  = 0;
@@ -56,6 +58,7 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
     private SwitchPreference mColorizeVisualizer;
     private ColorPickerPreference mTextColor;
     private ColorPickerPreference mIconColor;
+    private ColorPickerPreference mBatteryTextColor;
 
     private ContentResolver mResolver;
 
@@ -96,6 +99,14 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
         mIconColor.setResetColors(ColorConstants.WHITE,
                 ColorConstants.HOLO_BLUE_LIGHT);
         mIconColor.setOnPreferenceChangeListener(this);
+
+        mBatteryTextColor =
+                (ColorPickerPreference) findPreference(PREF_BATTERY_TEXT_COLOR);
+        intColor = LockScreenColorHelper.getAmbientDisplayBatteryTextColor(getActivity());
+        mBatteryTextColor.setNewColor(intColor);
+        mBatteryTextColor.setResetColors(ColorConstants.WHITE,
+                ColorConstants.WHITE);
+        mBatteryTextColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -139,6 +150,13 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_ICON_COLOR, intHex);
             return true;
+        } else if (preference == mBatteryTextColor) {
+            hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(mResolver,
+                    Settings.System.AMBIENT_DISPLAY_BATTERY_TEXT_COLOR, intHex);
+            return true;
         }
         return false;
     }
@@ -179,6 +197,9 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
                                     Settings.System.LOCK_SCREEN_TEXT_COLOR, ColorConstants.WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.LOCK_SCREEN_ICON_COLOR, ColorConstants.WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.AMBIENT_DISPLAY_BATTERY_TEXT_COLOR,
+                                    ColorConstants.WHITE);
                             getOwner().refreshSettings();
                         }
                     })
@@ -191,6 +212,9 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.LOCK_SCREEN_ICON_COLOR,
                                     ColorConstants.HOLO_BLUE_LIGHT);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.AMBIENT_DISPLAY_BATTERY_TEXT_COLOR,
+                                    ColorConstants.WHITE);
                             getOwner().refreshSettings();
                         }
                     })
