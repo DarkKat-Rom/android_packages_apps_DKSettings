@@ -154,6 +154,7 @@
     <!-- Lock screen colors -->
     <string name="colors_lock_screen_colorize_visualizer_title">Musik Visualisierung einfärben</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
+    <string name="colors_ambient_display_battery_text_color_title">Eingebettete Akku Prozentzahl</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\"SlimRoms\" Anwendungsverlauf Feld</string>
@@ -184,7 +185,7 @@
     <string name="lock_screen_battery_info_settings_title">Akku Information</string>
     <string name="lock_screen_battery_info_settings_summary">Wähle wie die Akku Informationen auf dem Sperrbildschirm dargestellt werden</string>
 
-    <!-- battery info -->
+    <!-- Battery info -->
     <string name="lock_screen_show_battery_info_title">Akku-Informationen anzeigen</string>
     <string name="lock_screen_show_battery_info_summary">Aktivieren um Akku-Informationen auf dem Sperrbildschirm anzuzeigen</string>
     <string name="lock_screen_show_battery_temp_title">Akku Temperatur anzeigen</string>
@@ -193,7 +194,12 @@
     <string name="lock_screen_show_battery_charging_info_summary">Aktivieren um Akku Lade-Informationen auf dem Sperrbildschirm anzuzeigen</string>
     <string name="lock_screen_show_advanced_battery_charging_info_title">Erweiterte Akku Lade-Informationen anzeigen</string>
     <string name="lock_screen_show_advanced_battery_charging_info_summary">Aktivieren um Erweiterte Akku Lade-Informationen auf dem Sperrbildschirm anzuzeigen.\n(Einige Werte sind möglicherweise nicht verfügbar, bis das Gerät einige Zeit geladen wurde.\nWerte in Klammern stellen die maximal unterstützten Werte des Ladegeräts oder Akkus dar.)</string>
-    <string name="lock_screen_show_battery_info_on_ambient_display_summary">Aktivieren um die gewählten Akku (Lade-)Informationen ebenfalls auf dem Inaktivitätsdisplay anzuzeigen</string>
+    <string name="ambient_display_show_battery_info_summary">Aktivieren um die gewählten Akku (Lade-)Informationen ebenfalls auf dem Inaktivitätsdisplay anzuzeigen</string>
+    <string name="ambient_display_battery_meter_summary">Wähle wie die Akkuanzeige auf dem Inaktivitätsdisplay dargestellt wird</string>
+
+    <!-- Ambient display -->
+    <string name="ambient_display_battery_meter_cut_out_summary">Aktivieren um die Prozentzahl aus dem Akkusymbol auszuschneiden, sobald die Akkufüllung die Prozentzahl überlagert</string>
+    <!-- Battery info end-->
     <!-- Lock screen end -->
 
     <!-- Status bar -->

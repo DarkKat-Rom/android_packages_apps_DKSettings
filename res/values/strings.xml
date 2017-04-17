@@ -155,6 +155,7 @@
     <!-- Lock screen colors -->
     <string name="colors_lock_screen_colorize_visualizer_title">Colorize music visualizer</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Enable to colorize the music visualizer on the lock screen</string>
+    <string name="colors_ambient_display_battery_text_color_title">Embedded battery percentage text</string>
 
     <!-- Recents colors -->
     <string name="colors_slim_recents_cat_panel_title">\'SlimRoms\' recents panel</string>
@@ -185,7 +186,7 @@
     <string name="lock_screen_battery_info_settings_title">Battery info</string>
     <string name="lock_screen_battery_info_settings_summary">Choose how to display the battery info on the lock screen</string>
 
-    <!-- battery info -->
+    <!-- Battery info -->
     <string name="lock_screen_show_battery_info_title">Show battery info</string>
     <string name="lock_screen_show_battery_info_summary">Enable to show battery info on the lock screen</string>
     <string name="lock_screen_show_battery_temp_title">Show battery temperature</string>
@@ -194,7 +195,12 @@
     <string name="lock_screen_show_battery_charging_info_summary">Enable to show battery charging info on the lock screen</string>
     <string name="lock_screen_show_advanced_battery_charging_info_title">Show advanced battery charging info</string>
     <string name="lock_screen_show_advanced_battery_charging_info_summary">Enable to show advanced battery charging info on the lock screen.\n(Some values may not be available, until the device has been charged some time.\nValues in brackets displaying the maximum supported values of the charger or battery.)</string>
-    <string name="lock_screen_show_battery_info_on_ambient_display_summary">Enable to show the choosen battery (charging) info on the ambient display as well</string>
+    <string name="ambient_display_show_battery_info_summary">Enable to show the choosen battery (charging) info on the ambient display as well</string>
+    <string name="ambient_display_battery_meter_summary">Choose how to display the battery meter on the ambient display</string>
+
+    <!-- Ambient display -->
+    <string name="ambient_display_battery_meter_cut_out_summary">Enable to cut the percentage-text out of the battery icon, if the battery fill overlaps the percentage-text.</string>
+    <!-- Battery info end-->
     <!-- Lock screen end -->
 
     <!-- Status bar -->
