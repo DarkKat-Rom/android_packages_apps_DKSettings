@@ -27,6 +27,7 @@ import android.provider.Settings;
 import android.util.Log;
 
 import com.android.internal.util.darkkat.DeviceUtils;
+import com.android.internal.util.darkkat.ThemeHelper;
 import com.android.internal.util.darkkat.WeatherHelper;
 
 import net.darkkatrom.dksettings.R;
@@ -98,7 +99,9 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         }
         detailedWeather.setEnabled(isWeatherServiceAvailable);
 
-        if (getActivity() instanceof SettingsActivity) {
+//        boolean isEnabled = ThemeHelper.notificationEnabledThemeColors(getActivity());
+        boolean isEnabled = true;
+        if (getActivity() instanceof SettingsActivity || !isEnabled) {
             removePreference("colors_notification");
         }
     }

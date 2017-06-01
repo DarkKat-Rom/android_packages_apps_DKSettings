@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 DarkKat
+<!-- Copyright (C) 2017 Darkkat
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,9 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
 
-    <!-- Theme  DarkKat -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/theme_colors_settings_title">
 
-    <color name="action_send_color">#b3ffffff</color>
-</resources>
+    <SwitchPreference
+        android:key="experimental_enable_notification_theme_colors"
+        android:title="@string/experimental_enable_notification_theme_colors_title"
+        android:summary="@string/experimental_enable_notification_theme_colors_summary" />
+
+</PreferenceScreen>

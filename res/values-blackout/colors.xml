@@ -27,6 +27,4 @@
 
     <!-- Accent color -->
     <color name="theme_accent">#ff1976d2</color>  <!-- material blue 700 -->
-
-    <color name="action_send_color">#b3ffffff</color>
 </resources>
