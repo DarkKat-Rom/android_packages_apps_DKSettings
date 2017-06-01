@@ -74,7 +74,7 @@ public final class PreferenceUtils {
 
     public static final PreferenceUtils getInstance(final Context context) {
         if (sInstance == null) {
-            sInstance = new PreferenceUtils(context);
+            sInstance = new PreferenceUtils(context.getApplicationContext());
         }
         return sInstance;
     }

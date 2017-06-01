@@ -133,6 +133,7 @@
     <!-- Categories -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
     <string name="settings_category_buttons_title">Tasten</string>
+    <string name="settings_category_experimental_title">Experimentell</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
     <!-- Main settings-->
@@ -393,6 +394,10 @@
     <string name="power_button_settings_title">Ein&#47;Aus-Taste</string>
     <string name="power_menu_show_advanced_reboot_title">Erweitertes Neustart-Menu</string>
     <string name="power_menu_show_advanced_reboot_summary">Aktivieren um erweiterte Optionen im Neustart-Menü anzuzeigen</string>
+
+    <!-- Experimental settings -->
+    <string name="experimental_enable_notification_theme_colors_title">Benachrichtigungen Theme &amp; Farben</string>
+    <string name="experimental_enable_notification_theme_colors_summary">Aktivieren um das Globale Theme zu benutzen und Benachrichtigungen einzufärben</string>
 
     <!-- Build info -->
     <string name="build_info_title">Build-Info</string>

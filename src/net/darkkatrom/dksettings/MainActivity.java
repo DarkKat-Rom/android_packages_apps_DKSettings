@@ -24,6 +24,7 @@ import android.preference.PreferenceFragment;
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.fragments.BuildInfo;
+import net.darkkatrom.dksettings.fragments.ExperimentalThemeColorsSettings;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.QuickSettings;
@@ -74,6 +75,7 @@ public class MainActivity extends PreferenceActivity {
         ColorsStatusBarExpanded.class.getName(),
         DarkKat.class.getName(),
         DetailedWeatherViewSettings.class.getName(),
+        ExperimentalThemeColorsSettings.class.getName(),
         LockScreenSettings.class.getName(),
         NetworkTrafficSettings.class.getName(),
         NotificationTestSettings.class.getName(),

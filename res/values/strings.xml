@@ -133,6 +133,7 @@
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
     <string name="settings_category_buttons_title">Buttons</string>
+    <string name="settings_category_experimental_title">Experimental</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
     <!-- Main settings-->
@@ -397,6 +398,10 @@
     <string name="power_button_settings_title">Power button</string>
     <string name="power_menu_show_advanced_reboot_title">Advanced reboot menu</string>
     <string name="power_menu_show_advanced_reboot_summary">Enable to show advanced options in the reboot menu</string>
+
+    <!-- Experimental settings -->
+    <string name="experimental_enable_notification_theme_colors_title">Notification theme &amp; colors</string>
+    <string name="experimental_enable_notification_theme_colors_summary">Enable to use the global theme and colorize the notifications</string>
 
     <!-- Build info -->
     <string name="build_info_title">Build info</string>

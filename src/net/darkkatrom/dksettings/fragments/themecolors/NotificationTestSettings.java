@@ -76,7 +76,7 @@ public class NotificationTestSettings extends SettingsColorPickerFragment implem
 
         addPreferencesFromResource(R.xml.notification_test_settings);
 
-        mUtils = new PreferenceUtils(getActivity());
+        mUtils = new PreferenceUtils(getActivity().getApplicationContext());
 
         PreferenceCategory catActions =
                 (PreferenceCategory) findPreference(PREF_CAT_ACTIONS);

@@ -73,6 +73,18 @@ limitations under the License.
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="settings_category_experimental"
+        android:title="@string/settings_category_experimental_title">
+
+        <PreferenceScreen
+            android:key="experimental_theme_colors_settings"
+            android:title="@string/theme_colors_settings_title"
+            android:icon="@drawable/ic_settings_theme_colors"
+            android:fragment="net.darkkatrom.dksettings.fragments.ExperimentalThemeColorsSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="settings_category_about_software"
         android:title="@string/settings_category_about_software_title">
 
