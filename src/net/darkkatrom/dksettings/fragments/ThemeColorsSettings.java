@@ -72,7 +72,7 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         if (mCurrentTheme == mUiModeManager.MODE_NIGHT_AUTO) {
             mAutoNightMode = (ListPreference) findPreference(PREF_AUTO_NIGHT_MODE);
             final int autoNightMode = Settings.Secure.getInt(mResolver,
-                    Settings.Secure.UI_NIGHT_AUTO_MODE, UiModeManager.MODE_NIGHT_YES);
+                    Settings.Secure.UI_NIGHT_AUTO_MODE, UiModeManager.MODE_NIGHT_YES_DARKKAT);
             mAutoNightMode.setValue(String.valueOf(autoNightMode));
             mAutoNightMode.setOnPreferenceChangeListener(this);
         } else {
