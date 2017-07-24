@@ -35,10 +35,12 @@
 
     <string-array name="auto_night_mode_entries">
         <item>@string/theme_darkkat_title</item>
+        <item>@string/theme_material_title</item>
         <item>@string/theme_blackout_title</item>
     </string-array>
 
     <string-array name="auto_night_mode_values" translatable="false">
+        <item>2</item>
         <item>2</item>
         <item>3</item>
     </string-array>
