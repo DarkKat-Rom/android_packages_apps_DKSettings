@@ -22,6 +22,8 @@ import android.preference.Preference;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 
+import com.android.internal.util.darkkat.LockscreenHelper;
+
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
 
@@ -30,8 +32,11 @@ public class LockScreenSettings extends SettingsBaseFragment implements
 
     private static final String PREF_SHOW_VISUALIZER =
             "lock_screen_show_visualizer";
+    private static final String PREF_SHOW_WEATHER_WIDGET =
+            "lock_screen_show_weather_widget";
 
-    private SwitchPreference mShow;
+    private SwitchPreference mShowVizualizer;
+    private SwitchPreference mShowWeatherWidget;
 
     private ContentResolver mResolver;
 
@@ -43,18 +48,29 @@ public class LockScreenSettings extends SettingsBaseFragment implements
 
         mResolver = getContentResolver();
 
-        mShow = (SwitchPreference) findPreference(PREF_SHOW_VISUALIZER);
-        mShow.setChecked(Settings.System.getInt(mResolver,
+        mShowVizualizer = (SwitchPreference) findPreference(PREF_SHOW_VISUALIZER);
+        mShowVizualizer.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.LOCK_SCREEN_SHOW_VISUALIZER, 0) == 1);
-        mShow.setOnPreferenceChangeListener(this);
+        mShowVizualizer.setOnPreferenceChangeListener(this);
+
+        mShowWeatherWidget = (SwitchPreference) findPreference(PREF_SHOW_WEATHER_WIDGET);
+        mShowWeatherWidget.setChecked(LockscreenHelper.showWeatherWidget(getActivity()));
+        mShowWeatherWidget.setOnPreferenceChangeListener(this);
 
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mShow) {
-            boolean value = (Boolean) newValue;
+        boolean value;
+
+        if (preference == mShowVizualizer) {
+            value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_SHOW_VISUALIZER, value ? 1 : 0);
+            return true;
+        } else if (preference == mShowWeatherWidget) {
+            value = (Boolean) newValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.LOCK_SCREEN_SHOW_WEATHER_WIDGET, value ? 1 : 0);
             return true;
         }
         return false;

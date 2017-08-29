@@ -188,10 +188,13 @@
     <!-- Weather end -->
 
     <!-- Lock screen -->
+    <string name="lock_screen_category_widgets_title">Widgets</string>
     <string name="lock_screen_show_visualizer_title">Show music visualizer</string>
     <string name="lock_screen_show_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
     <string name="lock_screen_battery_info_settings_title">Battery info</string>
     <string name="lock_screen_battery_info_settings_summary">Choose how to display the battery info on the lock screen</string>
+    <string name="lock_screen_show_weather_widget_title">Show weather widget</string>
+    <string name="lock_screen_show_weather_widget_summary">Enable to show the weather widget on the lock screen, when swiping the clock to the left</string>
 
     <!-- Battery info -->
     <string name="lock_screen_show_battery_info_title">Show battery info</string>
