@@ -187,10 +187,13 @@
     <!-- Weather end -->
 
     <!-- Lock screen -->
+    <string name="lock_screen_category_widgets_title">Widgets</string>
     <string name="lock_screen_show_visualizer_title">Musik Visualisierung anzeigen</string>
     <string name="lock_screen_show_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm anzuzeigen</string>
     <string name="lock_screen_battery_info_settings_title">Akku Information</string>
     <string name="lock_screen_battery_info_settings_summary">Wähle wie die Akku Informationen auf dem Sperrbildschirm dargestellt werden</string>
+    <string name="lock_screen_show_weather_widget_title">Wetter Widget anzeigen</string>
+    <string name="lock_screen_show_weather_widget_summary">Aktivieren um das Wetter Widget anzuzeigen, wenn die Uhr nach links gewischt wird</string>
 
     <!-- Battery info -->
     <string name="lock_screen_show_battery_info_title">Akku-Informationen anzeigen</string>
