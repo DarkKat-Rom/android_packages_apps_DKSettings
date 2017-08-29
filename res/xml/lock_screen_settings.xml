@@ -29,4 +29,15 @@
         android:title="@string/lock_screen_battery_info_settings_title"
         android:summary="@string/lock_screen_battery_info_settings_summary"
         android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.BatteryInfoSettings" />
+
+    <PreferenceCategory
+        android:key="lock_screen_category_widgets"
+        android:title="@string/lock_screen_category_widgets_title">
+
+        <SwitchPreference
+            android:key="lock_screen_show_weather_widget"
+            android:title="@string/lock_screen_show_weather_widget_title"
+            android:summary="@string/lock_screen_show_weather_widget_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
 </PreferenceScreen>
