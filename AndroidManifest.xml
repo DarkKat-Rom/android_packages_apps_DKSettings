@@ -128,7 +128,7 @@
 
         <activity android:name="SettingsActivity$PowerButtonSettingsActivity"
                 android:icon="@drawable/ic_settings_power_button"
-                android:label="@string/power_button_settings_title"
+                android:label="@string/power_menu_settings_title"
                 android:theme="@android:style/Theme.Material.Settings"
                 android:exported="true">
             <intent-filter>

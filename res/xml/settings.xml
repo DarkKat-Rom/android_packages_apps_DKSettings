@@ -65,8 +65,8 @@ limitations under the License.
         android:title="@string/settings_category_buttons_title">
 
         <PreferenceScreen
-            android:key="power_button_settings"
-            android:title="@string/power_button_settings_title"
+            android:key="power_menu_settings"
+            android:title="@string/power_menu_settings_title"
             android:icon="@drawable/ic_settings_power_button"
             android:fragment="net.darkkatrom.dksettings.fragments.PowerButtonSettings" />
 

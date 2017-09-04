@@ -416,4 +416,22 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <string-array name="power_menu_advanced_restart_mode_entries">
+        <item>@string/power_menu_advanced_restart_mode_always_entry</item>
+        <item>@string/power_menu_advanced_restart_mode_never_entry</item>
+        <item>@string/power_menu_advanced_restart_mode_hide_on_secure_lock_screen_entry</item>
+    </string-array>
+
+    <string-array name="power_menu_advanced_restart_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="power_menu_advanced_restart_mode_summary_titles">
+        <item>@string/power_menu_advanced_restart_mode_always_summary</item>
+        <item>@string/power_menu_advanced_restart_mode_never_summary</item>
+        <item>@string/power_menu_advanced_restart_mode_hide_on_secure_lock_screen_summary</item>
+    </string-array>
 </resources>
