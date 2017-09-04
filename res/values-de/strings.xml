@@ -347,9 +347,20 @@
     <string name="slim_recents_show_topmost_pinning_enabled_summary">Bildschirmfixierung ist aktiviert, der Aktuellen Task wird immer angezeigt.</string>
 
     <!-- Power button settings -->
-    <string name="power_button_settings_title">Ein&#47;Aus-Taste</string>
-    <string name="power_menu_show_advanced_reboot_title">Erweitertes Neustart-Menu</string>
-    <string name="power_menu_show_advanced_reboot_summary">Aktivieren um erweiterte Optionen im Neustart-Menü anzuzeigen</string>
+    <string name="power_menu_settings_title">Ein&#47;Aus-Menu</string>
+    <string name="power_menu_category_power_off_title">Ausschalten</string>
+    <string name="power_menu_category_restart_title">Neu starten</string>
+    <string name="power_menu_confirm_power_off_title">Ausschalten bestätigen</string>
+    <string name="power_menu_confirm_power_off_summary">Aktivieren um vor dem Herunterfahren einen Bestätigungs-Dialog anzuzeigen, deaktivieren um direkt ohne Bestätigung herunterzufahren.</string>
+    <string name="power_menu_advanced_restart_mode_title">Erweiterte Neustart-Optionen</string>
+    <string name="power_menu_advanced_restart_mode_always_summary">Erweiterte Neustart-Optionen werden immer angezeigt.</string>
+    <string name="power_menu_advanced_restart_mode_never_summary">Erweiterte Neustart-Optionen werden nie angezeigt.</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_summary">Erweiterte Neustart-Optionen werden nur auf einem sicheren Sperrbildschirm verborgen.</string>
+    <string name="power_menu_advanced_restart_mode_always_entry">Immer</string>
+    <string name="power_menu_advanced_restart_mode_never_entry">Nie</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_entry">Auf einem sicheren Sperrbildschirm verbergen</string>
+    <string name="power_menu_confirm_restart_title">Neustart bestätigen</string>
+    <string name="power_menu_confirm_restart_summary">Aktivieren um vor dem Neustarten einen Bestätigungs-Dialog anzuzeigen, deaktivieren um direkt ohne Bestätigung neuzustarten.</string>
 
     <!-- Build info -->
     <string name="build_info_title">Build-Info</string>

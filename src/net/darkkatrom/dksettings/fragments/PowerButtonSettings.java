@@ -18,6 +18,7 @@ package net.darkkatrom.dksettings.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -28,10 +29,13 @@ import net.darkkatrom.dksettings.SettingsBaseFragment;
 public class PowerButtonSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_SHOW_ADVANCED_REBOOT =
-            "power_menu_show_advanced_reboot";
+    private static final String PREF_CONFIRM_POWER_OFF     = "power_menu_confirm_power_off";
+    private static final String PREF_ADVANCED_RESTART_MODE = "power_menu_advanced_restart_mode";
+    private static final String PREF_CONFIRM_RESTART       = "power_menu_confirm_restart";
 
-    private SwitchPreference mShowAdvancedReboot;
+    private SwitchPreference mConfirmPowerOff;
+    private ListPreference mAdvancedRestartMode;
+    private SwitchPreference mConfirmRestart;
 
     private ContentResolver mResolver;
 
@@ -43,20 +47,51 @@ public class PowerButtonSettings extends SettingsBaseFragment implements
 
         mResolver = getContentResolver();
 
-        mShowAdvancedReboot =
-                (SwitchPreference) findPreference(PREF_SHOW_ADVANCED_REBOOT);
-        mShowAdvancedReboot.setChecked((Settings.System.getInt(mResolver,
-                Settings.System.POWER_MENU_SHOW_ADVANCED_REBOOT, 0) == 1));
-        mShowAdvancedReboot.setOnPreferenceChangeListener(this);
+        mConfirmPowerOff =
+                (SwitchPreference) findPreference(PREF_CONFIRM_POWER_OFF);
+        mConfirmPowerOff.setChecked((Settings.System.getInt(mResolver,
+                Settings.System.POWER_MENU_CONFIRM_POWER_OFF, 0) == 1));
+        mConfirmPowerOff.setOnPreferenceChangeListener(this);
+
+        mAdvancedRestartMode = (ListPreference) findPreference(PREF_ADVANCED_RESTART_MODE);
+        final int advancedRestartMode = Settings.System.getInt(mResolver,
+                    Settings.System.POWER_MENU_ADVANCED_RESTART_MODE, 2);
+        mAdvancedRestartMode.setValue(String.valueOf(advancedRestartMode));
+        mAdvancedRestartMode.setSummary(getAdvancedRestartModeSummary(advancedRestartMode));
+        mAdvancedRestartMode.setOnPreferenceChangeListener(this);
+
+        mConfirmRestart =
+                (SwitchPreference) findPreference(PREF_CONFIRM_RESTART);
+        mConfirmRestart.setChecked((Settings.System.getInt(mResolver,
+                Settings.System.POWER_MENU_CONFIRM_RESTART, 0) == 1));
+        mConfirmRestart.setOnPreferenceChangeListener(this);
+    }
+
+    private String getAdvancedRestartModeSummary(int mode) {
+        String[] titles = getResources().getStringArray(
+                R.array.power_menu_advanced_restart_mode_summary_titles);
+        return titles[mode];
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+       boolean value;
 
-        if (preference == mShowAdvancedReboot) {
-            boolean value = (Boolean) objValue;
+        if (preference == mConfirmPowerOff) {
+            value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
-                    Settings.System.POWER_MENU_SHOW_ADVANCED_REBOOT, value ? 1 : 0);
+                    Settings.System.POWER_MENU_CONFIRM_POWER_OFF, value ? 1 : 0);
+            return true;
+        } else if (preference == mAdvancedRestartMode) {
+            int intValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.POWER_MENU_ADVANCED_RESTART_MODE, intValue);
+            mAdvancedRestartMode.setSummary(getAdvancedRestartModeSummary(intValue));
+            return true;
+        } else if (preference == mConfirmRestart) {
+            value = (Boolean) newValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.POWER_MENU_CONFIRM_RESTART, value ? 1 : 0);
             return true;
         }
         return false;

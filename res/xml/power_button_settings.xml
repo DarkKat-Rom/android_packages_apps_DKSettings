@@ -16,11 +16,33 @@ limitations under the License.
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/power_button_settings_title">
+    android:title="@string/power_menu_settings_title">
 
-    <SwitchPreference
-        android:key="power_menu_show_advanced_reboot"
-        android:title="@string/power_menu_show_advanced_reboot_title"
-        android:summary="@string/power_menu_show_advanced_reboot_summary" />
+    <PreferenceCategory
+        android:key="power_menu_category_power_off_title"
+        android:title="@string/power_menu_category_power_off_title">
+
+        <SwitchPreference
+            android:key="power_menu_confirm_power_off"
+            android:title="@string/power_menu_confirm_power_off_title"
+            android:summary="@string/power_menu_confirm_power_off_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="power_menu_category_restart"
+        android:title="@string/power_menu_category_restart_title">
+
+        <ListPreference
+            android:key="power_menu_advanced_restart_mode"
+            android:title="@string/power_menu_advanced_restart_mode_title"
+            android:entries="@array/power_menu_advanced_restart_mode_entries"
+            android:entryValues="@array/power_menu_advanced_restart_mode_values" />
+
+        <SwitchPreference
+            android:key="power_menu_confirm_restart"
+            android:title="@string/power_menu_confirm_restart_title"
+            android:summary="@string/power_menu_confirm_restart_summary" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
-
