@@ -154,7 +154,8 @@
     <string name="colors_detailed_weather_view_summary">Wähle die Farben mit denen die Detaillierte Wetteransicht eingefärbt wird</string>
     <string name="colors_lock_screen_summary">Wähle die Farben mit denen Text und Symbole auf dem Sperrbildschirm eingefärbt werden</string>
     <string name="colors_status_bar_summary">Wähle die Farben mit denen Text und Symbole in der Statusleiste eingefärbt werden</string>
-    <string name="colors_status_bar_expanded_summary">Wähle die Farben mit denen der Inhalt in der Erweiterten Statusleiste eingefärbt werden</string>
+    <string name="colors_status_bar_expanded_and_volume_dialog_title">Erweiterten Statusleiste &amp; Lautstärke-Dialog</string>
+    <string name="colors_status_bar_expanded_and_volume_dialog_summary">Wähle die Farben mit denen der Inhalt der Erweiterten Statusleiste und dem Lautstärke-Dialog eingefärbt werden</string>
     <string name="colors_navigation_bar_summary">Wähle die Farben mit denen Symbole und Ripple Effekt in der Navigationsleiste eingefärbt werden</string>
     <string name="colors_recents_summary">Wähle die Farben mit denen der Anwendungsverlauf eingefärbt werden</string>
 

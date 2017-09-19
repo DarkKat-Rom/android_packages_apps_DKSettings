@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/status_bar_expanded_title">
+    android:title="@string/colors_status_bar_expanded_and_volume_dialog_title">
 
     <SwitchPreference
         android:key="colors_status_bar_expanded_use_theme_colors"
