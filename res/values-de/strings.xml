@@ -140,7 +140,6 @@
     <string name="theme_summary">%s</string>
     <string name="theme_night_darkkat_title">DarkKat (Nacht)</string>
     <string name="theme_night_material_title">Material (Nacht)</string>
-    <string name="theme_day_whiteout_title">Whiteout (Tag, Material light)</string>
     <string name="theme_day_material_light_title">Material Light (Tag)</string>
     <string name="theme_night_blackout_title">Blackout (Nacht)</string>
     <string name="theme_auto_title">Automatisch Tag/Nacht</string>
@@ -148,7 +147,6 @@
     <string name="auto_night_mode_summary">%s</string>
     <string name="theme_darkkat_title">DarkKat</string>
     <string name="theme_material_title">Material</string>
-    <string name="theme_whiteout_title">Whiteout (Material light)</string>
     <string name="theme_material_light_title">Material Light</string>
     <string name="theme_blackout_title">Blackout</string>
     <string name="colors_detailed_weather_view_summary">Wähle die Farben mit denen die Detaillierte Wetteransicht eingefärbt wird</string>
