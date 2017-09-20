@@ -18,7 +18,6 @@
     <string-array name="theme_entries">
         <item>@string/theme_night_darkkat_title</item>
         <item>@string/theme_night_material_title</item>
-        <item>@string/theme_day_whiteout_title</item>
         <item>@string/theme_day_material_light_title</item>
         <item>@string/theme_night_blackout_title</item>
         <item>@string/theme_auto_title</item>
@@ -27,7 +26,6 @@
     <string-array name="theme_values" translatable="false">
         <item>3</item>
         <item>2</item>
-        <item>4</item>
         <item>1</item>
         <item>5</item>
         <item>0</item>
