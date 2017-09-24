@@ -23,7 +23,7 @@ limitations under the License.
         android:summary="@string/weather_config_summary">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="net.darkkatroms.weather.SettingsActivity"
+            android:targetClass="net.darkkatroms.weather.activities.SettingsActivity"
             android:targetPackage="net.darkkatroms.weather" />
     </PreferenceScreen>
 
