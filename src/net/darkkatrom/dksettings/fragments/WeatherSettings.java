@@ -27,6 +27,7 @@ import com.android.internal.util.darkkat.DeviceUtils;
 import com.android.internal.util.darkkat.WeatherHelper;
 import com.android.internal.util.darkkat.WeatherServiceControllerImpl;
 
+import net.darkkatrom.dksettings.MainActivity;
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.SettingsBaseFragment;
 
@@ -55,6 +56,10 @@ public class WeatherSettings extends SettingsBaseFragment {
                     getResources().getString(R.string.weather_service_missing_summary));
         }
         weatherConfig.setEnabled(isWeatherServiceAvailable);
+
+        if (getActivity() instanceof MainActivity) {
+            weatherConfig.setIntent(WeatherHelper.getWeatherServiceAppSettingsIntent());
+        }
 
         if (!isWeatherServiceAvailable) {
             removePreference("weather_detailed_weather_view_settings");
