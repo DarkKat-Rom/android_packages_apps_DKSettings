@@ -61,6 +61,18 @@ limitations under the License.
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="settings_category_app_drawer"
+        android:title="@string/settings_category_app_drawer_title">
+
+        <PreferenceScreen
+            android:key="app_drawer_shortcuts"
+            android:title="@string/app_drawer_shortcuts_title"
+            android:icon="@drawable/ic_settings_app_drawer_shortcuts"
+            android:fragment="net.darkkatrom.dksettings.fragments.AppDrawerShortcutsSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="settings_category_buttons"
         android:title="@string/settings_category_buttons_title">
 

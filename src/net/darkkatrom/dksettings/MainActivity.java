@@ -23,6 +23,7 @@ import android.preference.PreferenceFragment;
 
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
+import net.darkkatrom.dksettings.fragments.AppDrawerShortcutsSettings;
 import net.darkkatrom.dksettings.fragments.BuildInfo;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
@@ -57,6 +58,7 @@ import java.util.List;
 public class MainActivity extends PreferenceActivity {
 
     private static final String[] ENTRY_FRAGMENTS = {
+        AppDrawerShortcutsSettings.class.getName(),
         AmbientDisplayBatteryMeterSettings.class.getName(),
         BatteryInfoSettings.class.getName(),
         BatteryMeterSettings.class.getName(),
