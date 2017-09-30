@@ -128,6 +128,7 @@
 
     <!-- Categories -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
+    <string name="settings_category_app_drawer_title">App-Übersicht</string>
     <string name="settings_category_buttons_title">Tasten</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
@@ -344,6 +345,10 @@
     <string name="slim_recents_show_topmost_title">Aktueller Task</string>
     <string name="slim_recents_show_topmost_summary">Aktivieren um den Aktuellen Task anzuzeigen</string>
     <string name="slim_recents_show_topmost_pinning_enabled_summary">Bildschirmfixierung ist aktiviert, der Aktuellen Task wird immer angezeigt.</string>
+
+    <!-- App drawer shortcuts settings -->
+    <string name="app_drawer_shortcut_title">Verknüpfungen</string>
+    <string name="app_drawer_show_darkkat_shortcut_summary">Aktivieren um eine Verknüfung zu den DarkKat Einstellungen in der App-Übersicht anzuzeigen.</string>
 
     <!-- Power button settings -->
     <string name="power_menu_settings_title">Ein&#47;Aus-Menu</string>

@@ -129,6 +129,7 @@
 
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
+    <string name="settings_category_app_drawer_title">App drawer</string>
     <string name="settings_category_buttons_title">Buttons</string>
     <string name="settings_category_about_software_title">Software Info</string>
 
@@ -349,6 +350,10 @@
     <string name="slim_recents_show_topmost_title">Show topmost task</string>
     <string name="slim_recents_show_topmost_summary">Enable to show the topmost task</string>
     <string name="slim_recents_show_topmost_pinning_enabled_summary">Screen pinning is enabled, topmost task will always be shown.</string>
+
+    <!-- App drawer shortcuts settings -->
+    <string name="app_drawer_shortcuts_title">Shortcuts</string>
+    <string name="app_drawer_show_darkkat_shortcut_summary">Enable to show a shortcut to Darkkat settings in the app drawer.</string>
 
     <!-- Power button settings -->
     <string name="power_menu_settings_title">Power menu</string>

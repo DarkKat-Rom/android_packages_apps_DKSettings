@@ -15,12 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/app_name" />
 
         <activity
             android:name=".SettingsActivity"
@@ -29,6 +24,15 @@
 			android:exported="true"
             android:taskAffinity=""
             android:excludeFromRecents="true" />
+
+        <activity-alias
+            android:name=".LauncherActivity"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <activity android:name="SettingsActivity$ThemeColorsSettingsActivity"
                 android:icon="@drawable/ic_settings_theme_colors"
@@ -124,6 +128,22 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                     android:value="com.android.settings.category.ui" />
+        </activity>
+
+        <activity android:name="SettingsActivity$AppDrawerShortcutsSettingsActivity"
+                android:icon="@drawable/ic_settings_app_drawer_shortcuts"
+                android:label="@string/app_drawer_shortcuts_title"
+                android:theme="@android:style/Theme.Material.Settings"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                    android:value="com.android.settings.category.appDrawer" />
         </activity>
 
         <activity android:name="SettingsActivity$PowerButtonSettingsActivity"

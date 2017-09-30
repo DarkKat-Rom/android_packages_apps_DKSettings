@@ -24,6 +24,7 @@ import android.preference.PreferenceFragment;
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.fragments.BuildInfo;
+import net.darkkatrom.dksettings.fragments.AppDrawerShortcutsSettings;
 import net.darkkatrom.dksettings.fragments.LockScreenSettings;
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.QuickSettings;
@@ -57,6 +58,7 @@ import java.util.List;
 public class SettingsActivity extends PreferenceActivity {
 
     private static final String[] ENTRY_FRAGMENTS = {
+        AppDrawerShortcutsSettings.class.getName(),
         AmbientDisplayBatteryMeterSettings.class.getName(),
         BatteryInfoSettings.class.getName(),
         BatteryMeterSettings.class.getName(),
@@ -186,6 +188,20 @@ public class SettingsActivity extends PreferenceActivity {
             if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
                 getFragmentManager().beginTransaction()
                         .replace(android.R.id.content, new RecentsSettings())
+                        .commit();
+            }
+        }
+    }
+
+    public static class AppDrawerShortcutsSettingsActivity extends SettingsActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, new AppDrawerShortcutsSettings())
                         .commit();
             }
         }
