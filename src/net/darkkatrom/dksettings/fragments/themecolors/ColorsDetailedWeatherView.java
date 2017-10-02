@@ -137,9 +137,9 @@ public class ColorsDetailedWeatherView extends SettingsColorPickerFragment imple
 
             mAccentColor =
                     (ColorPickerPreference) findPreference(PREF_ACCENT_COLOR);
-            intColor = DetailedWeatherColorHelper.getAccentColor(getActivity());
+            intColor = DetailedWeatherColorHelper.getWeatherAccentColor(getActivity());
             mAccentColor.setNewColor(intColor);
-            mAccentColor.setResetColor(DetailedWeatherThemeHelper.getAccentColor(getActivity()));
+            mAccentColor.setResetColor(DetailedWeatherThemeHelper.getWeatherAccentColor(getActivity()));
             mAccentColor.setResetColorTitle(R.string.reset_theme_default_title);
             mAccentColor.setOnPreferenceChangeListener(this);
 
@@ -269,12 +269,9 @@ public class ColorsDetailedWeatherView extends SettingsColorPickerFragment imple
                 showDialogInner(DLG_RESET);
                 return true;
             case MENU_SHOW:
-                Bundle b = new Bundle();
-                b.putInt(WeatherHelper.DAY_INDEX, 0);
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setComponent(WeatherServiceControllerImpl.COMPONENT_DETAILED_WEATHER);
-                intent.putExtras(b);
+                intent.setComponent(WeatherServiceControllerImpl.COMPONENT_DK_WEATHER);
                 startActivity(intent);
                 return true;
              default:
@@ -409,7 +406,7 @@ public class ColorsDetailedWeatherView extends SettingsColorPickerFragment imple
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.DETAILED_WEATHER_ACCENT_COLOR,
-                                    DetailedWeatherThemeHelper.getAccentColor(getActivity()));
+                                    DetailedWeatherThemeHelper.getWeatherAccentColor(getActivity()));
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.DETAILED_WEATHER_STATUS_BAR_BG_COLOR,
                                     DetailedWeatherThemeHelper.getStatusBarBgColor(getActivity()));
