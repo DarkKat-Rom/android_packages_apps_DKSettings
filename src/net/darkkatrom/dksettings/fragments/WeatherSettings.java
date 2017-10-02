@@ -79,12 +79,9 @@ public class WeatherSettings extends SettingsBaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case Menu.FIRST:
-                Bundle b = new Bundle();
-                b.putInt(WeatherHelper.DAY_INDEX, 0);
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setComponent(WeatherServiceControllerImpl.COMPONENT_DETAILED_WEATHER);
-                intent.putExtras(b);
+                intent.setComponent(WeatherServiceControllerImpl.COMPONENT_DK_WEATHER);
                 startActivity(intent);
                 return true;
              default:
