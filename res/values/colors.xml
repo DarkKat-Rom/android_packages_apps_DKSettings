@@ -15,7 +15,7 @@
 -->
 <resources>
 
-    <!-- General theme -->
+    <!-- Day/Night (Material, Material-Light and DarkKat) theme colors -->
     <color name="theme_primary">#ff2196f3</color>  <!-- material blue 500 -->
     <color name="theme_primary_dark">#ff1976d2</color>  <!-- material blue 700 -->
     <color name="theme_accent">#ff5a8596</color>  <!-- 12% holo blue light over material blue grey 500 -->
