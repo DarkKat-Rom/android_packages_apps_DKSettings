@@ -15,7 +15,7 @@
 -->
 <resources>
 
-    <!-- Theme  Blackout -->
+    <!-- Night (Blackout) theme colors -->
     <color name="primary_color_blackout">#ff101010</color>
     <color name="blackout_bg">#ff000000</color> <!-- black -->
 
