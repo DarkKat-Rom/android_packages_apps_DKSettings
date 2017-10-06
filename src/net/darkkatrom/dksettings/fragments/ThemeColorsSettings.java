@@ -79,23 +79,23 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
             removePreference(PREF_AUTO_NIGHT_MODE);
         }
 
-        final boolean isWeatherServiceAvailable =
-                WeatherHelper.isWeatherServiceAvailable(getActivity());
-        final int weatherServiceAvailability = WeatherHelper.getWeatherServiceAvailability(getActivity());
+        final boolean isWeatherAvailable =
+                WeatherHelper.isWeatherAvailable(getActivity());
+        final int weatherAvailability = WeatherHelper.getWeatherAvailability(getActivity());
 
         Preference detailedWeather =
                 findPreference("colors_detailed_weather_view");
 
-        if (weatherServiceAvailability == WeatherHelper.PACKAGE_DISABLED) {
+        if (weatherAvailability == WeatherHelper.PACKAGE_DISABLED) {
             final CharSequence summary = getResources().getString(DeviceUtils.isPhone(getActivity())
-                    ? R.string.weather_service_disabled_summary
-                    : R.string.weather_service_disabled_tablet_summary);
+                    ? R.string.dk_weather_disabled_summary
+                    : R.string.dk_weather_disabled_tablet_summary);
             detailedWeather.setSummary(summary);
-        } else if (weatherServiceAvailability == WeatherHelper.PACKAGE_MISSING) {
+        } else if (weatherAvailability == WeatherHelper.PACKAGE_MISSING) {
             detailedWeather.setSummary(
-                    getResources().getString(R.string.weather_service_missing_summary));
+                    getResources().getString(R.string.dk_weather_missing_summary));
         }
-        detailedWeather.setEnabled(isWeatherServiceAvailable);
+        detailedWeather.setEnabled(isWeatherAvailable);
     }
 
     @Override

@@ -39,29 +39,29 @@ public class WeatherSettings extends SettingsBaseFragment {
 
         addPreferencesFromResource(R.xml.weather_settings);
 
-        final boolean isWeatherServiceAvailable =
-                WeatherHelper.isWeatherServiceAvailable(getActivity());
-        final int weatherServiceAvailability = WeatherHelper.getWeatherServiceAvailability(getActivity());
+        final boolean isWeatherAvailable =
+                WeatherHelper.isWeatherAvailable(getActivity());
+        final int weatherAvailability = WeatherHelper.getWeatherAvailability(getActivity());
 
         Preference weatherConfig =
                 findPreference("weather_config");
 
-        if (weatherServiceAvailability == WeatherHelper.PACKAGE_DISABLED) {
+        if (weatherAvailability == WeatherHelper.PACKAGE_DISABLED) {
             final CharSequence summary = getResources().getString(DeviceUtils.isPhone(getActivity())
-                    ? R.string.weather_service_disabled_summary
-                    : R.string.weather_service_disabled_tablet_summary);
+                    ? R.string.dk_weather_disabled_summary
+                    : R.string.dk_weather_disabled_tablet_summary);
             weatherConfig.setSummary(summary);
-        } else if (weatherServiceAvailability == WeatherHelper.PACKAGE_MISSING) {
+        } else if (weatherAvailability == WeatherHelper.PACKAGE_MISSING) {
             weatherConfig.setSummary(
-                    getResources().getString(R.string.weather_service_missing_summary));
+                    getResources().getString(R.string.dk_weather_missing_summary));
         }
-        weatherConfig.setEnabled(isWeatherServiceAvailable);
+        weatherConfig.setEnabled(isWeatherAvailable);
 
         if (getActivity() instanceof MainActivity) {
-            weatherConfig.setIntent(WeatherHelper.getWeatherServiceAppSettingsIntent());
+            weatherConfig.setIntent(WeatherHelper.getWeatherAppSettingsIntent());
         }
 
-        if (!isWeatherServiceAvailable) {
+        if (!isWeatherAvailable) {
             removePreference("weather_detailed_weather_view_settings");
         } else {
             setHasOptionsMenu(true);

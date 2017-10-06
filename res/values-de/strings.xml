@@ -38,9 +38,9 @@
     <string name="weather_title">Wetter</string>
     <string name="qs_title">Schnelleinstellungen</string>
     <string name="detailed_weather_view_title">Detaillierte Wetteransicht</string>
-    <string name="weather_service_missing_summary">\"DK Wetter Dienst\" ist nicht installiert.\nUm die Wetter Funtion nutzen zu können, muss die App DKWeatherService \"DK Wetter Dienst\" installiert sein</string>
-    <string name="weather_service_disabled_summary">\"DK Wetter Dienst\" ist deaktiviert.\nUm die Wetter Funtion nutzen zu können, aktiviere die App DKWeatherService \"DK Wetter Dienst\" und starte das Telefon neu</string>
-    <string name="weather_service_disabled_tablet_summary">\"DK Wetter Dienst\" ist deaktiviert.\nUm die Wetter Funtion nutzen zu können, aktiviere die App DKWeatherService \"DK Wetter Dienst\" und starte das Tablet neu</string>
+    <string name="dk_weather_missing_summary">\"DarkKat Wetter\" ist nicht installiert.\nUm die Wetter Funtion nutzen zu können, muss die App DKWeather \"DarkKat Wetter\" installiert sein</string>
+    <string name="dk_weather_disabled_summary">\"DarkKat Wetter\" ist deaktiviert.\nUm die Wetter Funtion nutzen zu können, aktiviere die App DKWeather \"DarkKat Wetter\" und starte das Telefon neu</string>
+    <string name="dk_weather_disabled_tablet_summary">\"DarkKat Wetter\" ist deaktiviert.\nUm die Wetter Funtion nutzen zu können, aktiviere die App DKWeather \"DarkKat Wetter\" und starte das Tablet neu</string>
     <string name="customize_title">Anpassen</string>
     <string name="options_title">Optionen</string>
     <string name="battery_meter_title">Akkuanzeige</string>
