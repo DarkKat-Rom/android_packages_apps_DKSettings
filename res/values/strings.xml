@@ -39,9 +39,9 @@
     <string name="weather_title">Weather</string>
     <string name="qs_title">Quick settings</string>
     <string name="detailed_weather_view_title">Detailed weather view</string>
-    <string name="weather_service_missing_summary">\'DK Weather Service\' is not installed.\nTo use the weather feature, the app DKWeatherService \'DK Weather Service\' has to be installed</string>
-    <string name="weather_service_disabled_summary">\'DK Weather Service\' is disabled.\nTo use the weather feature, enable the app DKWeatherService \'DK Weather Service\', and reboot your phone</string>
-    <string name="weather_service_disabled_tablet_summary">\'DK Weather Service\' is disabled.\nTo use the weather feature, enable the app DKWeatherService \'DK Weather Service\', and reboot your tablet</string>
+    <string name="dk_weather_missing_summary">\'DarkKat Weather\' is not installed.\nTo use the weather feature, the app DKWeather \'DarkKat Weather\' has to be installed</string>
+    <string name="dk_weather_disabled_summary">\'DarkKat Weather\' is disabled.\nTo use the weather feature, enable the app DKWeather \'DarkKat Weather\', and reboot your phone</string>
+    <string name="dk_weather_disabled_tablet_summary">\'DarkKat Weather\' is disabled.\nTo use the weather feature, enable the app DKWeather \'DarkKat Weather\', and reboot your tablet</string>
     <string name="customize_title">Customize</string>
     <string name="options_title">Options</string>
     <string name="battery_meter_title">Battery meter</string>
