@@ -15,5 +15,28 @@
 -->
 <resources>
 
+    <!-- Allgemein -->
     <string name="app_name">DarkKat Einstellungen</string>
+
+    <!-- Haupteinstellungen -->
+
+    <!-- Kategorien -->
+    <string name="settings_category_buttons_title">Tasten</string>
+    <!-- Haupteinstellungen Ende -->
+
+    <!-- Einstellungen der Ein/Aus-Taste-->
+    <string name="power_menu_settings_title">Ein&#47;Aus-Menu</string>
+    <string name="power_menu_category_power_off_title">Ausschalten</string>
+    <string name="power_menu_category_restart_title">Neu starten</string>
+    <string name="power_menu_confirm_power_off_title">Ausschalten bestätigen</string>
+    <string name="power_menu_confirm_power_off_summary">Aktivieren um vor dem Herunterfahren einen Bestätigungs-Dialog anzuzeigen, deaktivieren um direkt ohne Bestätigung herunterzufahren.</string>
+    <string name="power_menu_advanced_restart_mode_title">Erweiterte Neustart-Optionen</string>
+    <string name="power_menu_advanced_restart_mode_always_summary">Erweiterte Neustart-Optionen werden immer angezeigt.</string>
+    <string name="power_menu_advanced_restart_mode_never_summary">Erweiterte Neustart-Optionen werden nie angezeigt.</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_summary">Erweiterte Neustart-Optionen werden nur auf einem sicheren Sperrbildschirm verborgen.</string>
+    <string name="power_menu_advanced_restart_mode_always_entry">Immer</string>
+    <string name="power_menu_advanced_restart_mode_never_entry">Nie</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_entry">Auf einem sicheren Sperrbildschirm verbergen</string>
+    <string name="power_menu_confirm_restart_title">Neustart bestätigen</string>
+    <string name="power_menu_confirm_restart_summary">Aktivieren um vor dem Neustarten einen Bestätigungs-Dialog anzuzeigen, deaktivieren um direkt ohne Bestätigung neuzustarten.</string>
 </resources>

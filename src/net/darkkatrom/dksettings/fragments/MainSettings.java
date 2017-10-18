@@ -14,7 +14,18 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.dksettings;
+package net.darkkatrom.dksettings.fragments;
 
-public class SettingsActivity extends MainActivity {
+import android.os.Bundle;
+
+import net.darkkatrom.dksettings.R;
+
+public class MainSettings extends SettingsBaseFragment {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        addPreferencesFromResource(R.xml.main_settings);
+    }
 }

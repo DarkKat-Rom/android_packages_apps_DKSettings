@@ -16,15 +16,31 @@
 
 package net.darkkatrom.dksettings;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.os.Bundle;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 
-public class MainActivity extends PreferenceActivity {
+import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
+import net.darkkatrom.dksettings.fragments.MainSettings;
 
-    private static final String[] ENTRY_FRAGMENTS = {
-        ""
-    };
+public class MainActivity extends Activity implements
+        PreferenceFragment.OnPreferenceStartFragmentCallback {
+
+    public static final String EXTRA_SHOW_FRAGMENT = ":android:show_fragment";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
+            getFragmentManager().beginTransaction()
+                    .replace(android.R.id.content, new MainSettings())
+                    .commit();
+        }
+    }
 
     @Override
     public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
@@ -33,11 +49,21 @@ public class MainActivity extends PreferenceActivity {
         return true;
     }
 
-    @Override
-    protected boolean isValidFragment(String fragmentName) {
-        for (int i = 0; i < ENTRY_FRAGMENTS.length; i++) {
-            if (ENTRY_FRAGMENTS[i].equals(fragmentName)) return true;
+    public void startPreferencePanel(String fragmentClass, Bundle args, int titleRes,
+        CharSequence titleText, Fragment resultTo, int resultRequestCode) {
+        Fragment f = Fragment.instantiate(this, fragmentClass, args);
+        if (resultTo != null) {
+            f.setTargetFragment(resultTo, resultRequestCode);
         }
-        return super.isValidFragment(fragmentName);
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(android.R.id.content, f);
+        if (titleRes != 0) {
+            transaction.setBreadCrumbTitle(titleRes);
+        } else if (titleText != null) {
+            transaction.setBreadCrumbTitle(titleText);
+        }
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
+        transaction.commitAllowingStateLoss();
     }
 }

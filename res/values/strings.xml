@@ -15,5 +15,28 @@
 -->
 <resources>
 
+    <!-- General -->
     <string name="app_name">DarkKat Settings</string>
+
+    <!-- Main settings -->
+
+    <!-- Categories -->
+    <string name="settings_category_buttons_title">Buttons</string>
+    <!-- Main settings end -->
+
+    <!-- Power button settings -->
+    <string name="power_menu_settings_title">Power menu</string>
+    <string name="power_menu_category_power_off_title">Power off</string>
+    <string name="power_menu_category_restart_title">Restart</string>
+    <string name="power_menu_confirm_power_off_title">Confirm power off</string>
+    <string name="power_menu_confirm_power_off_summary">Enable to show a confirm dialog before shutting down, disable to shut down without confirmation</string>
+    <string name="power_menu_advanced_restart_mode_title">Advanced restart options</string>
+    <string name="power_menu_advanced_restart_mode_always_summary">Always show advanced restart options.</string>
+    <string name="power_menu_advanced_restart_mode_never_summary">Never show advanced reboot options.</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_summary">Only hide advanced restart options,\nwhen on an secure lock screen.</string>
+    <string name="power_menu_advanced_restart_mode_always_entry">Always</string>
+    <string name="power_menu_advanced_restart_mode_never_entry">Never</string>
+    <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_entry">Hide on secure lock screen</string>
+    <string name="power_menu_confirm_restart_title">Confirm (advanced) restart</string>
+    <string name="power_menu_confirm_restart_summary">Enable to show a confirm dialog before restarting, disable to restart without confirmation</string>
 </resources>
