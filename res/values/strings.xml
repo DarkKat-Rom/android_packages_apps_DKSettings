@@ -17,11 +17,16 @@
 
     <!-- General -->
     <string name="app_name">DarkKat Settings</string>
+    <string name="darkkat_title">Darkkat</string>
+    <string name="android_title">Android</string>
+    <string name="device_title">Device</string>
 
     <!-- Main settings -->
 
     <!-- Categories -->
     <string name="settings_category_buttons_title">Buttons</string>
+    <string name="settings_category_about_device_software_title" product="default">Phone &amp; software info</string>
+    <string name="settings_category_about_device_software_title" product="tablet">Tablet &amp; software info</string>
     <!-- Main settings end -->
 
     <!-- Power button settings -->
@@ -39,4 +44,30 @@
     <string name="power_menu_advanced_restart_mode_hide_on_secure_lock_screen_entry">Hide on secure lock screen</string>
     <string name="power_menu_confirm_restart_title">Confirm (advanced) restart</string>
     <string name="power_menu_confirm_restart_summary">Enable to show a confirm dialog before restarting, disable to restart without confirmation</string>
+
+    <!-- Device- and software info -->
+    <string name="about_darkkat_summary">Show more about the installed %1$s version</string>
+    <string name="about_android_summary">Show more about the installed Android %1$s version</string>
+    <string name="about_device_summary">Show more about the %1$s</string>
+    <string name="device_info_default">"Unknown"</string>
+
+    <!-- About DarkKat -->
+    <string name="darkkat_version_title">Darkkat version</string>
+    <string name="darkkat_build_version_title">Darkkat build version</string>
+    <string name="darkkat_build_type_title">Darkkat build type</string>
+    <string name="darkkat_build_date_title">Darkkat build date</string>
+
+    <!-- About Android -->
+    <string name="android_version_title">Android version</string>
+    <string name="android_build_id_title">Android build ID</string>
+    <string name="android_kernel_version_title">Kernel version</string>
+    <string name="android_bootloader_version_title">Bootloader version</string>
+    <string name="android_baseband_version_title">Baseband version</string>
+    <string name="android_build_number_title">Build number</string>
+
+    <!-- About device -->
+    <string name="device_model_title">Model</string>
+    <string name="device_cpu_title">CPU</string>
+    <string name="device_memory_title">Memory</string>
+    <!-- Device- and software info end -->
 </resources>

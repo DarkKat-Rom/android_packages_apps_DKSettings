@@ -29,4 +29,28 @@ limitations under the License.
             android:fragment="net.darkkatrom.dksettings.fragments.PowerButtonSettings" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="settings_category_about_device_software"
+        android:title="@string/settings_category_about_device_software_title">
+
+        <PreferenceScreen
+            android:key="about_darkkat"
+            android:title="@string/darkkat_title"
+            android:icon="@drawable/ic_settings_dk"
+            android:fragment="net.darkkatrom.dksettings.fragments.deviceinfo.AboutDarkKat" />
+
+        <PreferenceScreen
+            android:key="about_android"
+            android:title="@string/android_title"
+            android:icon="@drawable/ic_settings_android"
+            android:fragment="net.darkkatrom.dksettings.fragments.deviceinfo.AboutAndroid" />
+
+        <PreferenceScreen
+            android:key="about_device"
+            android:title="@string/device_title"
+            android:icon="@drawable/ic_settings_phone"
+            android:fragment="net.darkkatrom.dksettings.fragments.deviceinfo.AboutDevice" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
