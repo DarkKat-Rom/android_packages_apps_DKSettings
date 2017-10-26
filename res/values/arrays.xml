@@ -15,6 +15,46 @@
 -->
 <resources>
 
+    <string-array name="day_night_mode_entries">
+        <item>@string/theme_night_title</item>
+        <item>@string/theme_day_title</item>
+        <item>@string/theme_auto_title</item>
+    </string-array>
+
+    <string-array name="day_night_mode_values" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="night_theme_entries">
+        <item>@string/theme_darkkat_title</item>
+        <item>@string/theme_material_title</item>
+        <item>@string/theme_darkkat_blackout_title</item>
+        <item>@string/theme_blackout_title</item>
+    </string-array>
+
+    <string-array name="night_theme_values" translatable="false">
+        <item>3</item>
+        <item>2</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="day_theme_entries">
+        <item>@string/theme_darkkat_whiteout_title</item>
+        <item>@string/theme_darkkat_day_title</item>
+        <item>@string/theme_whiteout_title</item>
+        <item>@string/theme_material_light_title</item>
+    </string-array>
+
+    <string-array name="day_theme_values" translatable="false">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>1</item>
+    </string-array>
+
     <string-array name="power_menu_advanced_restart_mode_entries">
         <item>@string/power_menu_advanced_restart_mode_always_entry</item>
         <item>@string/power_menu_advanced_restart_mode_never_entry</item>

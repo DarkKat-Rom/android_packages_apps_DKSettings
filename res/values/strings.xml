@@ -24,10 +24,32 @@
     <!-- Main settings -->
 
     <!-- Categories -->
+    <string name="settings_category_ui_title">User interface</string>
     <string name="settings_category_buttons_title">Buttons</string>
     <string name="settings_category_about_device_software_title" product="default">Phone &amp; software info</string>
     <string name="settings_category_about_device_software_title" product="tablet">Tablet &amp; software info</string>
     <!-- Main settings end -->
+
+    <!-- User interface settings -->
+    <string name="theme_colors_settings_title">Theme &amp; colors</string>
+
+    <!-- Theme & colors settings -->
+    <string name="day_night_mode_title">Day/night theme mode</string>
+    <string name="theme_summary">%s</string>
+    <string name="theme_night_title">Night</string>
+    <string name="theme_day_title">Day</string>
+    <string name="theme_auto_title">Auto day/night</string>
+    <string name="night_theme_title">Night theme</string>
+    <string name="day_theme_title">Day theme</string>
+    <string name="theme_darkkat_title">DarkKat</string>
+    <string name="theme_darkkat_whiteout_title">DarkKat (Whiteout version)</string>
+    <string name="theme_darkkat_day_title">DarkKat (Light version)</string>
+    <string name="theme_whiteout_title">Whiteout</string>
+    <string name="theme_darkkat_blackout_title">DarkKat (Blackout version)</string>
+    <string name="theme_material_title">Material</string>
+    <string name="theme_material_light_title">Material Light</string>
+    <string name="theme_blackout_title">Blackout</string>
+    <!-- User interface settings end -->
 
     <!-- Power button settings -->
     <string name="power_menu_settings_title">Power menu</string>

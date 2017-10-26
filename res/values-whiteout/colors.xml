@@ -16,11 +16,6 @@
 
 <resources>
 
-    <!-- General day/night theme, used for all themes except:
-         Theme.Material (Blackout version) and Theme.Material.Light (Whiteout version) -->
-    <style name="AppTheme" parent="@android:style/Theme.Material.DayNight.DarkActionBar">
-        <item name="android:colorPrimary">@color/theme_primary</item>
-        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
-        <item name="android:colorAccent">@color/theme_accent</item>
-    </style>
+     <!-- Theme.Material.Light (Whiteout version) -->
+    <color name="theme_primary_dark_light_status_bar">@color/material_grey_300</color>
 </resources>
