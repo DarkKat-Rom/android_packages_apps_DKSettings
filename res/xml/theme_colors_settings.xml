@@ -38,4 +38,10 @@ limitations under the License.
         android:summary="@string/theme_summary"
         android:entries="@array/day_theme_entries"
         android:entryValues="@array/day_theme_values" />
+
+    <SwitchPreference
+        android:key="use_light_status_bar"
+        android:title="@string/use_light_status_bar_title"
+        android:summary="@string/use_light_status_bar_summary" />
+
 </PreferenceScreen>

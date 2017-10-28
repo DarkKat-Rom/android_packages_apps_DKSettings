@@ -22,6 +22,10 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.provider.Settings;
+import android.view.View;
+
+import com.android.internal.util.darkkat.ThemeHelper;
 
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.MainSettings;
@@ -35,6 +39,20 @@ public class MainActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (ThemeHelper.themeSupportsOptionalĹightSB(this)) {
+            if (ThemeHelper.useLightStatusBar(this)) {
+                setTheme(R.style.ThemeOverlay_Light_LightStatusBar);
+            } else {
+                View decorView = getWindow().getDecorView();
+                int flags = decorView.getSystemUiVisibility();
+                boolean isLightStatusBar = (flags & View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+                        == View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                if (isLightStatusBar) {
+                    flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+                    decorView.setSystemUiVisibility(flags);
+                }
+            }
+        }
         if (savedInstanceState == null && getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT) == null) {
             getFragmentManager().beginTransaction()
                     .replace(android.R.id.content, new MainSettings())
@@ -65,5 +83,9 @@ public class MainActivity extends Activity implements
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.addToBackStack(null);
         transaction.commitAllowingStateLoss();
+    }
+
+    public void recreateForThemeChange() {
+        recreate();
     }
 }
