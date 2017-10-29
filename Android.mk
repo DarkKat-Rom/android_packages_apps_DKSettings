@@ -5,6 +5,15 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
+LOCAL_STATIC_JAVA_LIBRARIES := dkcolorpicker
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+    external/dkcolorpicker/res
+
+LOCAL_AAPT_FLAGS := \
+    --auto-add-overlay \
+    --extra-packages net.darkkatrom.dkcolorpicker
+
 LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_PACKAGE_NAME := DKSettings

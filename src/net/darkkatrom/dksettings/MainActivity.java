@@ -27,6 +27,8 @@ import android.view.View;
 
 import com.android.internal.util.darkkat.ThemeHelper;
 
+import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
+import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.MainSettings;
 
@@ -62,8 +64,13 @@ public class MainActivity extends Activity implements
 
     @Override
     public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
-        startPreferencePanel(pref.getFragment(), pref.getExtras(), pref.getTitleRes(),
-                pref.getTitle(), null, 0);
+        if (pref instanceof ColorPickerPreference) {
+            startPreferencePanel(pref.getFragment(), pref.getExtras(), pref.getTitleRes(),
+                    pref.getTitle(), caller, ColorPickerPreference.RESULT_REQUEST_CODE);
+        } else {
+            startPreferencePanel(pref.getFragment(), pref.getExtras(), pref.getTitleRes(),
+                    pref.getTitle(), null, 0);
+        }
         return true;
     }
 
