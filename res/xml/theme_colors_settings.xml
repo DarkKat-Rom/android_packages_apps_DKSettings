@@ -44,4 +44,8 @@ limitations under the License.
         android:title="@string/use_light_status_bar_title"
         android:summary="@string/use_light_status_bar_summary" />
 
+    <SwitchPreference
+        android:key="use_light_navigation_bar"
+        android:title="@string/use_light_navigation_bar_title"
+        android:summary="@string/use_light_navigation_bar_summary" />
 </PreferenceScreen>

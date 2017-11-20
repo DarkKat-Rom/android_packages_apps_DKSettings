@@ -51,6 +51,8 @@
     <string name="theme_blackout_title">Blackout</string>
     <string name="use_light_status_bar_title">Light status- &amp; action bar</string>
     <string name="use_light_status_bar_summary">Use a light status- &amp; action bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
+    <string name="use_light_navigation_bar_title">Light navigation bar</string>
+    <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <!-- User interface settings end -->
 
     <!-- Power button settings -->

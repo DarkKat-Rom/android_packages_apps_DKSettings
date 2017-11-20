@@ -36,10 +36,11 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "ThemeColorsSettings";
 
-    private static final String PREF_DAY_NIGHT_MODE       = "day_night_mode";
-    private static final String PREF_NIGHT_THEME          = "night_theme";
-    private static final String PREF_DAY_THEME            = "day_theme";
-    private static final String PREF_USE_LIGHT_STATUS_BAR = "use_light_status_bar";
+    private static final String PREF_DAY_NIGHT_MODE           = "day_night_mode";
+    private static final String PREF_NIGHT_THEME              = "night_theme";
+    private static final String PREF_DAY_THEME                = "day_theme";
+    private static final String PREF_USE_LIGHT_STATUS_BAR     = "use_light_status_bar";
+    private static final String PREF_USE_LIGHT_NAVIGATION_BAR = "use_light_navigation_bar";
 
     private ContentResolver mResolver;
 
@@ -47,6 +48,7 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
     private ListPreference mNightTheme;
     private ListPreference mDayTheme;
     private SwitchPreference mUseLightStatusBar;
+    private SwitchPreference mUseLightNavigationBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -112,6 +114,16 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         } else {
             removePreference(PREF_USE_LIGHT_STATUS_BAR);
         }
+
+        if (ThemeHelper.themeSupportsOptionalĹightNB(getActivity())) {
+            mUseLightNavigationBar =
+                    (SwitchPreference) findPreference(PREF_USE_LIGHT_NAVIGATION_BAR);
+            mUseLightNavigationBar.setChecked(Settings.Secure.getInt(mResolver,
+                    Settings.Secure.USE_LIGHT_NAVIGATION_BAR, 0) == 1);
+            mUseLightNavigationBar.setOnPreferenceChangeListener(this);
+        } else {
+            removePreference(PREF_USE_LIGHT_NAVIGATION_BAR);
+        }
     }
 
     @Override
@@ -142,6 +154,12 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(mResolver,
                     Settings.Secure.USE_LIGHT_STATUS_BAR, value ? 1 : 0);
+            ((MainActivity) getActivity()).recreateForThemeChange();
+            return true;
+        } else if (preference == mUseLightNavigationBar) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(mResolver,
+                    Settings.Secure.USE_LIGHT_NAVIGATION_BAR, value ? 1 : 0);
             ((MainActivity) getActivity()).recreateForThemeChange();
             return true;
         }

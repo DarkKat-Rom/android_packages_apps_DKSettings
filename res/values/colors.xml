@@ -25,5 +25,7 @@
     <color name="theme_primary_dark">#ff1976d2</color>  <!-- material blue 700 -->
     <color name="theme_accent">#ff5a8596</color>  <!-- 12% holo blue light over material blue grey 500 -->
 
+    <!-- Background color of the system bars when on light mode -->
+    <color name="background_light_system_bars">@color/material_grey_300</color>
     <color name="theme_primary_dark_light_status_bar">@color/material_grey_300</color>
 </resources>
