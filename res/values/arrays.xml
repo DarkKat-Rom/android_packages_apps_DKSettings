@@ -55,6 +55,24 @@
         <item>1</item>
     </string-array>
 
+    <string-array name="ambient_display_pulse_on_notification_entries">
+        <item>@string/always_title</item>
+        <item>@string/never_title</item>
+        <item>@string/ambient_display_pulse_on_notification_secure_lock_screen_title</item>
+    </string-array>
+
+    <string-array name="ambient_display_pulse_on_notification_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="ambient_display_pulse_on_notification_summary_titles">
+        <item>@string/ambient_display_pulse_on_notification_always_summary</item>
+        <item>@string/ambient_display_pulse_on_notification_never_summary</item>
+        <item>@string/ambient_display_pulse_on_notification_secure_lock_secreen_summary</item>
+    </string-array>
+
     <string-array name="power_menu_advanced_restart_mode_entries">
         <item>@string/power_menu_advanced_restart_mode_always_entry</item>
         <item>@string/power_menu_advanced_restart_mode_never_entry</item>

@@ -17,6 +17,8 @@
 
     <!-- General -->
     <string name="app_name">DarkKat Settings</string>
+    <string name="always_title">Always</string>
+    <string name="never_title">Never</string>
     <string name="darkkat_title">Darkkat</string>
     <string name="android_title">Android</string>
     <string name="device_title">Device</string>
@@ -26,6 +28,7 @@
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
     <string name="settings_category_buttons_title">Buttons</string>
+    <string name="settings_category_experimental_title">Experimental</string>
     <string name="settings_category_about_device_software_title" product="default">Phone &amp; software info</string>
     <string name="settings_category_about_device_software_title" product="tablet">Tablet &amp; software info</string>
     <!-- Main settings end -->
@@ -54,6 +57,24 @@
     <string name="use_light_navigation_bar_title">Light navigation bar</string>
     <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <!-- User interface settings end -->
+
+    <!-- Device settings -->
+    <string name="display_settings_title">Display</string>
+
+    <!-- Display settings -->
+    <string name="ambient_display_settings_title">Ambient display</string>
+    <string name="ambient_display_settings_summary">Choose the conditions to show the ambient display</string>
+
+    <!-- Ambient display settings -->
+    <string name="ambient_display_category_pulse_title">Show temporarily</string>
+    <string name="ambient_display_pulse_on_notification_info_title">Proximity sensor missing</string>
+    <string name="ambient_display_pulse_on_notification_info_summary">Showing a notification on the ambient display can accidentally unlock the device without a proximity sensor, when a insecure lock screen was set.</string>
+    <string name="ambient_display_pulse_on_notification_title">Notifications</string>
+    <string name="ambient_display_pulse_on_notification_secure_lock_screen_title">On a secure lock screen only</string>
+    <string name="ambient_display_pulse_on_notification_always_summary">Receiving a notifications will temporarily show the ambient display</string>
+    <string name="ambient_display_pulse_on_notification_never_summary">Receiving a notifications will never show the ambient display</string>
+    <string name="ambient_display_pulse_on_notification_secure_lock_secreen_summary">Receiving a notifications will temporarily show the ambient display,\n when a secure lock screen was set.</string>
+    <!-- Device settings end -->
 
     <!-- Power button settings -->
     <string name="power_menu_settings_title">Power menu</string>
