@@ -19,12 +19,18 @@ package net.darkkatrom.dksettings.fragments;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.preference.PreferenceCategory;
+
+import com.android.internal.util.darkkat.AmbientDisplayHelper;
 
 import net.darkkatrom.dksettings.R;
 import net.darkkatrom.dksettings.fragments.deviceinfo.DeviceInfoBaseFragment;
 
 public class MainSettings extends SettingsBaseFragment {
     private static final String PROP_DK_VERSION = "ro.dk.version";
+
+    private static final String PREF_CAT_EXPERIMENTAL              = "settings_category_experimental";
+    private static final String PREF_EXPERIMENTAL_DISPLAY_SETTINGS = "experimental_display_settings";
 
     private static final String PREF_DARKKAT = "about_darkkat";
     private static final String PREF_ANDROID = "about_android";
@@ -35,6 +41,14 @@ public class MainSettings extends SettingsBaseFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.main_settings);
+
+        if (AmbientDisplayHelper.deviceHasProximitySensor(getActivity())) {
+            PreferenceCategory catExperimental =
+                    (PreferenceCategory) findPreference(PREF_CAT_EXPERIMENTAL);
+            catExperimental.removePreference(findPreference(PREF_EXPERIMENTAL_DISPLAY_SETTINGS));
+            removePreference(PREF_CAT_EXPERIMENTAL);
+        }
+
         final String summaryDarkKat = getResources().getString(
                 R.string.about_darkkat_summary, getPropValue(PROP_DK_VERSION));
         final String summaryAndroid = getResources().getString(
