@@ -17,13 +17,24 @@
 
     <!-- Allgemein -->
     <string name="app_name">DarkKat Einstellungen</string>
+    <string name="list_preference_default_summary">%s</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">Abbrechen</string>
+    <string name="dlg_reset_values_message">Werte auf\nAndroid- oder DarkKat Standard\nzurück setzen?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_darkkat">DarkKat</string>
     <string name="always_title">Immer</string>
     <string name="never_title">Nie</string>
     <string name="darkkat_title">Darkkat</string>
     <string name="android_title">Android</string>
     <string name="device_title">Device</string>
-
-    <!-- Haupteinstellungen -->
+    <string name="status_bar_title">Statusleiste</string>
+    <string name="position_title">Position</string>
+    <string name="position_right_title">Rechts</string>
+    <string name="position_centered_title">Zentriert</string>
+    <string name="normal_title">Normal</string>
+    <string name="hidden_title">Verborgen</string>
 
     <!-- Kategorien -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
@@ -31,14 +42,12 @@
     <string name="settings_category_experimental_title">Experimentell</string>
     <string name="settings_category_about_device_software_title" product="default">Telefon- &amp; Software Info</string>
     <string name="settings_category_about_device_software_title" product="tablet">Tablet- &amp; Software Info</string>
-    <!-- Haupteinstellungen Ende -->
 
     <!-- Einstellungen der Benutzeroberfläche -->
     <string name="theme_colors_settings_title">Theme &amp; colors</string>
 
     <!-- Einstellungen des Designs & der Farben -->
     <string name="day_night_mode_title">Tag/Nacht Modus</string>
-    <string name="theme_summary">%s</string>
     <string name="theme_night_title">Nacht</string>
     <string name="theme_day_title">Tag</string>
     <string name="theme_auto_title">Automatisch Tag/Nacht</string>
@@ -54,6 +63,27 @@
     <string name="theme_blackout_title">Blackout</string>
     <string name="use_light_status_bar_title">Helle Status- &amp; Aktionsleiste</string>
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
+
+    <!-- Einstellungen der Statusleiste -->
+    <string name="status_bar_clock_date_settings_title">Uhr &amp; Datum</string>
+    <string name="status_bar_clock_date_settings_summary">Wähle wie die Uhr &amp; das Datum in der Statusleiste dargestellt werden</string>
+
+    <!-- Einstellungen Uhr & Datum -->
+    <string name="clock_date_cat_date_title">Datum</string>
+    <string name="clock_date_show_date_title">Das Datum anzeigen</string>
+    <string name="clock_date_show_seconds_title">Sekunden anzeigen</string>
+    <string name="clock_date_show_seconds_summary">Aktivieren um die Uhr mit Sekunden in der Statusleiste anzuzeigen</string>
+    <string name="clock_date_show_date_summary">Aktivieren um das Datum neben der Uhr in der Statusleiste anzuzeigen</string>
+    <string name="clock_date_date_format_title">Datumsformat</string>
+    <string name="clock_date_date_custom_date_format">Eigenes \"DateFormat\"</string>
+    <string name="clock_date_date_string_edittext_title">\"DateFormat\" -Muster eingeben</string>
+    <string name="clock_date_date_string_edittext_summary">Muß als gültiges \"DateFormat\" -Muster eingegeben werden, z.B. MM/dd/yy</string>
+    <string name="clock_date_date_style_title">Style</string>
+    <string name="clock_date_date_style_lowercase">Kleinbuchstaben</string>
+    <string name="clock_date_date_style_uppercase">Großbuchstaben</string>
+    <string name="clock_date_date_size_small_title">Klein</string>
+    <string name="clock_date_date_size_small_summary">Aktivieren um ein kleines Datum anzuzeigen</string>
+    <!-- Einstellungen der Statusleiste Ende -->
     <!-- Einstellungen der Benutzeroberfläche Ende -->
 
     <!-- Einstellungen der Ein/Aus-Taste-->

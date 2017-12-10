@@ -17,13 +17,24 @@
 
     <!-- General -->
     <string name="app_name">DarkKat Settings</string>
+    <string name="list_preference_default_summary">%s</string>
+    <string name="reset">Reset</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">cancel</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or DarkKat default?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_darkkat">DarkKat</string>
     <string name="always_title">Always</string>
     <string name="never_title">Never</string>
     <string name="darkkat_title">Darkkat</string>
     <string name="android_title">Android</string>
     <string name="device_title">Device</string>
-
-    <!-- Main settings -->
+    <string name="status_bar_title">Status bar</string>
+    <string name="position_title">Position</string>
+    <string name="position_right_title">Right</string>
+    <string name="position_centered_title">Centered</string>
+    <string name="normal_title">Normal</string>
+    <string name="hidden_title">Hidden</string>
 
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
@@ -31,14 +42,12 @@
     <string name="settings_category_experimental_title">Experimental</string>
     <string name="settings_category_about_device_software_title" product="default">Phone &amp; software info</string>
     <string name="settings_category_about_device_software_title" product="tablet">Tablet &amp; software info</string>
-    <!-- Main settings end -->
 
     <!-- User interface settings -->
     <string name="theme_colors_settings_title">Theme &amp; colors</string>
 
     <!-- Theme & colors settings -->
     <string name="day_night_mode_title">Day/night mode</string>
-    <string name="theme_summary">%s</string>
     <string name="theme_night_title">Night</string>
     <string name="theme_day_title">Day</string>
     <string name="theme_auto_title">Auto day/night</string>
@@ -56,6 +65,27 @@
     <string name="use_light_status_bar_summary">Use a light status- &amp; action bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <string name="use_light_navigation_bar_title">Light navigation bar</string>
     <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
+
+    <!-- Status bar settings -->
+    <string name="status_bar_clock_date_settings_title">Clock &amp; date</string>
+    <string name="status_bar_clock_date_settings_summary">Choose how to display the clock &amp; date in the status bar</string>
+
+    <!-- Clock & date settings -->
+    <string name="clock_date_cat_date_title">Date</string>
+    <string name="clock_date_show_seconds_title">Show seconds</string>
+    <string name="clock_date_show_seconds_summary">Enable to show clock with seconds in the status bar</string>
+    <string name="clock_date_show_date_title">Show date</string>
+    <string name="clock_date_show_date_summary">Enable to show the date next to the clock in the status bar</string>
+    <string name="clock_date_date_format_title">Date format</string>
+    <string name="clock_date_date_custom_date_format">Custom \'DateFormat\'</string>
+    <string name="clock_date_date_string_edittext_title">Enter \'DateFormat\' pattern</string>
+    <string name="clock_date_date_string_edittext_summary">Enter a valid \'DateFormat\' pattern, eg. MM/dd/yy</string>
+    <string name="clock_date_date_style_title">Style</string>
+    <string name="clock_date_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_date_size_small_title">Small</string>
+    <string name="clock_date_date_size_small_summary">Enabe to display the date small sized</string>
+    <!-- Status bar settings end -->
     <!-- User interface settings end -->
 
     <!-- Device settings -->
