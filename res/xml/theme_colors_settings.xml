@@ -21,21 +21,21 @@ limitations under the License.
     <ListPreference
         android:key="day_night_mode"
         android:title="@string/day_night_mode_title"
-        android:summary="@string/theme_summary"
+        android:summary="@string/list_preference_default_summary"
         android:entries="@array/day_night_mode_entries"
         android:entryValues="@array/day_night_mode_values" />
 
     <ListPreference
         android:key="night_theme"
         android:title="@string/night_theme_title"
-        android:summary="@string/theme_summary"
+        android:summary="@string/list_preference_default_summary"
         android:entries="@array/night_theme_entries"
         android:entryValues="@array/night_theme_values" />
 
     <ListPreference
         android:key="day_theme"
         android:title="@string/day_theme_title"
-        android:summary="@string/theme_summary"
+        android:summary="@string/list_preference_default_summary"
         android:entries="@array/day_theme_entries"
         android:entryValues="@array/day_theme_values" />
 

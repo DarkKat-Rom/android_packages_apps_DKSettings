@@ -28,6 +28,12 @@ limitations under the License.
             android:icon="@drawable/ic_settings_theme_colors"
             android:fragment="net.darkkatrom.dksettings.fragments.ThemeColorsSettings" />
 
+        <PreferenceScreen
+            android:key="status_bar_settings"
+            android:title="@string/status_bar_title"
+            android:icon="@drawable/ic_settings_status_bar"
+            android:fragment="net.darkkatrom.dksettings.fragments.StatusBarSettings" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
