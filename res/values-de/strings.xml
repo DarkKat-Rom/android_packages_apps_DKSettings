@@ -44,7 +44,7 @@
     <string name="settings_category_about_device_software_title" product="tablet">Tablet- &amp; Software Info</string>
 
     <!-- Einstellungen der Benutzeroberfläche -->
-    <string name="theme_colors_settings_title">Theme &amp; colors</string>
+    <string name="theme_colors_settings_title">Theme &amp; Farben</string>
 
     <!-- Einstellungen des Designs & der Farben -->
     <string name="day_night_mode_title">Tag/Nacht Modus</string>
@@ -63,6 +63,8 @@
     <string name="theme_blackout_title">Blackout</string>
     <string name="use_light_status_bar_title">Helle Status- &amp; Aktionsleiste</string>
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
+    <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
+    <string name="use_light_navigation_bar_summary">Helle Navigationsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
 
     <!-- Einstellungen der Statusleiste -->
     <string name="status_bar_clock_date_settings_title">Uhr &amp; Datum</string>
@@ -70,9 +72,9 @@
 
     <!-- Einstellungen Uhr & Datum -->
     <string name="clock_date_cat_date_title">Datum</string>
-    <string name="clock_date_show_date_title">Das Datum anzeigen</string>
     <string name="clock_date_show_seconds_title">Sekunden anzeigen</string>
     <string name="clock_date_show_seconds_summary">Aktivieren um die Uhr mit Sekunden in der Statusleiste anzuzeigen</string>
+    <string name="clock_date_show_date_title">Das Datum anzeigen</string>
     <string name="clock_date_show_date_summary">Aktivieren um das Datum neben der Uhr in der Statusleiste anzuzeigen</string>
     <string name="clock_date_date_format_title">Datumsformat</string>
     <string name="clock_date_date_custom_date_format">Eigenes \"DateFormat\"</string>
@@ -85,6 +87,8 @@
     <string name="clock_date_date_size_small_summary">Aktivieren um ein kleines Datum anzuzeigen</string>
     <!-- Einstellungen der Statusleiste Ende -->
     <!-- Einstellungen der Benutzeroberfläche Ende -->
+
+    <!-- Geräteeinstellungen -->
 
     <!-- Einstellungen der Ein/Aus-Taste-->
     <string name="power_menu_settings_title">Ein&#47;Aus-Menu</string>
@@ -108,14 +112,12 @@
     <!-- Bildschirmeinstellungen -->
     <string name="ambient_display_settings_title">Inaktivitätsdisplay</string>
     <string name="ambient_display_settings_summary">Wähle unter welchen Bedingungen das Inaktivitätsdisplay angezeigt wird</string>
-    <string name="ambient_display_disabled_summary">Das Inaktivitätsdisplay ist nicht verfügbar</string>
 
     <!-- Einstellungen des Inaktivitätsdisplays -->
     <string name="ambient_display_category_pulse_title">Kurz einblenden</string>
     <string name="ambient_display_pulse_on_notification_info_title">Fehlender Näherungssensor</string>
     <string name="ambient_display_pulse_on_notification_info_summary">Wenn eine Benachrichtigung auf dem Inaktivitätsdisplay angezeigt wird, kann das Gerät versehentlich ensperrt werden, wenn kein Näherungssensor vorhanden ist, und ein unsicherer Sperrbildschirm eingestellt wurde.</string>
     <string name="ambient_display_pulse_on_notification_title">Benachrichtigungen</string>
-    <string name="ambient_display_pulse_on_notification_switch_summary">Aktivieren um das Inaktivitätsdisplay kurz einzublenden, wenn eine Benachtichtigung empfangen wird</string>
     <string name="ambient_display_pulse_on_notification_secure_lock_screen_title">Nur auf einem sicheren Sperrbildschirm</string>
     <string name="ambient_display_pulse_on_notification_always_summary">Der Empfang einer Benachrichtigung blendet das Inaktivitätsdisplay kurz ein</string>
     <string name="ambient_display_pulse_on_notification_never_summary">Der Empfang einer Benachrichtigung blendet das Inaktivitätsdisplay nie ein</string>
