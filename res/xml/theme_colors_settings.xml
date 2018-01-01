@@ -18,6 +18,7 @@ limitations under the License.
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/theme_colors_settings_title">
 
+<!-- 
     <ListPreference
         android:key="day_night_mode"
         android:title="@string/day_night_mode_title"
@@ -38,6 +39,28 @@ limitations under the License.
         android:summary="@string/list_preference_default_summary"
         android:entries="@array/day_theme_entries"
         android:entryValues="@array/day_theme_values" />
+-->
+
+    <ListPreference
+        android:key="theme_overlay"
+        android:title="@string/theme_overlay_title"
+        android:summary="@string/list_preference_default_summary"
+        android:entries="@array/theme_overlay_entries"
+        android:entryValues="@array/theme_overlay_values" />
+
+    <ListPreference
+        android:key="theme_overlay_auto_dark_theme"
+        android:title="@string/theme_overlay_auto_dark_theme_title"
+        android:summary="@string/list_preference_default_summary"
+        android:entries="@array/theme_overlay_auto_dark_theme_entries"
+        android:entryValues="@array/theme_overlay_auto_dark_theme_values" />
+
+    <ListPreference
+        android:key="theme_overlay_auto_light_theme"
+        android:title="@string/theme_overlay_auto_light_theme_title"
+        android:summary="@string/list_preference_default_summary"
+        android:entries="@array/theme_overlay_auto_light_theme_entries"
+        android:entryValues="@array/theme_overlay_auto_light_theme_values" />
 
     <SwitchPreference
         android:key="use_light_status_bar"
@@ -48,4 +71,10 @@ limitations under the License.
         android:key="use_light_navigation_bar"
         android:title="@string/use_light_navigation_bar_title"
         android:summary="@string/use_light_navigation_bar_summary" />
+
+    <PreferenceScreen
+        android:key="theme_systemui_settings"
+        android:title="@string/theme_systemui_settings_title"
+        android:summary="@string/theme_systemui_settings_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ThemeSystemUI" />
 </PreferenceScreen>

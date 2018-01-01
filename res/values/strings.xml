@@ -53,6 +53,10 @@
     <string name="theme_auto_title">Auto day/night</string>
     <string name="night_theme_title">Night theme</string>
     <string name="day_theme_title">Day theme</string>
+
+    <string name="theme_overlay_title">Theme</string>
+    <string name="theme_overlay_auto_dark_theme_title">Auto theme (dark)</string>
+    <string name="theme_overlay_auto_light_theme_title">Auto theme (light)</string>
     <string name="theme_darkkat_title">DarkKat</string>
     <string name="theme_darkkat_whiteout_title">DarkKat (Whiteout version)</string>
     <string name="theme_darkkat_day_title">DarkKat (Light version)</string>
@@ -65,6 +69,15 @@
     <string name="use_light_status_bar_summary">Use a light status- &amp; action bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <string name="use_light_navigation_bar_title">Light navigation bar</string>
     <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
+
+    <!-- Theme SystemUI -->
+    <string name="theme_systemui_settings_title">SystemUI</string>
+    <string name="theme_systemui_settings_summary">Choose how to theme the SystemUI</string>
+    <string name="theme_systemui_overlay_mode_title">Theme mode</string>
+    <string name="theme_systemui_overlay_mode_auto_default_title">Default,\nMaterial/Material Light theme:\n(Depending on the home screen wallpaper)</string>
+    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto theme dark/light:\n(Depending on the home screen wallpaper)</string>
+    <string name="theme_systemui_overlay_mode_current_overlay_title">Current theme</string>
+    <!-- Theme & colors settings end -->
 
     <!-- Status bar settings -->
     <string name="status_bar_clock_date_settings_title">Clock &amp; date</string>

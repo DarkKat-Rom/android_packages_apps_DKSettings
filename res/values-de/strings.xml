@@ -46,13 +46,17 @@
     <!-- Einstellungen der Benutzeroberfläche -->
     <string name="theme_colors_settings_title">Theme &amp; Farben</string>
 
-    <!-- Einstellungen des Designs & der Farben -->
+    <!-- Einstellungen des Themes & der Farben -->
     <string name="day_night_mode_title">Tag/Nacht Modus</string>
     <string name="theme_night_title">Nacht</string>
     <string name="theme_day_title">Tag</string>
     <string name="theme_auto_title">Automatisch Tag/Nacht</string>
     <string name="night_theme_title">Nacht Theme</string>
     <string name="day_theme_title">Tag Theme</string>
+
+    <string name="theme_overlay_title">Theme</string>
+    <string name="theme_overlay_auto_dark_theme_title">Auto Theme (dunkel)</string>
+    <string name="theme_overlay_auto_light_theme_title">Auto Theme (hell)</string>
     <string name="theme_darkkat_title">DarkKat</string>
     <string name="theme_darkkat_whiteout_title">DarkKat (Whiteout Version)</string>
     <string name="theme_darkkat_day_title">DarkKat (Light Version)</string>
@@ -65,6 +69,15 @@
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
     <string name="use_light_navigation_bar_summary">Helle Navigationsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
+
+    <!-- SystemUI Theme -->
+    <string name="theme_systemui_settings_title">SystemUI</string>
+    <string name="theme_systemui_settings_summary">Wähle das Theme der SystemUI</string>
+    <string name="theme_systemui_overlay_mode_title">Theme Modus</string>
+    <string name="theme_systemui_overlay_mode_auto_default_title">Standard,\nMaterial/Material Light Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
+    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto Theme dunkel/hell:\n(Abhängig vom Startbildschirm Hintergrund)</string>
+    <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Theme</string>
+    <!-- Einstellungen des Themes & der Farben Ende -->
 
     <!-- Einstellungen der Statusleiste -->
     <string name="status_bar_clock_date_settings_title">Uhr &amp; Datum</string>

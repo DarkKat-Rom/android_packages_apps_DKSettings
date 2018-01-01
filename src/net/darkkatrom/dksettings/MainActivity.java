@@ -19,14 +19,13 @@ package net.darkkatrom.dksettings;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.app.UiModeManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.provider.Settings;
 import android.view.View;
 
-import com.android.internal.util.darkkat.ThemeHelper;
+import com.android.internal.util.darkkat.ThemeOverlayHelper;
 
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
@@ -42,10 +41,10 @@ public class MainActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean useOptionalLightStatusBar = ThemeHelper.themeSupportsOptionalĹightSB(this)
-                && ThemeHelper.useLightStatusBar(this);
-        boolean useOptionalLightNavigationBar = ThemeHelper.themeSupportsOptionalĹightNB(this)
-                && ThemeHelper.useLightNavigationBar(this);
+        boolean useOptionalLightStatusBar = ThemeOverlayHelper.themeSupportsOptionalĹightSB(this)
+                && ThemeOverlayHelper.useLightStatusBar(this);
+        boolean useOptionalLightNavigationBar = ThemeOverlayHelper.themeSupportsOptionalĹightNB(this)
+                && ThemeOverlayHelper.useLightNavigationBar(this);
         int themeResId = 0;
 
         if (useOptionalLightStatusBar && useOptionalLightNavigationBar) {
@@ -64,7 +63,7 @@ public class MainActivity extends Activity implements
         if (!useOptionalLightStatusBar) {
             // Possibly we are using the Whiteout theme
             boolean isWhiteoutTheme =
-                    ThemeHelper.getTheme(this) == UiModeManager.MODE_NIGHT_NO_WHITEOUT;
+                    ThemeOverlayHelper.getThemeOverlay(this) == ThemeOverlayHelper.THEME_OVERLAY_WHITEOUT;
             boolean isLightStatusBar = (newFlags & View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
                     == View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             // Check if light status bar flag was set,
