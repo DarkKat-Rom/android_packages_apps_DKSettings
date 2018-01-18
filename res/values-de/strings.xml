@@ -53,10 +53,6 @@
     <string name="theme_auto_title">Automatisch Tag/Nacht</string>
     <string name="night_theme_title">Nacht Theme</string>
     <string name="day_theme_title">Tag Theme</string>
-
-    <string name="theme_overlay_title">Theme</string>
-    <string name="theme_overlay_auto_dark_theme_title">Auto Theme (dunkel)</string>
-    <string name="theme_overlay_auto_light_theme_title">Auto Theme (hell)</string>
     <string name="theme_darkkat_title">DarkKat</string>
     <string name="theme_darkkat_whiteout_title">DarkKat (Whiteout Version)</string>
     <string name="theme_darkkat_day_title">DarkKat (Light Version)</string>
@@ -75,8 +71,8 @@
     <string name="theme_systemui_settings_summary">Wähle das Theme der SystemUI</string>
     <string name="theme_systemui_overlay_mode_title">Theme Modus</string>
     <string name="theme_systemui_overlay_mode_auto_default_title">Standard,\nMaterial/Material Light Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
-    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto Theme dunkel/hell:\n(Abhängig vom Startbildschirm Hintergrund)</string>
-    <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Theme</string>
+    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, Nacht Theme / Tag Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
+    <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Tag/Nacht Theme</string>
     <!-- Einstellungen des Themes & der Farben Ende -->
 
     <!-- Einstellungen der Statusleiste -->

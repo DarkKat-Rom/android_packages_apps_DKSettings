@@ -16,13 +16,13 @@
 
 <resources>
 
-    <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+    <style name="AppTheme" parent="@android:style/Theme.Material.DayNight.DarkActionBar">
         <item name="android:colorPrimary">@color/theme_primary</item>
         <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ThemeOverlay.Light" parent="@android:style/Theme.Material.Light">
+    <style name="ThemeOverlay.Light" parent="@android:style/Theme.Material.DayNight">
         <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
