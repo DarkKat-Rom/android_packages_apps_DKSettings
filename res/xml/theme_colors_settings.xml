@@ -17,8 +17,7 @@ limitations under the License.
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/theme_colors_settings_title">
-
-<!-- 
+ 
     <ListPreference
         android:key="day_night_mode"
         android:title="@string/day_night_mode_title"
@@ -39,28 +38,6 @@ limitations under the License.
         android:summary="@string/list_preference_default_summary"
         android:entries="@array/day_theme_entries"
         android:entryValues="@array/day_theme_values" />
--->
-
-    <ListPreference
-        android:key="theme_overlay"
-        android:title="@string/theme_overlay_title"
-        android:summary="@string/list_preference_default_summary"
-        android:entries="@array/theme_overlay_entries"
-        android:entryValues="@array/theme_overlay_values" />
-
-    <ListPreference
-        android:key="theme_overlay_auto_dark_theme"
-        android:title="@string/theme_overlay_auto_dark_theme_title"
-        android:summary="@string/list_preference_default_summary"
-        android:entries="@array/theme_overlay_auto_dark_theme_entries"
-        android:entryValues="@array/theme_overlay_auto_dark_theme_values" />
-
-    <ListPreference
-        android:key="theme_overlay_auto_light_theme"
-        android:title="@string/theme_overlay_auto_light_theme_title"
-        android:summary="@string/list_preference_default_summary"
-        android:entries="@array/theme_overlay_auto_light_theme_entries"
-        android:entryValues="@array/theme_overlay_auto_light_theme_values" />
 
     <SwitchPreference
         android:key="use_light_status_bar"

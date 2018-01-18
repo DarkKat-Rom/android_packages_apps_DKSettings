@@ -53,10 +53,6 @@
     <string name="theme_auto_title">Auto day/night</string>
     <string name="night_theme_title">Night theme</string>
     <string name="day_theme_title">Day theme</string>
-
-    <string name="theme_overlay_title">Theme</string>
-    <string name="theme_overlay_auto_dark_theme_title">Auto theme (dark)</string>
-    <string name="theme_overlay_auto_light_theme_title">Auto theme (light)</string>
     <string name="theme_darkkat_title">DarkKat</string>
     <string name="theme_darkkat_whiteout_title">DarkKat (Whiteout version)</string>
     <string name="theme_darkkat_day_title">DarkKat (Light version)</string>
@@ -75,8 +71,8 @@
     <string name="theme_systemui_settings_summary">Choose how to theme the SystemUI</string>
     <string name="theme_systemui_overlay_mode_title">Theme mode</string>
     <string name="theme_systemui_overlay_mode_auto_default_title">Default,\nMaterial/Material Light theme:\n(Depending on the home screen wallpaper)</string>
-    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto theme dark/light:\n(Depending on the home screen wallpaper)</string>
-    <string name="theme_systemui_overlay_mode_current_overlay_title">Current theme</string>
+    <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, night theme / day theme:\n(Depending on the home screen wallpaper)</string>
+    <string name="theme_systemui_overlay_mode_current_overlay_title">Current night/day theme</string>
     <!-- Theme & colors settings end -->
 
     <!-- Status bar settings -->
