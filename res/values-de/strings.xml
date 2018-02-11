@@ -24,6 +24,7 @@
     <string name="dlg_reset_values_message">Werte auf\nAndroid- oder DarkKat Standard\nzurück setzen?</string>
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_darkkat">DarkKat</string>
+    <string name="lock_screen_title">Sperrbildschirm</string>
     <string name="always_title">Immer</string>
     <string name="never_title">Nie</string>
     <string name="darkkat_title">Darkkat</string>
@@ -74,6 +75,10 @@
     <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, Nacht Theme / Tag Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
     <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Tag/Nacht Theme</string>
     <!-- Einstellungen des Themes & der Farben Ende -->
+
+    <!-- Sperrbildschirm -->
+    <string name="lock_screen_show_visualizer_title">Musik Visualisierung anzeigen</string>
+    <string name="lock_screen_show_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm anzuzeigen</string>
 
     <!-- Einstellungen der Statusleiste -->
     <string name="status_bar_clock_date_settings_title">Uhr &amp; Datum</string>
