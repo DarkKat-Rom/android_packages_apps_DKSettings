@@ -54,4 +54,10 @@ limitations under the License.
         android:title="@string/theme_systemui_settings_title"
         android:summary="@string/theme_systemui_settings_summary"
         android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ThemeSystemUI" />
+
+    <PreferenceScreen
+        android:key="colors_lock_screen"
+        android:title="@string/lock_screen_title"
+        android:summary="@string/colors_lock_screen_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsLockScreen" />
 </PreferenceScreen>

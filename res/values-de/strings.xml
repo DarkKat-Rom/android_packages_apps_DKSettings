@@ -17,6 +17,7 @@
 
     <!-- Allgemein -->
     <string name="app_name">DarkKat Einstellungen</string>
+    <string name="pick_color_title">Farbe wählen</string>
     <string name="list_preference_default_summary">%s</string>
     <string name="reset">Zurücksetzen</string>
     <string name="dlg_ok">OK</string>
@@ -36,6 +37,10 @@
     <string name="position_centered_title">Zentriert</string>
     <string name="normal_title">Normal</string>
     <string name="hidden_title">Verborgen</string>
+    <string name="dark_wallpaper_title">Dunkler Sperrbildschirm Hintergrund</string>
+    <string name="light_wallpaper_title">Heller Sperrbildschirm Hintergrund</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Symbol</string>
 
     <!-- Kategorien -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
@@ -66,6 +71,7 @@
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
     <string name="use_light_navigation_bar_summary">Helle Navigationsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
+    <string name="colors_lock_screen_summary">Wähle die Farben mit denen Text und Symbole auf dem Sperrbildschirm eingefärbt werden</string>
 
     <!-- SystemUI Theme -->
     <string name="theme_systemui_settings_title">SystemUI</string>
@@ -74,6 +80,10 @@
     <string name="theme_systemui_overlay_mode_auto_default_title">Standard,\nMaterial/Material Light Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
     <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, Nacht Theme / Tag Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
     <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Tag/Nacht Theme</string>
+
+    <!-- Lock screen colors -->
+    <string name="colors_lock_screen_colorize_visualizer_title">Musik Visualisierung einfärben</string>
+    <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
     <!-- Einstellungen des Themes & der Farben Ende -->
 
     <!-- Sperrbildschirm -->
