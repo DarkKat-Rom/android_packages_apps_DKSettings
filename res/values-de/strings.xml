@@ -87,15 +87,19 @@
     <!-- Einstellungen des Themes & der Farben Ende -->
 
     <!-- Sperrbildschirm -->
-    <string name="lock_screen_category_status_area_title">Statusbereich</string>
     <string name="lock_screen_show_visualizer_title">Musik Visualisierung anzeigen</string>
     <string name="lock_screen_show_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm anzuzeigen</string>
+    <string name="lock_screen_status_area_settings_title">Statusbereich</string>
+    <string name="lock_screen_status_area_settings_summary">Wähle wie der Statusbereich auf dem Sperrbildschirm dargestellt wird</string>
+
+    <!-- Statusbereich -->
     <string name="lock_screen_status_area_show_weather_title">Wetter anzeigen</string>
     <string name="lock_screen_status_area_show_weather_summary">Aktivieren um das Wetter neben dem Datum auf dem Sperrbildschirm anzuzeigen</string>
     <string name="lock_screen_status_area_show_weather_location_title">Wetter Standort anzeigen</string>
     <string name="lock_screen_status_area_show_weather_location_summary">Aktivieren um den Wetter Standort anzuzeigen</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_title">Wecker verbirgt Wetter</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_summary">Aktivieren um das Wetter zu verbergen, wenn ein Wecker gestellt wurde</string>
+    <!-- Sperrbildschirm Ende -->
 
     <!-- Einstellungen der Statusleiste -->
     <string name="status_bar_clock_date_settings_title">Uhr &amp; Datum</string>
