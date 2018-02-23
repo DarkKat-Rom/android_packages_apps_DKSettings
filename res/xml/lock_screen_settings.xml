@@ -24,23 +24,9 @@
         android:summary="@string/lock_screen_show_visualizer_summary"
         android:persistent="false" />
 
-    <PreferenceCategory
-        android:key="lock_screen_category_status_area"
-        android:title="@string/lock_screen_category_status_area_title">
-
-        <SwitchPreference
-            android:key="lock_screen_status_area_show_weather"
-            android:title="@string/lock_screen_status_area_show_weather_title"
-            android:summary="@string/lock_screen_status_area_show_weather_summary" />
-
-        <SwitchPreference
-            android:key="lock_screen_status_area_show_weather_location"
-            android:title="@string/lock_screen_status_area_show_weather_location_title"
-            android:summary="@string/lock_screen_status_area_show_weather_location_summary" />
-
-        <SwitchPreference
-            android:key="lock_screen_status_area_hide_weather_on_alarm"
-            android:title="@string/lock_screen_status_area_hide_weather_on_alarm_title"
-            android:summary="@string/lock_screen_status_area_hide_weather_on_alarm_summary" />
-    </PreferenceCategory>
+    <PreferenceScreen
+        android:key="lock_screen_status_area_settings"
+        android:title="@string/lock_screen_status_area_settings_title"
+        android:summary="@string/lock_screen_status_area_settings_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.StatusAreaSettings" />
 </PreferenceScreen>

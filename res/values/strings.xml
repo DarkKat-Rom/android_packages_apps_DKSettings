@@ -87,15 +87,19 @@
     <!-- Theme & colors settings end -->
 
     <!-- Lock screen -->
-    <string name="lock_screen_category_status_area_title">Status area</string>
     <string name="lock_screen_show_visualizer_title">Show music visualizer</string>
     <string name="lock_screen_show_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
+    <string name="lock_screen_status_area_settings_title">Status area</string>
+    <string name="lock_screen_status_area_settings_summary">Choose how to display the status area on the lock screen</string>
+
+    <!-- Status area -->
     <string name="lock_screen_status_area_show_weather_title">Show weather</string>
     <string name="lock_screen_status_area_show_weather_summary">Enable to show the weather next to the date on the lock screen</string>
     <string name="lock_screen_status_area_show_weather_location_title">Show weather location</string>
     <string name="lock_screen_status_area_show_weather_location_summary">Enable to show the weather location</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_title">Alarm hides weather</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_summary">Enable to hide the weather, when an alarm was set</string>
+    <!-- Lock screen end -->
 
     <!-- Status bar settings -->
     <string name="status_bar_clock_date_settings_title">Clock &amp; date</string>
