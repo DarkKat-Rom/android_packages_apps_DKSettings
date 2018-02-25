@@ -29,4 +29,10 @@
         android:title="@string/lock_screen_status_area_settings_title"
         android:summary="@string/lock_screen_status_area_settings_summary"
         android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.StatusAreaSettings" />
+
+    <PreferenceScreen
+        android:key="lock_screen_battery_status_settings"
+        android:title="@string/lock_screen_battery_status_settings_title"
+        android:summary="@string/lock_screen_battery_status_settings_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.BatteryStatusSettings" />
 </PreferenceScreen>

@@ -26,6 +26,7 @@
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_darkkat">DarkKat</string>
     <string name="lock_screen_title">Sperrbildschirm</string>
+    <string name="ambient_display_title">Inaktivitätsdisplay</string>
     <string name="always_title">Immer</string>
     <string name="never_title">Nie</string>
     <string name="darkkat_title">Darkkat</string>
@@ -91,6 +92,8 @@
     <string name="lock_screen_show_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm anzuzeigen</string>
     <string name="lock_screen_status_area_settings_title">Statusbereich</string>
     <string name="lock_screen_status_area_settings_summary">Wähle wie der Statusbereich auf dem Sperrbildschirm dargestellt wird</string>
+    <string name="lock_screen_battery_status_settings_title">Akku Information</string>
+    <string name="lock_screen_battery_status_settings_summary">Wähle wie die Akku Informationen auf dem Sperrbildschirm dargestellt werden</string>
 
     <!-- Statusbereich -->
     <string name="lock_screen_status_area_show_weather_title">Wetter anzeigen</string>
@@ -99,6 +102,18 @@
     <string name="lock_screen_status_area_show_weather_location_summary">Aktivieren um den Wetter Standort anzuzeigen</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_title">Wecker verbirgt Wetter</string>
     <string name="lock_screen_status_area_hide_weather_on_alarm_summary">Aktivieren um das Wetter zu verbergen, wenn ein Wecker gestellt wurde</string>
+
+    <!-- Akkustatus -->
+    <string name="lock_screen_battery_status_type_title">Akkustatus anzeigen</string>
+    <string name="lock_screen_battery_status_type_discharging_title">Beim Entladen</string>
+    <string name="lock_screen_battery_status_type_charging_title">Beim Aufladen</string>
+    <string name="lock_screen_battery_status_type_discharging_charging_title">Beim Entladen &amp; Aufladen</string>
+    <string name="lock_screen_show_battery_temp_title">Akku Temperatur anzeigen</string>
+    <string name="lock_screen_show_battery_temp_summary">Aktivieren um die Akku Temperatur auf dem Sperrbildschirm anzuzeigen</string>
+    <string name="lock_screen_show_advanced_battery_charging_info_title">Erweiterte Akku Lade-Informationen anzeigen</string>
+    <string name="lock_screen_show_advanced_battery_charging_info_summary">Aktivieren um Erweiterte Akku Lade-Informationen auf dem Sperrbildschirm anzuzeigen.\n(Einige Werte sind möglicherweise nicht verfügbar, bis das Gerät einige Zeit geladen wurde.\nWerte in Klammern stellen die maximal unterstützten Werte des Ladegeräts oder Akkus dar.)</string>
+    <string name="ambient_display_show_battery_status_title">Akkustatus anzeigen</string>
+    <string name="ambient_display_show_battery_status_summary">Aktivieren um die gewählten Akku Informationen ebenfalls auf dem Inaktivitätsdisplay anzuzeigen</string>
     <!-- Sperrbildschirm Ende -->
 
     <!-- Einstellungen der Statusleiste -->
