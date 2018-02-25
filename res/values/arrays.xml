@@ -67,6 +67,20 @@
         <item>2</item>
     </string-array>
 
+    <string-array name="lock_screen_battery_status_type_entries">
+        <item>@string/hidden_title</item>
+        <item>@string/lock_screen_battery_status_type_discharging_title</item>
+        <item>@string/lock_screen_battery_status_type_charging_title</item>
+        <item>@string/lock_screen_battery_status_type_discharging_charging_title</item>
+    </string-array>
+
+    <string-array name="lock_screen_battery_status_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
     <string-array name="clock_date_position_entries">
         <item>@string/position_right_title</item>
         <item>@string/position_centered_title</item>
