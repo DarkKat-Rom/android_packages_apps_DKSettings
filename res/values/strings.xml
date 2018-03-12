@@ -38,9 +38,14 @@
     <string name="position_centered_title">Centered</string>
     <string name="normal_title">Normal</string>
     <string name="hidden_title">Hidden</string>
+    <string name="colors_general_title">Colors general</string>
+    <string name="colors_general_dark_mode_title">Colors general (light status bar)</string>
+    <string name="colors_battery_title">Colors battery status</string>
+    <string name="colors_battery_dark_mode_title">Colors battery status (light status bar)</string>
     <string name="dark_wallpaper_title">Dark wallpaper</string>
     <string name="light_wallpaper_title">Light wallpaper</string>
     <string name="text_title">Text</string>
+    <string name="text_charge_icon_title">Percentage text &amp; charging indicator</string>
     <string name="icon_title">Icon</string>
 
     <!-- Categories -->
@@ -73,6 +78,7 @@
     <string name="use_light_navigation_bar_title">Light navigation bar</string>
     <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <string name="colors_lock_screen_summary">Choose the colors to colorize the text and icons in the lock screen</string>
+    <string name="colors_status_bar_summary">Choose the colors to colorize the text and icons in the status bar</string>
 
     <!-- Theme SystemUI -->
     <string name="theme_systemui_settings_title">SystemUI</string>
