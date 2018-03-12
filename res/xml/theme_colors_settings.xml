@@ -60,4 +60,10 @@ limitations under the License.
         android:title="@string/lock_screen_title"
         android:summary="@string/colors_lock_screen_summary"
         android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsLockScreen" />
+
+    <PreferenceScreen
+        android:key="colors_status_bar"
+        android:title="@string/status_bar_title"
+        android:summary="@string/colors_status_bar_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar" />
 </PreferenceScreen>

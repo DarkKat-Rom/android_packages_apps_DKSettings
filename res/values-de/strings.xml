@@ -38,9 +38,14 @@
     <string name="position_centered_title">Zentriert</string>
     <string name="normal_title">Normal</string>
     <string name="hidden_title">Verborgen</string>
+    <string name="colors_general_title">Farben allgemein</string>
+    <string name="colors_general_dark_mode_title">Farben allgemein (helle Statusleiste)</string>
+    <string name="colors_battery_title">Farben Akkustatus</string>
+    <string name="colors_battery_dark_mode_title">Farben Akkustatus (helle Statusleiste)</string>
     <string name="dark_wallpaper_title">Dunkler Sperrbildschirm Hintergrund</string>
     <string name="light_wallpaper_title">Heller Sperrbildschirm Hintergrund</string>
     <string name="text_title">Text</string>
+    <string name="text_charge_icon_title">Prozentzahl &amp; Ladesymbol</string>
     <string name="icon_title">Symbol</string>
 
     <!-- Kategorien -->
@@ -73,6 +78,7 @@
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
     <string name="use_light_navigation_bar_summary">Helle Navigationsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="colors_lock_screen_summary">Wähle die Farben mit denen Text und Symbole auf dem Sperrbildschirm eingefärbt werden</string>
+    <string name="colors_status_bar_summary">Wähle die Farben mit denen Text und Symbole auf der Statusleiste eingefärbt werden</string>
 
     <!-- SystemUI Theme -->
     <string name="theme_systemui_settings_title">SystemUI</string>
