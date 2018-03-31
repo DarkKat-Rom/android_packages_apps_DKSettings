@@ -59,6 +59,16 @@
     <string name="theme_colors_settings_title">Theme &amp; Farben</string>
 
     <!-- Einstellungen des Themes & der Farben -->
+    <string name="theme_colors_cat_theme_general_title">Theme allgemein</string>
+    <string name="theme_colors_cat_theme_bars_title">Theme Systemleisten</string>
+    <string name="theme_colors_cat_theme_apps_title">Theme Apps</string>
+    <string name="theme_colors_cat_colors_title">Farben</string>
+    <string name="test_notifications_title">Benachrichigungen testen</string>
+    <string name="test_notifications_summary" product="default">Wenn das Theme geändert WURDE wie unter \"Benachrichigungen Theme\" beschrieben, muß das Telefon neu gestartet werden bevor Benachrichigungen getestet werden</string>
+    <string name="test_notifications_summary" product="tablet">Wenn das Theme geändert WURDE wie unter \"Benachrichigungen Theme\" beschrieben, muß das Tablet neu gestartet werden bevor Benachrichigungen getestet werden</string>
+    <string name="notification_theme_change_info_title">Benachrichigungen Theme</string>
+    <string name="notification_theme_change_info_summary" product="default">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Telefon neu gestartet werden, sobald das Theme durch eine Option in dieser Kategorie geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
+    <string name="notification_theme_change_info_summary" product="tablet">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Tablet neu gestartet werden, sobald das Theme durch eine Option in dieser Kategorie geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
     <string name="day_night_mode_title">Tag/Nacht Modus</string>
     <string name="theme_night_title">Nacht</string>
     <string name="theme_day_title">Tag</string>

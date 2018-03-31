@@ -22,6 +22,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -36,6 +37,7 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "ThemeColorsSettings";
 
+    private static final String PREF_CAT_THEME_BARS           = "theme_colors_cat_theme_bars";
     private static final String PREF_DAY_NIGHT_MODE           = "day_night_mode";
     private static final String PREF_NIGHT_THEME              = "night_theme";
     private static final String PREF_DAY_THEME                = "day_theme";
@@ -82,6 +84,9 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         mDayTheme.setValue(String.valueOf(dayTheme));
         mDayTheme.setOnPreferenceChangeListener(this);
 
+        PreferenceCategory catThemeBars =
+                (PreferenceCategory) findPreference(PREF_CAT_THEME_BARS);
+
         if (ThemeHelper.themeSupportsOptionalĹightSB(getActivity())) {
             mUseLightStatusBar =
                     (SwitchPreference) findPreference(PREF_USE_LIGHT_STATUS_BAR);
@@ -89,7 +94,7 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
                     Settings.Secure.USE_LIGHT_STATUS_BAR, 0) == 1);
             mUseLightStatusBar.setOnPreferenceChangeListener(this);
         } else {
-            removePreference(PREF_USE_LIGHT_STATUS_BAR);
+            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_STATUS_BAR));
         }
 
         if (ThemeHelper.themeSupportsOptionalĹightNB(getActivity())) {
@@ -99,7 +104,12 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
                     Settings.Secure.USE_LIGHT_NAVIGATION_BAR, 0) == 1);
             mUseLightNavigationBar.setOnPreferenceChangeListener(this);
         } else {
-            removePreference(PREF_USE_LIGHT_NAVIGATION_BAR);
+            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_NAVIGATION_BAR));
+        }
+
+        if (!ThemeHelper.themeSupportsOptionalĹightSB(getActivity())
+                && !ThemeHelper.themeSupportsOptionalĹightNB(getActivity())) {
+            removePreference(PREF_CAT_THEME_BARS);
         }
     }
 
