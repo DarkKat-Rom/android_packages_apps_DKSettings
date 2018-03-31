@@ -59,6 +59,16 @@
     <string name="theme_colors_settings_title">Theme &amp; colors</string>
 
     <!-- Theme & colors settings -->
+    <string name="theme_colors_cat_theme_general_title">Theme general</string>
+    <string name="theme_colors_cat_theme_bars_title">Theme system bars</string>
+    <string name="theme_colors_cat_theme_apps_title">Theme apps</string>
+    <string name="test_notifications_title">Test notifications</string>
+    <string name="test_notifications_summary" product="default">When the theme WAS changed as described in \'Notification theme\' the phone must be restarted before testing notifications.</string>
+    <string name="test_notifications_summary" product="tablet">When the theme WAS changed as described in \'Notification theme\' the tablet must be restarted before testing notifications.</string>
+    <string name="theme_colors_cat_colors_title">Colors</string>
+    <string name="notification_theme_change_info_title">Notification theme</string>
+    <string name="notification_theme_change_info_summary" product="default">To ensure the notification theme is applied correctly,\nthe phone must be restarted, when the theme WAS changed by one of the options in this category,\n(also when the theme change was an automatically change via:\n\'Day/night mode\' -> \'Auto day/night\').</string>
+    <string name="notification_theme_change_info_summary" product="tablet">To ensure the notification theme is applied correctly,\nthe tablet must be restarted, when the theme WAS changed by one of the options in this category,\n(also when the theme change was an automatically change via:\n\'Day/night mode\' -> \'Auto day/night\').</string>
     <string name="day_night_mode_title">Day/night mode</string>
     <string name="theme_night_title">Night</string>
     <string name="theme_day_title">Day</string>
