@@ -25,6 +25,12 @@
         android:persistent="false" />
 
     <PreferenceScreen
+        android:key="lock_screen_widgets_settings"
+        android:title="@string/lock_screen_widgets_settings_title"
+        android:summary="@string/lock_screen_widgets_settings_summary"
+        android:fragment="net.darkkatrom.dksettings.fragments.lockscreen.WidgetsSettings" />
+
+    <PreferenceScreen
         android:key="lock_screen_status_area_settings"
         android:title="@string/lock_screen_status_area_settings_title"
         android:summary="@string/lock_screen_status_area_settings_summary"
