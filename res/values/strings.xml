@@ -106,10 +106,20 @@
     <!-- Lock screen -->
     <string name="lock_screen_show_visualizer_title">Show music visualizer</string>
     <string name="lock_screen_show_visualizer_summary">Enable to show the music visualizer on the lock screen</string>
+    <string name="lock_screen_widgets_settings_title">Widgets</string>
+    <string name="lock_screen_widgets_settings_summary">Choose how to display the widgets on the lock screen</string>
     <string name="lock_screen_status_area_settings_title">Status area</string>
     <string name="lock_screen_status_area_settings_summary">Choose how to display the status area on the lock screen</string>
     <string name="lock_screen_battery_status_settings_title">Battery status</string>
     <string name="lock_screen_battery_status_settings_summary">Choose how to display the battery status on the lock screen</string>
+
+    <!-- Widgets -->
+    <string name="lock_screen_widgets_cat_weather_title">weather</string>
+    <string name="lock_screen_show_widgets_title">Show widgets</string>
+    <string name="lock_screen_show_widgets_summary">Enable to show additional widget on the lock screen.</string>
+    <string name="lock_screen_widgets_show_weather_hour_forecast_title">12 hour forecast (all 3 hours)</string>
+    <string name="lock_screen_widgets_show_summary">Enable to show the weather widget on the lock screen, when swiping the current widget to the left or right</string>
+    <string name="lock_screen_widgets_show_weather_day_forecast_title">5 day forecast</string>
 
     <!-- Status area -->
     <string name="lock_screen_status_area_show_weather_title">Show weather</string>

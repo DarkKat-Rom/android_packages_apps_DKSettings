@@ -106,10 +106,20 @@
     <!-- Sperrbildschirm -->
     <string name="lock_screen_show_visualizer_title">Musik Visualisierung anzeigen</string>
     <string name="lock_screen_show_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm anzuzeigen</string>
+    <string name="lock_screen_widgets_settings_title">Widgets</string>
+    <string name="lock_screen_widgets_settings_summary">Wähle wie die Widgets auf dem Sperrbildschirm dargestellt werden</string>
     <string name="lock_screen_status_area_settings_title">Statusbereich</string>
     <string name="lock_screen_status_area_settings_summary">Wähle wie der Statusbereich auf dem Sperrbildschirm dargestellt wird</string>
     <string name="lock_screen_battery_status_settings_title">Akku Information</string>
     <string name="lock_screen_battery_status_settings_summary">Wähle wie die Akku Informationen auf dem Sperrbildschirm dargestellt werden</string>
+
+    <!-- Widgets -->
+    <string name="lock_screen_widgets_cat_weather_title">Wetter</string>
+    <string name="lock_screen_show_widgets_title">Widgets anzeigen</string>
+    <string name="lock_screen_show_widgets_summary">Aktivieren um zusätzliche Widgets auf dem Sperrbildschirm anzuzeigen.</string>
+    <string name="lock_screen_widgets_show_weather_hour_forecast_title">12 Stunden Vorhersage (alle 3 Stunden)</string>
+    <string name="lock_screen_widgets_show_summary">Aktivieren um das Widget anzuzeigen, wenn das aktuelle Widget nach links bzw. rechts gewischt wird</string>
+    <string name="lock_screen_widgets_show_weather_day_forecast_title">5 Tage Vorhersage</string>
 
     <!-- Statusbereich -->
     <string name="lock_screen_status_area_show_weather_title">Wetter anzeigen</string>
