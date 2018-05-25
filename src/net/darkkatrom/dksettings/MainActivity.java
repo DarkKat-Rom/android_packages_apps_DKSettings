@@ -34,48 +34,53 @@ import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.MainSettings;
 
 public class MainActivity extends Activity implements
-        PreferenceFragment.OnPreferenceStartFragmentCallback {
+        PreferenceFragment.OnPreferenceStartFragmentCallback, ColorPickerPreference.OwnerActivity {
 
     public static final String EXTRA_SHOW_FRAGMENT = ":android:show_fragment";
+
+    private int mThemeResId = 0;
+    private boolean mIsWhiteoutTheme = false;
+    private boolean mUseOptionalLightStatusBar = false;
+    private boolean mUseOptionalLightNavigationBar = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean useOptionalLightStatusBar = ThemeHelper.themeSupportsOptionalĹightSB(this)
+        mUseOptionalLightStatusBar = ThemeHelper.themeSupportsOptionalĹightSB(this)
                 && ThemeHelper.useLightStatusBar(this);
-        boolean useOptionalLightNavigationBar = ThemeHelper.themeSupportsOptionalĹightNB(this)
+        mUseOptionalLightNavigationBar = ThemeHelper.themeSupportsOptionalĹightNB(this)
                 && ThemeHelper.useLightNavigationBar(this);
-        int themeResId = 0;
 
-        if (useOptionalLightStatusBar && useOptionalLightNavigationBar) {
-            themeResId = R.style.ThemeOverlay_Light_LightStatusNavigationBar;
-        } else if (useOptionalLightStatusBar) {
-            themeResId = R.style.ThemeOverlay_Light_LightStatusBar;
-        } else if (useOptionalLightNavigationBar) {
-            themeResId = R.style.ThemeOverlay_Light_LightNavigationBar;
+        if (mUseOptionalLightStatusBar && mUseOptionalLightNavigationBar) {
+            mThemeResId = R.style.ThemeOverlay_Light_LightStatusNavigationBar;
+        } else if (mUseOptionalLightStatusBar) {
+            mThemeResId = R.style.ThemeOverlay_Light_LightStatusBar;
+        } else if (mUseOptionalLightNavigationBar) {
+            mThemeResId = R.style.ThemeOverlay_Light_LightNavigationBar;
         } else {
-            themeResId = R.style.AppTheme;
+            mThemeResId = R.style.AppTheme;
         }
-        setTheme(themeResId);
+
+        setTheme(mThemeResId);
 
         int oldFlags = getWindow().getDecorView().getSystemUiVisibility();
         int newFlags = oldFlags;
-        if (!useOptionalLightStatusBar) {
+        if (!mUseOptionalLightStatusBar) {
             // Possibly we are using the Whiteout theme
-            boolean isWhiteoutTheme =
+            mIsWhiteoutTheme =
                     ThemeHelper.getTheme(this) == UiModeManager.MODE_NIGHT_NO_WHITEOUT;
             boolean isLightStatusBar = (newFlags & View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
                     == View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             // Check if light status bar flag was set,
             // and we are not using the Whiteout theme,
             // (Whiteout theme should always use a light status bar).
-            if (isLightStatusBar && !isWhiteoutTheme) {
+            if (isLightStatusBar && !mIsWhiteoutTheme) {
                 // Remove flag
                 newFlags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             }
         }
-        if (useOptionalLightNavigationBar) {
+        if (mUseOptionalLightNavigationBar) {
             newFlags |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
         } else {
             // Check if light navigation bar flag was set
@@ -129,5 +134,25 @@ public class MainActivity extends Activity implements
 
     public void recreateForThemeChange() {
         recreate();
+    }
+
+    @Override
+    public int getCurentThemeResId() {
+        return mThemeResId;
+    }
+
+    @Override
+    public boolean isWhiteoutTheme() {
+        return mIsWhiteoutTheme;
+    }
+
+    @Override
+    public boolean useOptionalLightStatusBar() {
+        return mUseOptionalLightStatusBar;
+    }
+
+    @Override
+    public boolean useOptionalLightNavigationBar() {
+        return mUseOptionalLightNavigationBar;
     }
 }
