@@ -137,6 +137,11 @@ public class ColorsLockScreen extends SettingsColorPickerFragment implements
         }
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_colors_lock_screen;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String hex;
         int intHex;

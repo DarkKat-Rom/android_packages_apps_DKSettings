@@ -122,6 +122,11 @@ public class BatteryStatusSettings extends SettingsBaseFragment implements
     }
 
     @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_lock_screen_battery_status;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value;
 

@@ -48,6 +48,11 @@ public class LockScreenSettings extends SettingsBaseFragment implements
         mShowVizualizer.setOnPreferenceChangeListener(this);
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_lock_screen;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mShowVizualizer) {
             boolean value = (Boolean) newValue;

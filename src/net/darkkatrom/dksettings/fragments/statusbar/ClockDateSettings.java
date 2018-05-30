@@ -172,6 +172,11 @@ public class ClockDateSettings extends SettingsBaseFragment implements
         }
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_status_bar_clock_date;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean result = false;
         AlertDialog dialog;

@@ -48,6 +48,27 @@
     <string name="text_charge_icon_title">Percentage text &amp; charging indicator</string>
     <string name="icon_title">Icon</string>
 
+    <!-- Actionbar -->
+    <string name="action_bar_subtitle_theme_colors">@string/theme_colors_settings_title</string>
+    <string name="action_bar_subtitle_lock_screen">@string/lock_screen_title</string>
+    <string name="action_bar_subtitle_status_bar">@string/status_bar_title</string>
+    <string name="action_bar_subtitle_power_menu">@string/power_menu_settings_title</string>
+    <string name="action_bar_subtitle_experimental_display">Experimental -> \'Display\'</string>
+    <string name="action_bar_subtitle_theme_system_ui">Theme SystemUI</string>
+    <string name="action_bar_subtitle_colors_lock_screen">Colors lock screen</string>
+    <string name="action_bar_subtitle_colors_status_bar">Colors status bar</string>
+    <string name="action_bar_subtitle_lock_screen_widgets">Lock screen -> \'Widgets\'</string>
+    <string name="action_bar_subtitle_lock_screen_status_area">Lock screen -> \'Status area\'</string>
+    <string name="action_bar_subtitle_lock_screen_battery_status">Lock screen -> \'Battery status\'</string>
+    <string name="action_bar_subtitle_status_bar_clock_date">Status bar -> \'Clock &amp; date\'</string>
+    <string name="action_bar_subtitle_about_darkkat" product="default">Phone &amp; software info -> \'DarkKat\'</string>
+    <string name="action_bar_subtitle_about_darkkat" product="tablet">Tablet &amp; software info -> \'DarkKat\'</string>
+    <string name="action_bar_subtitle_about_android" product="default">Phone &amp; software info -> \'Android\'</string>
+    <string name="action_bar_subtitle_about_android" product="tablet">Tablet &amp; software info -> \'Android\'</string>
+    <string name="action_bar_subtitle_about_device" product="default">Phone &amp; software info -> \'%1$s\'</string>
+    <string name="action_bar_subtitle_about_device" product="tablet">Tablet &amp; software info -> \'%1$s\'</string>
+    <string name="action_bar_subtitle_ambient_display">Experimental -> \'Ambient display\'</string>
+
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
     <string name="settings_category_buttons_title">Buttons</string>

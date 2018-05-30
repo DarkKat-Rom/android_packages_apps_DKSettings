@@ -73,6 +73,11 @@ public class PowerButtonSettings extends SettingsBaseFragment implements
     }
 
     @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_power_menu;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
        boolean value;
 

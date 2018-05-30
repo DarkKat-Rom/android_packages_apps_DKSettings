@@ -29,4 +29,9 @@ public class StatusBarSettings extends SettingsBaseFragment {
 
         addPreferencesFromResource(R.xml.status_bar_settings);
     }
+
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_status_bar;
+    }
 }

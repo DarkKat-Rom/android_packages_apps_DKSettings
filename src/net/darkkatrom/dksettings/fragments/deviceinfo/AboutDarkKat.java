@@ -51,4 +51,9 @@ public class AboutDarkKat extends DeviceInfoBaseFragment {
         setValueSummary(PREF_DARKKAT_BUILD_TYPE, PROP_DK_BUILD_TYPE);
         setValueSummary(PREF_DARKKAT_BUILD_DATE, PROP_DK_BUILD_DATE);
     }
+
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_about_darkkat;
+    }
 }

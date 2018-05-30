@@ -61,6 +61,11 @@ public class MainSettings extends SettingsBaseFragment {
         setStringSummary(PREF_DEVICE, summaryDevice);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        removeSubtitle();
+    }
 
     private void setStringSummary(String preference, String value) {
         try {
