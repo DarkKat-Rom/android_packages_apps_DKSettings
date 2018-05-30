@@ -48,6 +48,27 @@
     <string name="text_charge_icon_title">Prozentzahl &amp; Ladesymbol</string>
     <string name="icon_title">Symbol</string>
 
+    <!-- Actionbar -->
+    <string name="action_bar_subtitle_theme_colors">@string/theme_colors_settings_title</string>
+    <string name="action_bar_subtitle_lock_screen">@string/lock_screen_title</string>
+    <string name="action_bar_subtitle_status_bar">@string/status_bar_title</string>
+    <string name="action_bar_subtitle_power_menu">@string/power_menu_settings_title</string>
+    <string name="action_bar_subtitle_experimental_display">Experimentell -> \'Bildschirm\'</string>
+    <string name="action_bar_subtitle_theme_system_ui">Theme: SystemUI</string>
+    <string name="action_bar_subtitle_colors_lock_screen">Farben: Sperrbildschirm</string>
+    <string name="action_bar_subtitle_colors_status_bar">Farben: Statusleiste</string>
+    <string name="action_bar_subtitle_lock_screen_widgets">Sperrbildschirm -> \'Widgets\'</string>
+    <string name="action_bar_subtitle_lock_screen_status_area">Sperrbildschirm -> \'Statusbereich\'</string>
+    <string name="action_bar_subtitle_lock_screen_battery_status">Sperrbildschirm -> \'Akku Information\'</string>
+    <string name="action_bar_subtitle_status_bar_clock_date">Statusleiste -> \'Uhr &amp; Datum\'</string>
+    <string name="action_bar_subtitle_about_darkkat" product="default">Telefon- &amp; Software Info -> \'DarkKat\'</string>
+    <string name="action_bar_subtitle_about_darkkat" product="tablet">Tablet- &amp; Software Info -> \'DarkKat\'</string>
+    <string name="action_bar_subtitle_about_android" product="default">Telefon- &amp; Software Info -> \'Android\'</string>
+    <string name="action_bar_subtitle_about_android" product="tablet">Tablet- &amp; Software Info -> \'Android\'</string>
+    <string name="action_bar_subtitle_about_device" product="default">Telefon- &amp; Software Info -> \'%1$s\'</string>
+    <string name="action_bar_subtitle_about_device" product="tablet">Tablet- &amp; Software Info -> \'%1$s\'</string>
+    <string name="action_bar_subtitle_ambient_display">Experimental -> \'Inaktivitätsdisplay\'</string>
+
     <!-- Kategorien -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
     <string name="settings_category_buttons_title">Tasten</string>

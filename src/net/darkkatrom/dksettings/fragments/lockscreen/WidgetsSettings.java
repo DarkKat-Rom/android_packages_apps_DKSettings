@@ -87,6 +87,11 @@ public class WidgetsSettings extends SettingsBaseFragment implements
         }
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_lock_screen_widgets;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value;
         if (preference == mShowWidgets) {

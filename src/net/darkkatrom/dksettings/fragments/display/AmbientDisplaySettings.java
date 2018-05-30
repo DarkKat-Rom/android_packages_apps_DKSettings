@@ -67,6 +67,11 @@ public class AmbientDisplaySettings extends SettingsBaseFragment implements
     }
 
     @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_ambient_display;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mPulseOnNotification) {
             int intValue = Integer.valueOf((String) newValue);

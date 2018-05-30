@@ -151,6 +151,11 @@ public class ColorsStatusBar extends SettingsColorPickerFragment implements
         }
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_colors_status_bar;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String hex;
         int intHex;

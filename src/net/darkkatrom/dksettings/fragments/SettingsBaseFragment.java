@@ -18,10 +18,29 @@ package net.darkkatrom.dksettings.fragments;
 
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 
 public class SettingsBaseFragment extends PreferenceFragment {
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity().getActionBar() != null && getSubtitleResId() > 0) {
+            getActivity().getActionBar().setSubtitle(getSubtitleResId());
+        }
+    }
+
+    protected int getSubtitleResId() {
+        return 0;
+    }
+
+    protected void removeSubtitle() {
+        if (getActivity().getActionBar() != null) {
+            getActivity().getActionBar().setSubtitle(null);
+        }
+    }
 
     protected void removePreference(String key) {
         Preference pref = findPreference(key);

@@ -80,6 +80,11 @@ public class StatusAreaSettings extends SettingsBaseFragment implements
         }
     }
 
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_lock_screen_status_area;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value;
 

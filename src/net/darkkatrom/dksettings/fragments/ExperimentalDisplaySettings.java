@@ -28,4 +28,9 @@ public class ExperimentalDisplaySettings extends SettingsBaseFragment {
 
         addPreferencesFromResource(R.xml.experimental_display_settings);
     }
+
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_experimental_display;
+    }
 }

@@ -34,6 +34,12 @@ public class AboutDevice extends DeviceInfoBaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (getActivity().getActionBar() != null) {
+            final String subtitle = getResources().getString(
+                    R.string.action_bar_subtitle_about_device, Build.MODEL + getMsvSuffix());
+            getActivity().getActionBar().setSubtitle(subtitle);
+        }
+
         addPreferencesFromResource(R.xml.about_device);
 
         setStringSummary(PREF_DEVICE_MODEL, Build.MODEL);

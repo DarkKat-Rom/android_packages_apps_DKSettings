@@ -52,8 +52,12 @@ public class ThemeSystemUI extends SettingsBaseFragment implements
         mThemeOverlayMode.setOnPreferenceChangeListener(this);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_theme_system_ui;
+    }
 
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mThemeOverlayMode) {
             int themeOverlayMode = Integer.valueOf((String) newValue);
             int index = mThemeOverlayMode.findIndexOfValue((String) newValue);

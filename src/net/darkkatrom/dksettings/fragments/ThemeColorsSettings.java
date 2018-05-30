@@ -114,6 +114,11 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
     }
 
     @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_theme_colors;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         int intValue;
         boolean value;

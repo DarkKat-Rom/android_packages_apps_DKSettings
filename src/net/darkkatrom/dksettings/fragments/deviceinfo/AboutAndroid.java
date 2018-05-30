@@ -57,4 +57,9 @@ public class AboutAndroid extends DeviceInfoBaseFragment {
 
         setStringSummary(PREF_BUILD_NUMBER, Build.DISPLAY);
     }
+
+    @Override
+    protected int getSubtitleResId() {
+        return R.string.action_bar_subtitle_about_android;
+    }
 }
