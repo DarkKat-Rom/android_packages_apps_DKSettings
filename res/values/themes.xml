@@ -22,22 +22,30 @@
         <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ThemeOverlay.Light" parent="@android:style/Theme.Material.DayNight">
+    <style name="AppTheme.LightActionBar" parent="@android:style/Theme.Material.DayNight.LightActionBar">
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ThemeOverlay.Light.LightStatusBar">
-        <item name="android:colorPrimaryDark">@color/background_light_system_bars</item>
-        <item name="android:windowLightStatusBar">true</item>
+    <style name="AppTheme.LightStatusBar" parent="@android:style/Theme.Material.DayNight.LightStatusBar">
+        <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ThemeOverlay.Light.LightNavigationBar" parent="@style/AppTheme">
-        <item name="android:navigationBarColor">@color/background_light_system_bars</item>
+    <style name="AppTheme.LightNavigationBar"
+            parent="@android:style/Theme.Material.DayNight.DarkActionBar.LightNavigationBar">
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ThemeOverlay.Light.LightStatusNavigationBar">
-        <item name="android:colorPrimaryDark">@color/background_light_system_bars</item>
-        <item name="android:navigationBarColor">@color/background_light_system_bars</item>
-        <item name="android:windowLightStatusBar">true</item>
+    <style name="AppTheme.LightActionBar.LightNavigationBar"
+            parent="@android:style/Theme.Material.DayNight.LightActionBar.LightNavigationBar">
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorAccent">@color/theme_accent</item>
+    </style>
+
+    <style name="AppTheme.LightStatusBar.LightNavigationBar"
+            parent="@android:style/Theme.Material.DayNight.LightStatusBar.LightNavigationBar">
+        <item name="android:colorAccent">@color/theme_accent</item>
     </style>
 </resources>
