@@ -28,19 +28,26 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.android.internal.util.darkkat.ThemeColorHelper;
 import com.android.internal.util.darkkat.ThemeHelper;
 
+import net.darkkatrom.dkcolorpicker.fragment.SettingsColorPickerFragment;
+import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.MainActivity;
 import net.darkkatrom.dksettings.R;
 
-public class ThemeColorsSettings extends SettingsBaseFragment implements
+public class ThemeColorsSettings extends SettingsColorPickerFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "ThemeColorsSettings";
 
+    private static final String PREF_CAT_THEME_GENERAL        = "theme_colors_cat_theme_general";
     private static final String PREF_CAT_THEME_BARS           = "theme_colors_cat_theme_bars";
     private static final String PREF_DAY_NIGHT_MODE           = "day_night_mode";
     private static final String PREF_NIGHT_THEME              = "night_theme";
     private static final String PREF_DAY_THEME                = "day_theme";
+    private static final String PREF_CUSTOMIZE_COLORS         = "customize_colors";
+    private static final String PREF_PRIMARY_COLOR            = "primary_color";
+    private static final String PREF_COLORIZE_NAVIGATION_BAR  = "colorize_navigation_bar";
     private static final String PREF_USE_LIGHT_STATUS_BAR     = "use_light_status_bar";
     private static final String PREF_USE_LIGHT_NAVIGATION_BAR = "use_light_navigation_bar";
 
@@ -49,6 +56,9 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
     private ListPreference mDayNightMode;
     private ListPreference mNightTheme;
     private ListPreference mDayTheme;
+    private SwitchPreference mCustomizeColors;
+    private ColorPickerPreference mPrimaryColor;
+    private SwitchPreference mColorizeNavigationBar;
     private SwitchPreference mUseLightStatusBar;
     private SwitchPreference mUseLightNavigationBar;
 
@@ -84,32 +94,68 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
         mDayTheme.setValue(String.valueOf(dayTheme));
         mDayTheme.setOnPreferenceChangeListener(this);
 
+        PreferenceCategory catThemeGeneral =
+                (PreferenceCategory) findPreference(PREF_CAT_THEME_GENERAL);
         PreferenceCategory catThemeBars =
                 (PreferenceCategory) findPreference(PREF_CAT_THEME_BARS);
 
-        if (ThemeHelper.themeSupportsOptionalĹightSB(getActivity())) {
+        if (ThemeHelper.isBlackoutTheme(getActivity())
+                || ThemeHelper.isWhiteoutTheme(getActivity())) {
+            catThemeGeneral.removePreference(findPreference(PREF_CUSTOMIZE_COLORS));
+        } else {
+            mCustomizeColors =
+                    (SwitchPreference) findPreference(PREF_CUSTOMIZE_COLORS);
+            mCustomizeColors.setChecked(Settings.Secure.getInt(mResolver,
+                    Settings.Secure.CUSTOMIZE_THEME_COLORS, 0) == 1);
+            mCustomizeColors.setOnPreferenceChangeListener(this);
+        }
+
+        if (ThemeHelper.isBlackoutTheme(getActivity())
+                || ThemeHelper.isWhiteoutTheme(getActivity())
+                || !ThemeColorHelper.customizeColors(getActivity())) {
+            catThemeGeneral.removePreference(findPreference(PREF_PRIMARY_COLOR));
+        } else {
+            int defaultPrimaryColor = getActivity().getColor(R.color.theme_primary);
+            mPrimaryColor = (ColorPickerPreference) findPreference(PREF_PRIMARY_COLOR);
+            int intColor = ThemeColorHelper.getPrimaryColor(getActivity(), defaultPrimaryColor);
+            mPrimaryColor.setNewColor(intColor);
+            mPrimaryColor.setOnPreferenceChangeListener(this);
+        }
+
+        if (ThemeHelper.isNightMode(getActivity())
+                || ThemeColorHelper.customizeColors(getActivity())
+                || ThemeHelper.isWhiteoutTheme(getActivity())) {
+            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_STATUS_BAR));
+        } else {
             mUseLightStatusBar =
                     (SwitchPreference) findPreference(PREF_USE_LIGHT_STATUS_BAR);
             mUseLightStatusBar.setChecked(Settings.Secure.getInt(mResolver,
                     Settings.Secure.USE_LIGHT_STATUS_BAR, 0) == 1);
             mUseLightStatusBar.setOnPreferenceChangeListener(this);
-        } else {
-            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_STATUS_BAR));
         }
 
-        if (ThemeHelper.themeSupportsOptionalĹightNB(getActivity())) {
+        if (ThemeHelper.isNightMode(getActivity())
+                || ThemeColorHelper.colorizeNavigationBar(getActivity())
+                || ThemeHelper.isWhiteoutTheme(getActivity())) {
+            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_NAVIGATION_BAR));
+        } else {
             mUseLightNavigationBar =
                     (SwitchPreference) findPreference(PREF_USE_LIGHT_NAVIGATION_BAR);
             mUseLightNavigationBar.setChecked(Settings.Secure.getInt(mResolver,
                     Settings.Secure.USE_LIGHT_NAVIGATION_BAR, 0) == 1);
             mUseLightNavigationBar.setOnPreferenceChangeListener(this);
-        } else {
-            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_NAVIGATION_BAR));
         }
 
-        if (!ThemeHelper.themeSupportsOptionalĹightSB(getActivity())
-                && !ThemeHelper.themeSupportsOptionalĹightNB(getActivity())) {
+        if (ThemeHelper.isBlackoutTheme(getActivity())
+                || ThemeHelper.isWhiteoutTheme(getActivity())) {
+            catThemeBars.removePreference(findPreference(PREF_COLORIZE_NAVIGATION_BAR));
             removePreference(PREF_CAT_THEME_BARS);
+        } else {
+            mColorizeNavigationBar =
+                    (SwitchPreference) findPreference(PREF_COLORIZE_NAVIGATION_BAR);
+            mColorizeNavigationBar.setChecked(Settings.Secure.getInt(mResolver,
+                    Settings.Secure.COLORIZE_NAVIGATION_BAR, 0) == 1);
+            mColorizeNavigationBar.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -144,6 +190,20 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
             Settings.Secure.putInt(mResolver,
                     Settings.Secure.UI_DAY_THEME, intValue);
             return true;
+        } else if (preference == mCustomizeColors) {
+            value = (Boolean) newValue;
+            Settings.Secure.putInt(mResolver,
+                    Settings.Secure.CUSTOMIZE_THEME_COLORS, value ? 1 : 0);
+            ((MainActivity) getActivity()).recreateForThemeChange();
+            return true;
+        } else if (preference == mPrimaryColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.Secure.putInt(mResolver,
+                    Settings.Secure.THEME_PRIMARY_COLOR, intHex);
+            ((MainActivity) getActivity()).recreateForThemeChange();
+            return true;
         } else if (preference == mUseLightStatusBar) {
             value = (Boolean) newValue;
             Settings.Secure.putInt(mResolver,
@@ -154,6 +214,12 @@ public class ThemeColorsSettings extends SettingsBaseFragment implements
             value = (Boolean) newValue;
             Settings.Secure.putInt(mResolver,
                     Settings.Secure.USE_LIGHT_NAVIGATION_BAR, value ? 1 : 0);
+            ((MainActivity) getActivity()).recreateForThemeChange();
+            return true;
+        } else if (preference == mColorizeNavigationBar) {
+            value = (Boolean) newValue;
+            Settings.Secure.putInt(mResolver,
+                    Settings.Secure.COLORIZE_NAVIGATION_BAR, value ? 1 : 0);
             ((MainActivity) getActivity()).recreateForThemeChange();
             return true;
         }

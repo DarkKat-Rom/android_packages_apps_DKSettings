@@ -16,6 +16,7 @@ limitations under the License.
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/theme_colors_settings_title">
 
     <Preference
@@ -60,11 +61,30 @@ limitations under the License.
             android:entries="@array/day_theme_entries"
             android:entryValues="@array/day_theme_values" />
 
+        <SwitchPreference
+            android:key="customize_colors"
+            android:title="@string/customize_colors_title"
+            android:summary="@string/customize_colors_summary"
+            android:defaultValue="false" />
+
+        <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
+            android:key="primary_color"
+            android:title="@string/primary_color_title"
+            android:summary="@string/primary_color_summary"
+            app:resetColor1="@color/theme_primary"
+            app:defaultColor="@color/theme_primary" />
+
 	</PreferenceCategory>
 
     <PreferenceCategory
         android:key="theme_colors_cat_theme_bars"
         android:title="@string/theme_colors_cat_theme_bars_title">
+
+        <SwitchPreference
+            android:key="colorize_navigation_bar"
+            android:title="@string/colorize_navigation_bar_title"
+            android:summary="@string/colorize_navigation_bar_summary"
+            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="use_light_status_bar"

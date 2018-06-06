@@ -104,6 +104,14 @@
     <string name="theme_material_title">Material</string>
     <string name="theme_material_light_title">Material Light</string>
     <string name="theme_blackout_title">Blackout</string>
+
+    <string name="customize_colors_title">Farben anpassen</string>
+    <string name="customize_colors_summary">Aktivieren um die Farben der Aktions-, Status- und Navigationsleiste anzupassen.</string>
+    <string name="primary_color_title">Primäre Farbe</string>
+    <string name="primary_color_summary">Mit dieser Farbe werden die Aktions- und (optional) Navigationsleiste eingefärbt. Die Statusleiste wird mit einer dunkleren Variante dieser Farbe eingefäbt.</string>
+    <string name="colorize_navigation_bar_title">Navigationsleiste einfärben</string>
+    <string name="colorize_navigation_bar_summary">Aktivieren um die Navigationsleiste mit der Primären Farbe einzufärben.\nWenn \"Farben anpassen\" nicht aktiviert ist, ist die Primäre Farbe immer \"Material Blue 500\".</string>
+
     <string name="use_light_status_bar_title">Helle Status- &amp; Aktionsleiste</string>
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
