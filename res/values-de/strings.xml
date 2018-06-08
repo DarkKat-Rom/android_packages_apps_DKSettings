@@ -69,6 +69,20 @@
     <string name="action_bar_subtitle_about_device" product="tablet">Tablet- &amp; Software Info -> \'%1$s\'</string>
     <string name="action_bar_subtitle_ambient_display">Experimental -> \'Inaktivitätsdisplay\'</string>
 
+    <!-- Color picker subtitles -->
+    <string name="action_bar_picker_subtitle_theme_primary">Theme -> \'Primär\'</string>
+    <string name="action_bar_picker_subtitle_dark_lock_screen_text">Dunkler Sperrbildschirm -> \'Text\'</string>
+    <string name="action_bar_picker_subtitle_dark_lock_screen_icon">Dunkler Sperrbildschirm -> ...</string>
+    <string name="action_bar_picker_subtitle_light_lock_screen_text">Heller Sperrbildschirm -> \'Text\'</string>
+    <string name="action_bar_picker_subtitle_light_lock_screen_icon">Heller Sperrbildschirm -> ...</string>
+    <string name="action_bar_picker_subtitle_dark_status_bar">Dunkle Statusleiste ...</string>
+    <string name="action_bar_picker_subtitle_light_status_bar">Helle Statusleiste  ...</string>
+
+    <string name="picker_fragment_additional_subtitle_lock_screen_icon">\'Symbol\'</string>
+    <string name="picker_fragment_additional_subtitle_general_text">(Allgemein) -> \'Text\'</string>
+    <string name="picker_fragment_additional_subtitle_general_icon">(Allgemein) -> \'Symbol\'</string>
+    <string name="picker_fragment_additional_subtitle_battery_charge_icon">(Akku) -> \'Prozentzahl &amp; Ladesymbol\'</string>
+
     <!-- Kategorien -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
     <string name="settings_category_buttons_title">Tasten</string>

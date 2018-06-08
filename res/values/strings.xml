@@ -69,6 +69,20 @@
     <string name="action_bar_subtitle_about_device" product="tablet">Tablet &amp; software info -> \'%1$s\'</string>
     <string name="action_bar_subtitle_ambient_display">Experimental -> \'Ambient display\'</string>
 
+    <!-- Color picker subtitles -->
+    <string name="action_bar_picker_subtitle_theme_primary">Theme -> \'Primary\'</string>
+    <string name="action_bar_picker_subtitle_dark_lock_screen_text">Dark lock screen -> \'Text\'</string>
+    <string name="action_bar_picker_subtitle_dark_lock_screen_icon">Dark lock screen -> \'Icon\'</string>
+    <string name="action_bar_picker_subtitle_light_lock_screen_text">Light lock screen -> \'Text\'</string>
+    <string name="action_bar_picker_subtitle_light_lock_screen_icon">Light lock screen -> \'Icon\'</string>
+    <string name="action_bar_picker_subtitle_dark_status_bar">Dark status bar ...</string>
+    <string name="action_bar_picker_subtitle_light_status_bar">Light status bar ...</string>
+
+    <string name="picker_fragment_additional_subtitle_lock_screen_icon">@null</string>
+    <string name="picker_fragment_additional_subtitle_general_text">(General) -> \'Text\'</string>
+    <string name="picker_fragment_additional_subtitle_general_icon">(General) -> \'Icon\'</string>
+    <string name="picker_fragment_additional_subtitle_battery_charge_icon">(Battery) -> \'Percentage text &amp; charging indicator\'</string>
+
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
     <string name="settings_category_buttons_title">Buttons</string>

@@ -16,6 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/lock_screen_title">
 
     <SwitchPreference
@@ -30,11 +31,14 @@
          <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
             android:key="colors_lock_screen_text_color_dark_wallpaper"
             android:title="@string/text_title"
+            app:pickerSubtitle="@string/action_bar_picker_subtitle_dark_lock_screen_text"
             android:defaultValue="#ffffffff" />
 
          <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
             android:key="colors_lock_screen_icon_color_dark_wallpaper"
             android:title="@string/icon_title"
+            app:pickerSubtitle="@string/action_bar_picker_subtitle_dark_lock_screen_icon"
+            app:pickerAdditionalSubtitle="@string/picker_fragment_additional_subtitle_lock_screen_icon"
             android:defaultValue="#ffffffff" />
 
 	</PreferenceCategory>
@@ -46,11 +50,14 @@
          <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
             android:key="colors_lock_screen_text_color_light_wallpaper"
             android:title="@string/text_title"
+            app:pickerSubtitle="@string/action_bar_picker_subtitle_light_lock_screen_text"
             android:defaultValue="#ff000000" />
 
          <net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference
             android:key="colors_lock_screen_icon_color_light_wallpaper"
             android:title="@string/icon_title"
+            app:pickerSubtitle="@string/action_bar_picker_subtitle_light_lock_screen_icon"
+            app:pickerAdditionalSubtitle="@string/picker_fragment_additional_subtitle_lock_screen_icon"
             android:defaultValue="#ff000000" />
 
 	</PreferenceCategory>
