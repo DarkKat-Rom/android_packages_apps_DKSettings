@@ -33,6 +33,7 @@
     <string name="android_title">Android</string>
     <string name="device_title">Device</string>
     <string name="status_bar_title">Status bar</string>
+    <string name="navigation_bar_title">Navigation bar</string>
     <string name="position_title">Position</string>
     <string name="position_right_title">Right</string>
     <string name="position_centered_title">Centered</string>
@@ -47,6 +48,7 @@
     <string name="text_title">Text</string>
     <string name="text_charge_icon_title">Percentage text &amp; charging indicator</string>
     <string name="icon_title">Icon</string>
+    <string name="ripple_title">Ripple effect</string>
 
     <!-- Actionbar -->
     <string name="action_bar_subtitle_theme_colors">@string/theme_colors_settings_title</string>
@@ -57,6 +59,7 @@
     <string name="action_bar_subtitle_theme_system_ui">Theme SystemUI</string>
     <string name="action_bar_subtitle_colors_lock_screen">Colors lock screen</string>
     <string name="action_bar_subtitle_colors_status_bar">Colors status bar</string>
+    <string name="action_bar_subtitle_colors_navigation_bar">Colors navigation bar</string>
     <string name="action_bar_subtitle_lock_screen_widgets">Lock screen -> \'Widgets\'</string>
     <string name="action_bar_subtitle_lock_screen_status_area">Lock screen -> \'Status area\'</string>
     <string name="action_bar_subtitle_lock_screen_battery_status">Lock screen -> \'Battery status\'</string>
@@ -77,11 +80,18 @@
     <string name="action_bar_picker_subtitle_light_lock_screen_icon">Light lock screen -> \'Icon\'</string>
     <string name="action_bar_picker_subtitle_dark_status_bar">Dark status bar ...</string>
     <string name="action_bar_picker_subtitle_light_status_bar">Light status bar ...</string>
+    <string name="action_bar_picker_subtitle_dark_navigation_bar_icon">Dark navigation bar -> \'Icon\'</string>
+    <string name="action_bar_picker_subtitle_dark_navigation_bar_ripple">Dark navigation bar -> ...</string>
+    <string name="action_bar_picker_subtitle_light_navigation_bar_icon">Light navigation bar -> \'Icon\'</string>
+    <string name="action_bar_picker_subtitle_light_navigation_bar_ripple">Light navigation bar -> ...</string>
 
     <string name="picker_fragment_additional_subtitle_lock_screen_icon">@null</string>
     <string name="picker_fragment_additional_subtitle_general_text">(General) -> \'Text\'</string>
     <string name="picker_fragment_additional_subtitle_general_icon">(General) -> \'Icon\'</string>
     <string name="picker_fragment_additional_subtitle_battery_charge_icon">(Battery) -> \'Percentage text &amp; charging indicator\'</string>
+
+    <string name="picker_fragment_additional_subtitle_icon">@null</string>
+    <string name="picker_fragment_additional_subtitle_ripple">\'Ripple effekt\'</string>
 
     <!-- Categories -->
     <string name="settings_category_ui_title">User interface</string>
@@ -132,6 +142,7 @@
     <string name="use_light_navigation_bar_summary">Use a light navigation bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <string name="colors_lock_screen_summary">Choose the colors to colorize the text and icons in the lock screen</string>
     <string name="colors_status_bar_summary">Choose the colors to colorize the text and icons in the status bar</string>
+    <string name="colors_navigation_bar_summary">Choose the colors to colorize the icons and ripple effect on the navigation bar</string>
 
     <!-- Theme SystemUI -->
     <string name="theme_systemui_settings_title">SystemUI</string>
@@ -144,6 +155,12 @@
     <!-- Lock screen colors -->
     <string name="colors_lock_screen_colorize_visualizer_title">Colorize music visualizer</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Enable to colorize the music visualizer on the lock screen</string>
+
+    <!-- navigation bar colors -->
+    <string name="colors_navigation_bar_icon_color_for_ripple_title">Icon color for ripple effect</string>
+    <string name="colors_navigation_bar_icon_color_for_ripple_summary">Enable to use the icon color for the ripple effect, disable to use an own color for the ripple effect</string>
+    <string name="colors_navigation_bar_cat_light_mode_title">Dark navigation bar</string>
+    <string name="colors_navigation_bar_cat_dark_mode_title">Light navigation bar</string>
     <!-- Theme & colors settings end -->
 
     <!-- Lock screen -->

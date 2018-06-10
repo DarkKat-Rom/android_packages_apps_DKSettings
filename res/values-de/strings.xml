@@ -33,6 +33,7 @@
     <string name="android_title">Android</string>
     <string name="device_title">Device</string>
     <string name="status_bar_title">Statusleiste</string>
+    <string name="navigation_bar_title">Navigationsleiste</string>
     <string name="position_title">Position</string>
     <string name="position_right_title">Rechts</string>
     <string name="position_centered_title">Zentriert</string>
@@ -47,6 +48,7 @@
     <string name="text_title">Text</string>
     <string name="text_charge_icon_title">Prozentzahl &amp; Ladesymbol</string>
     <string name="icon_title">Symbol</string>
+    <string name="ripple_title">Ripple-Effekt</string>
 
     <!-- Actionbar -->
     <string name="action_bar_subtitle_theme_colors">@string/theme_colors_settings_title</string>
@@ -57,6 +59,7 @@
     <string name="action_bar_subtitle_theme_system_ui">Theme: SystemUI</string>
     <string name="action_bar_subtitle_colors_lock_screen">Farben: Sperrbildschirm</string>
     <string name="action_bar_subtitle_colors_status_bar">Farben: Statusleiste</string>
+    <string name="action_bar_subtitle_colors_navigation_bar">Farben: Navigationsleiste</string>
     <string name="action_bar_subtitle_lock_screen_widgets">Sperrbildschirm -> \'Widgets\'</string>
     <string name="action_bar_subtitle_lock_screen_status_area">Sperrbildschirm -> \'Statusbereich\'</string>
     <string name="action_bar_subtitle_lock_screen_battery_status">Sperrbildschirm -> \'Akku Information\'</string>
@@ -77,11 +80,18 @@
     <string name="action_bar_picker_subtitle_light_lock_screen_icon">Heller Sperrbildschirm -> ...</string>
     <string name="action_bar_picker_subtitle_dark_status_bar">Dunkle Statusleiste ...</string>
     <string name="action_bar_picker_subtitle_light_status_bar">Helle Statusleiste  ...</string>
+    <string name="action_bar_picker_subtitle_dark_navigation_bar_icon">Dunkle Navigationsleiste -> ...</string>
+    <string name="action_bar_picker_subtitle_dark_navigation_bar_ripple">Dunkle Navigationsleiste -> ...</string>
+    <string name="action_bar_picker_subtitle_light_navigation_bar_icon">Helle Navigationsleiste -> ...</string>
+    <string name="action_bar_picker_subtitle_light_navigation_bar_ripple">Helle Navigationsleiste -> ...</string>
 
     <string name="picker_fragment_additional_subtitle_lock_screen_icon">\'Symbol\'</string>
     <string name="picker_fragment_additional_subtitle_general_text">(Allgemein) -> \'Text\'</string>
     <string name="picker_fragment_additional_subtitle_general_icon">(Allgemein) -> \'Symbol\'</string>
     <string name="picker_fragment_additional_subtitle_battery_charge_icon">(Akku) -> \'Prozentzahl &amp; Ladesymbol\'</string>
+
+    <string name="picker_fragment_additional_subtitle_icon">\'Symbol\'</string>
+    <string name="picker_fragment_additional_subtitle_ripple">\'Ripple-Effekt\'</string>
 
     <!-- Kategorien -->
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
@@ -132,6 +142,7 @@
     <string name="use_light_navigation_bar_summary">Helle Navigationsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="colors_lock_screen_summary">Wähle die Farben mit denen Text und Symbole auf dem Sperrbildschirm eingefärbt werden</string>
     <string name="colors_status_bar_summary">Wähle die Farben mit denen Text und Symbole auf der Statusleiste eingefärbt werden</string>
+    <string name="colors_navigation_bar_summary">Wähle die Farben mit denen Symbole und Ripple-Effekt auf der Navigationsleiste eingefärbt werden</string>
 
     <!-- SystemUI Theme -->
     <string name="theme_systemui_settings_title">SystemUI</string>
@@ -144,6 +155,12 @@
     <!-- Lock screen colors -->
     <string name="colors_lock_screen_colorize_visualizer_title">Musik Visualisierung einfärben</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
+
+    <!-- navigation bar colors -->
+    <string name="colors_navigation_bar_icon_color_for_ripple_title">Symbolfarbe für den Ripple-Effect </string>
+    <string name="colors_navigation_bar_icon_color_for_ripple_summary">Aktivieren um die Symbolfarbe für den Ripple-Effekt zu nutzen, deaktivieren um eine eigene Farbe für den Ripple-Effekt zu nutzen</string>
+    <string name="colors_navigation_bar_cat_light_mode_title">Dunkle Navigationsleiste</string>
+    <string name="colors_navigation_bar_cat_dark_mode_title">Helle Navigationsleiste</string>
     <!-- Einstellungen des Themes & der Farben Ende -->
 
     <!-- Sperrbildschirm -->
