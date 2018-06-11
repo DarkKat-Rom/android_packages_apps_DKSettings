@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 DarkKat
+ * Copyright (C) 2018 DarkKat
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.dksettings.fragments;
+package net.darkkatrom.dksettings.fragments.theme;
 
 import android.app.UiModeManager;
 import android.content.ContentResolver;
@@ -36,12 +36,11 @@ import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
 import net.darkkatrom.dksettings.MainActivity;
 import net.darkkatrom.dksettings.R;
 
-public class ThemeColorsSettings extends SettingsColorPickerFragment implements
+public class ThemeDayNight extends SettingsColorPickerFragment implements
         Preference.OnPreferenceChangeListener {
-    private static final String TAG = "ThemeColorsSettings";
+    private static final String TAG = "ThemeDayNight";
 
-    private static final String PREF_CAT_THEME_GENERAL        = "theme_colors_cat_theme_general";
-    private static final String PREF_CAT_THEME_BARS           = "theme_colors_cat_theme_bars";
+    private static final String PREF_CAT_BARS                 = "theme_day_night_cat_bars";
     private static final String PREF_DAY_NIGHT_MODE           = "day_night_mode";
     private static final String PREF_NIGHT_THEME              = "night_theme";
     private static final String PREF_DAY_THEME                = "day_theme";
@@ -65,6 +64,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         refreshSettings();
     }
 
@@ -74,7 +74,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
             prefs.removeAll();
         }
 
-        addPreferencesFromResource(R.xml.theme_colors_settings);
+        addPreferencesFromResource(R.xml.theme_day_night_settings);
 
         mResolver = getContentResolver();
 
@@ -94,14 +94,12 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
         mDayTheme.setValue(String.valueOf(dayTheme));
         mDayTheme.setOnPreferenceChangeListener(this);
 
-        PreferenceCategory catThemeGeneral =
-                (PreferenceCategory) findPreference(PREF_CAT_THEME_GENERAL);
-        PreferenceCategory catThemeBars =
-                (PreferenceCategory) findPreference(PREF_CAT_THEME_BARS);
+        PreferenceCategory catBars =
+                (PreferenceCategory) findPreference(PREF_CAT_BARS);
 
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
-            catThemeGeneral.removePreference(findPreference(PREF_CUSTOMIZE_COLORS));
+            catBars.removePreference(findPreference(PREF_CUSTOMIZE_COLORS));
         } else {
             mCustomizeColors =
                     (SwitchPreference) findPreference(PREF_CUSTOMIZE_COLORS);
@@ -113,7 +111,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())
                 || !ThemeColorHelper.customizeColors(getActivity())) {
-            catThemeGeneral.removePreference(findPreference(PREF_PRIMARY_COLOR));
+            catBars.removePreference(findPreference(PREF_PRIMARY_COLOR));
         } else {
             int defaultPrimaryColor = getActivity().getColor(R.color.theme_primary);
             mPrimaryColor = (ColorPickerPreference) findPreference(PREF_PRIMARY_COLOR);
@@ -125,7 +123,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
         if (ThemeHelper.isNightMode(getActivity())
                 || ThemeColorHelper.customizeColors(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
-            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_STATUS_BAR));
+            catBars.removePreference(findPreference(PREF_USE_LIGHT_STATUS_BAR));
         } else {
             mUseLightStatusBar =
                     (SwitchPreference) findPreference(PREF_USE_LIGHT_STATUS_BAR);
@@ -137,7 +135,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
         if (ThemeHelper.isNightMode(getActivity())
                 || ThemeColorHelper.colorizeNavigationBar(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
-            catThemeBars.removePreference(findPreference(PREF_USE_LIGHT_NAVIGATION_BAR));
+            catBars.removePreference(findPreference(PREF_USE_LIGHT_NAVIGATION_BAR));
         } else {
             mUseLightNavigationBar =
                     (SwitchPreference) findPreference(PREF_USE_LIGHT_NAVIGATION_BAR);
@@ -148,8 +146,8 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
 
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
-            catThemeBars.removePreference(findPreference(PREF_COLORIZE_NAVIGATION_BAR));
-            removePreference(PREF_CAT_THEME_BARS);
+            catBars.removePreference(findPreference(PREF_COLORIZE_NAVIGATION_BAR));
+            removePreference(PREF_CAT_BARS);
         } else {
             mColorizeNavigationBar =
                     (SwitchPreference) findPreference(PREF_COLORIZE_NAVIGATION_BAR);
@@ -161,7 +159,7 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
 
     @Override
     protected int getSubtitleResId() {
-        return R.string.action_bar_subtitle_theme_colors;
+        return R.string.action_bar_subtitle_theme_day_night;
     }
 
     @Override
@@ -178,7 +176,6 @@ public class ThemeColorsSettings extends SettingsColorPickerFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist night mode setting", e);
             }
-//            refreshSettings();
             return true;
         } else if (preference == mNightTheme) {
             intValue = Integer.valueOf((String) newValue);

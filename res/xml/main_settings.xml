@@ -19,14 +19,26 @@ limitations under the License.
     android:title="@string/app_name">
 
     <PreferenceCategory
-        android:key="settings_category_ui"
-        android:title="@string/settings_category_ui_title">
+        android:key="settings_category_theme_colors"
+        android:title="@string/settings_category_theme_colors_title">
 
         <PreferenceScreen
-            android:key="theme_colors_settings"
-            android:title="@string/theme_colors_settings_title"
-            android:icon="@drawable/ic_settings_theme_colors"
-            android:fragment="net.darkkatrom.dksettings.fragments.ThemeColorsSettings" />
+            android:key="theme_settings"
+            android:title="@string/theme_settings_title"
+            android:icon="@drawable/ic_settings_theme"
+            android:fragment="net.darkkatrom.dksettings.fragments.ThemeSettings" />
+
+        <PreferenceScreen
+            android:key="colors_settings"
+            android:title="@string/colors_settings_title"
+            android:icon="@drawable/ic_settings_colors"
+            android:fragment="net.darkkatrom.dksettings.fragments.ColorsSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="settings_category_ui"
+        android:title="@string/settings_category_ui_title">
 
         <PreferenceScreen
             android:key="lock_screen_settings"
