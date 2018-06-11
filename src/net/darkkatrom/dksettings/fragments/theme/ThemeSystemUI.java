@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.dksettings.fragments.themecolors;
+package net.darkkatrom.dksettings.fragments.theme;
 
 import android.content.ContentResolver;
 import android.os.Bundle;

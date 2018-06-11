@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.dksettings.fragments.themecolors;
+package net.darkkatrom.dksettings.fragments.colors;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

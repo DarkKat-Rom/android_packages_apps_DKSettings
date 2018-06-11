@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 DarkKat
+<!-- Copyright (C) 2018 DarkKat
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,28 +17,11 @@ limitations under the License.
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/theme_colors_settings_title">
-
-    <Preference
-        android:key="test_notifications"
-        android:title="@string/test_notifications_title"
-        android:summary="@string/test_notifications_summary">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="net.darkkatrom.dknotificationtest.MainActivity"
-            android:targetPackage="net.darkkatrom.dknotificationtest" />
-    </Preference>
+    android:title="@string/theme_day_night_settings_title">
 
     <PreferenceCategory
-        android:key="theme_colors_cat_theme_general"
-        android:title="@string/theme_colors_cat_theme_general_title">
-
-        <Preference
-            android:key="notification_theme_change_info"
-            android:title="@string/notification_theme_change_info_title"
-            android:summary="@string/notification_theme_change_info_summary"
-            android:enabled="false"
-            android:shouldDisableView="false" />
+        android:key="theme_day_night_cat_general"
+        android:title="@string/theme_day_night_cat_general_title">
 
         <ListPreference
             android:key="day_night_mode"
@@ -61,6 +44,12 @@ limitations under the License.
             android:entries="@array/day_theme_entries"
             android:entryValues="@array/day_theme_values" />
 
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="theme_day_night_cat_bars"
+        android:title="@string/theme_day_night_cat_bars_title">
+
         <SwitchPreference
             android:key="customize_colors"
             android:title="@string/customize_colors_title"
@@ -72,14 +61,9 @@ limitations under the License.
             android:title="@string/primary_color_title"
             android:summary="@string/primary_color_summary"
             app:pickerSubtitle="@string/action_bar_picker_subtitle_theme_primary"
+            app:pickerAdditionalSubtitle="@string/picker_fragment_additional_subtitle_theme_primary"
             app:resetColor1="@color/theme_primary"
             app:defaultColor="@color/theme_primary" />
-
-	</PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="theme_colors_cat_theme_bars"
-        android:title="@string/theme_colors_cat_theme_bars_title">
 
         <SwitchPreference
             android:key="colorize_navigation_bar"
@@ -96,42 +80,6 @@ limitations under the License.
             android:key="use_light_navigation_bar"
             android:title="@string/use_light_navigation_bar_title"
             android:summary="@string/use_light_navigation_bar_summary" />
-
-	</PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="theme_colors_cat_theme_apps"
-        android:title="@string/theme_colors_cat_theme_apps_title">
-
-        <PreferenceScreen
-            android:key="theme_systemui_settings"
-            android:title="@string/theme_systemui_settings_title"
-            android:summary="@string/theme_systemui_settings_summary"
-            android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ThemeSystemUI" />
-
-	</PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="theme_colors_cat_colors"
-        android:title="@string/theme_colors_cat_colors_title">
-
-        <PreferenceScreen
-            android:key="colors_lock_screen"
-            android:title="@string/lock_screen_title"
-            android:summary="@string/colors_lock_screen_summary"
-            android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsLockScreen" />
-
-        <PreferenceScreen
-            android:key="colors_status_bar"
-            android:title="@string/status_bar_title"
-            android:summary="@string/colors_status_bar_summary"
-            android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsStatusBar" />
-
-        <PreferenceScreen
-            android:key="colors_navigation_bar"
-            android:title="@string/navigation_bar_title"
-            android:summary="@string/colors_navigation_bar_summary"
-            android:fragment="net.darkkatrom.dksettings.fragments.themecolors.ColorsNavigationBar" />
 
 	</PreferenceCategory>
 </PreferenceScreen>

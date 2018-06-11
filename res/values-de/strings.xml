@@ -51,15 +51,16 @@
     <string name="ripple_title">Ripple-Effekt</string>
 
     <!-- Actionbar -->
-    <string name="action_bar_subtitle_theme_colors">@string/theme_colors_settings_title</string>
-    <string name="action_bar_subtitle_lock_screen">@string/lock_screen_title</string>
+    <string name="action_bar_subtitle_theme">@string/theme_settings_title</string>
+    <string name="action_bar_subtitle_colors">@string/colors_settings_title</string>
     <string name="action_bar_subtitle_status_bar">@string/status_bar_title</string>
     <string name="action_bar_subtitle_power_menu">@string/power_menu_settings_title</string>
     <string name="action_bar_subtitle_experimental_display">Experimentell -> \'Bildschirm\'</string>
-    <string name="action_bar_subtitle_theme_system_ui">Theme: SystemUI</string>
-    <string name="action_bar_subtitle_colors_lock_screen">Farben: Sperrbildschirm</string>
-    <string name="action_bar_subtitle_colors_status_bar">Farben: Statusleiste</string>
-    <string name="action_bar_subtitle_colors_navigation_bar">Farben: Navigationsleiste</string>
+    <string name="action_bar_subtitle_theme_day_night">Theme -> \'Tag/Nacht\'</string>
+    <string name="action_bar_subtitle_theme_system_ui">Theme -> \'SystemUI\'</string>
+    <string name="action_bar_subtitle_colors_lock_screen">Farben -> \'Sperrbildschirm\'</string>
+    <string name="action_bar_subtitle_colors_status_bar">Farben -> \'Statusleiste\'</string>
+    <string name="action_bar_subtitle_colors_navigation_bar">Farben -> \'Navigationsleiste\'</string>
     <string name="action_bar_subtitle_lock_screen_widgets">Sperrbildschirm -> \'Widgets\'</string>
     <string name="action_bar_subtitle_lock_screen_status_area">Sperrbildschirm -> \'Statusbereich\'</string>
     <string name="action_bar_subtitle_lock_screen_battery_status">Sperrbildschirm -> \'Akku Information\'</string>
@@ -73,7 +74,7 @@
     <string name="action_bar_subtitle_ambient_display">Experimental -> \'Inaktivitätsdisplay\'</string>
 
     <!-- Color picker subtitles -->
-    <string name="action_bar_picker_subtitle_theme_primary">Theme -> \'Primär\'</string>
+    <string name="action_bar_picker_subtitle_theme_primary">Theme -> \'Tag/Nacht\' -> \'Primär\'</string>
     <string name="action_bar_picker_subtitle_dark_lock_screen_text">Dunkler Sperrbildschirm -> \'Text\'</string>
     <string name="action_bar_picker_subtitle_dark_lock_screen_icon">Dunkler Sperrbildschirm -> ...</string>
     <string name="action_bar_picker_subtitle_light_lock_screen_text">Heller Sperrbildschirm -> \'Text\'</string>
@@ -85,35 +86,37 @@
     <string name="action_bar_picker_subtitle_light_navigation_bar_icon">Helle Navigationsleiste -> ...</string>
     <string name="action_bar_picker_subtitle_light_navigation_bar_ripple">Helle Navigationsleiste -> ...</string>
 
+    <!-- Color picker additional subtitles -->
+    <string name="picker_fragment_additional_subtitle_theme_primary">@null</string>
     <string name="picker_fragment_additional_subtitle_lock_screen_icon">\'Symbol\'</string>
     <string name="picker_fragment_additional_subtitle_general_text">(Allgemein) -> \'Text\'</string>
     <string name="picker_fragment_additional_subtitle_general_icon">(Allgemein) -> \'Symbol\'</string>
     <string name="picker_fragment_additional_subtitle_battery_charge_icon">(Akku) -> \'Prozentzahl &amp; Ladesymbol\'</string>
-
     <string name="picker_fragment_additional_subtitle_icon">\'Symbol\'</string>
     <string name="picker_fragment_additional_subtitle_ripple">\'Ripple-Effekt\'</string>
 
-    <!-- Kategorien -->
+    <!-- Categories -->
+    <string name="settings_category_theme_colors_title">Theme &amp; Farben</string>
     <string name="settings_category_ui_title">Benutzeroberfläche</string>
     <string name="settings_category_buttons_title">Tasten</string>
     <string name="settings_category_experimental_title">Experimentell</string>
     <string name="settings_category_about_device_software_title" product="default">Telefon- &amp; Software Info</string>
     <string name="settings_category_about_device_software_title" product="tablet">Tablet- &amp; Software Info</string>
 
-    <!-- Einstellungen der Benutzeroberfläche -->
-    <string name="theme_colors_settings_title">Theme &amp; Farben</string>
+    <!-- Theme & Colors category -->
+    <string name="theme_settings_title">Theme</string>
+    <string name="colors_settings_title">Farben</string>
 
-    <!-- Einstellungen des Themes & der Farben -->
-    <string name="theme_colors_cat_theme_general_title">Theme allgemein</string>
-    <string name="theme_colors_cat_theme_bars_title">Theme Systemleisten</string>
-    <string name="theme_colors_cat_theme_apps_title">Theme Apps</string>
-    <string name="theme_colors_cat_colors_title">Farben</string>
+    <!-- Theme settings -->
+
+    <!-- General -->
+    <string name="theme_day_night_settings_title">Tag/Nacht</string>
+    <string name="theme_day_night_settings_summary">Wähle welches Tag/Nacht-Theme global angewendet werden soll,\nund wie die Systemleisten dargestellt werden.</string>
+    <string name="theme_day_night_cat_general_title">Allgemein</string>
+    <string name="theme_day_night_cat_bars_title">Systemleisten</string>
     <string name="test_notifications_title">Benachrichigungen testen</string>
-    <string name="test_notifications_summary" product="default">Wenn das Theme geändert WURDE wie unter \"Benachrichigungen Theme\" beschrieben, muß das Telefon neu gestartet werden bevor Benachrichigungen getestet werden</string>
-    <string name="test_notifications_summary" product="tablet">Wenn das Theme geändert WURDE wie unter \"Benachrichigungen Theme\" beschrieben, muß das Tablet neu gestartet werden bevor Benachrichigungen getestet werden</string>
-    <string name="notification_theme_change_info_title">Benachrichigungen Theme</string>
-    <string name="notification_theme_change_info_summary" product="default">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Telefon neu gestartet werden, sobald das Theme durch eine Option in dieser Kategorie geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
-    <string name="notification_theme_change_info_summary" product="tablet">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Tablet neu gestartet werden, sobald das Theme durch eine Option in dieser Kategorie geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
+    <string name="test_notifications_summary" product="default">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Telefon neu gestartet werden, sobald das Theme durch eine Option in der Kategorie \"Allgemein\" in den \"Tag/Nacht\" Einstellungen geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
+    <string name="test_notifications_summary" product="tablet">Um sicherzustellen das das Benachrichigungen Theme richtig angewendet wird,\nmuß das Tablet neu gestartet werden, sobald das Theme durch eine Option der Kategorie \"Allgemein\" in den \"Tag/Nacht\" Einstellungen geändert WURDE,\n(auch bei einer automatischen Änderung durch:\n\"Tag/Nacht Modus\" -> \"Automatisch Tag/Nacht\").</string>
     <string name="day_night_mode_title">Tag/Nacht Modus</string>
     <string name="theme_night_title">Nacht</string>
     <string name="theme_day_title">Tag</string>
@@ -128,14 +131,12 @@
     <string name="theme_material_title">Material</string>
     <string name="theme_material_light_title">Material Light</string>
     <string name="theme_blackout_title">Blackout</string>
-
     <string name="customize_colors_title">Farben anpassen</string>
-    <string name="customize_colors_summary">Aktivieren um die Farben der Aktions-, Status- und Navigationsleiste anzupassen.</string>
+    <string name="customize_colors_summary">Aktivieren um die Hintergrund Farben der Aktions-, Status- und Navigationsleiste anzupassen.</string>
     <string name="primary_color_title">Primäre Farbe</string>
-    <string name="primary_color_summary">Mit dieser Farbe werden die Aktions- und (optional) Navigationsleiste eingefärbt. Die Statusleiste wird mit einer dunkleren Variante dieser Farbe eingefäbt.</string>
+    <string name="primary_color_summary">Mit dieser Farbe werden die Hintergründe der Aktions- und (optional) Navigationsleiste eingefärbt. Der Hintergrund der Statusleiste wird mit einer dunkleren Variante dieser Farbe eingefäbt.</string>
     <string name="colorize_navigation_bar_title">Navigationsleiste einfärben</string>
-    <string name="colorize_navigation_bar_summary">Aktivieren um die Navigationsleiste mit der Primären Farbe einzufärben.\nWenn \"Farben anpassen\" nicht aktiviert ist, ist die Primäre Farbe immer \"Material Blue 500\".</string>
-
+    <string name="colorize_navigation_bar_summary">Aktivieren um den Hintergrund der Navigationsleiste mit der Primären Farbe einzufärben.\nWenn \"Farben anpassen\" nicht aktiviert ist, ist die Primäre Farbe immer \"Material Blue 500\".</string>
     <string name="use_light_status_bar_title">Helle Status- &amp; Aktionsleiste</string>
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
@@ -146,22 +147,25 @@
 
     <!-- SystemUI Theme -->
     <string name="theme_systemui_settings_title">SystemUI</string>
-    <string name="theme_systemui_settings_summary">Wähle das Theme der SystemUI</string>
+    <string name="theme_systemui_settings_summary">Wähle ob das globale \"Tag/Nacht-Theme\" oder ein eigenes \"Tag/Nacht-Theme\" auf die SystemUI angewendet werden soll</string>
     <string name="theme_systemui_overlay_mode_title">Theme Modus</string>
     <string name="theme_systemui_overlay_mode_auto_default_title">Standard,\nMaterial/Material Light Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
     <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, Nacht Theme / Tag Theme:\n(Abhängig vom Startbildschirm Hintergrund)</string>
     <string name="theme_systemui_overlay_mode_current_overlay_title">Aktuelles Tag/Nacht Theme</string>
+    <!-- Theme settings end -->
 
-    <!-- Lock screen colors -->
+    <!-- Color settings -->
+
+    <!-- Lock screen -->
     <string name="colors_lock_screen_colorize_visualizer_title">Musik Visualisierung einfärben</string>
     <string name="colors_lock_screen_colorize_visualizer_summary">Aktivieren um die Musik Visualisierung auf dem Sperrbildschirm einzufärben</string>
 
-    <!-- navigation bar colors -->
+    <!-- Navigation bar -->
     <string name="colors_navigation_bar_icon_color_for_ripple_title">Symbolfarbe für den Ripple-Effect </string>
     <string name="colors_navigation_bar_icon_color_for_ripple_summary">Aktivieren um die Symbolfarbe für den Ripple-Effekt zu nutzen, deaktivieren um eine eigene Farbe für den Ripple-Effekt zu nutzen</string>
     <string name="colors_navigation_bar_cat_light_mode_title">Dunkle Navigationsleiste</string>
     <string name="colors_navigation_bar_cat_dark_mode_title">Helle Navigationsleiste</string>
-    <!-- Einstellungen des Themes & der Farben Ende -->
+    <!-- Color settings end -->
 
     <!-- Sperrbildschirm -->
     <string name="lock_screen_show_visualizer_title">Musik Visualisierung anzeigen</string>
@@ -222,7 +226,6 @@
     <string name="clock_date_date_size_small_title">Klein</string>
     <string name="clock_date_date_size_small_summary">Aktivieren um ein kleines Datum anzuzeigen</string>
     <!-- Einstellungen der Statusleiste Ende -->
-    <!-- Einstellungen der Benutzeroberfläche Ende -->
 
     <!-- Geräteeinstellungen -->
 
