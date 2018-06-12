@@ -51,13 +51,8 @@
     <string name="ripple_title">Ripple effect</string>
 
     <!-- Actionbar -->
-    <string name="action_bar_subtitle_theme">@string/theme_settings_title</string>
-    <string name="action_bar_subtitle_theme_day_night">Theme -> \'Day/Night\'</string>
-    <string name="action_bar_subtitle_colors">@string/colors_settings_title</string>
-    <string name="action_bar_subtitle_lock_screen">@string/lock_screen_title</string>
-    <string name="action_bar_subtitle_status_bar">@string/status_bar_title</string>
-    <string name="action_bar_subtitle_power_menu">@string/power_menu_settings_title</string>
     <string name="action_bar_subtitle_experimental_display">Experimental -> \'Display\'</string>
+    <string name="action_bar_subtitle_theme_day_night">Theme -> \'Day/Night\'</string>
     <string name="action_bar_subtitle_theme_system_ui">Theme -> \'SystemUI\'</string>
     <string name="action_bar_subtitle_colors_lock_screen">Colors -> \'Lock screen\'</string>
     <string name="action_bar_subtitle_colors_status_bar">Colors -> \'Status bar\'</string>
@@ -109,15 +104,17 @@
     <string name="colors_settings_title">Colors</string>
 
     <!-- Theme settings -->
-
-    <!-- General -->
-    <string name="theme_day_night_settings_title">Day/Night</string>
-    <string name="theme_day_night_settings_summary">Choose which Day/Night theme should be applied globally,\nand how to display the system bars.</string>
-    <string name="theme_day_night_cat_general_title">General</string>
-    <string name="theme_day_night_cat_bars_title">System bars</string>
     <string name="test_notifications_title">Test notifications</string>
     <string name="test_notifications_summary" product="default">To ensure the notification theme is applied correctly,\nthe phone must be restarted, when the theme WAS changed by one of the options in the category \'General\' of the \'Day/Night\' settings,\n(also when the theme change was an automatically change via:\n\'Day/night mode\' -> \'Auto day/night\').</string>
     <string name="test_notifications_summary" product="tablet">To ensure the notification theme is applied correctly,\nthe tablet must be restarted, when the theme WAS changed by one of the options in the category \'General\' of the \'Day/Night\' settings,\n(also when the theme change was an automatically change via:\n\'Day/night mode\' -> \'Auto day/night\').</string>
+    <string name="theme_day_night_settings_title">Day/Night</string>
+    <string name="theme_day_night_settings_summary">Choose which Day/Night theme should be applied globally,\nand how to display the system bars.</string>
+    <string name="theme_systemui_settings_title">SystemUI</string>
+    <string name="theme_systemui_settings_summary">Choose if the global \'Day/Night theme\' or an own \'Day/Night theme\' should be applied to the SystemUI</string>
+
+    <!-- Theme Day/Night -->
+    <string name="theme_day_night_cat_general_title">General</string>
+    <string name="theme_day_night_cat_bars_title">System bars</string>
     <string name="day_night_mode_title">Day/night mode</string>
     <string name="theme_night_title">Night</string>
     <string name="theme_day_title">Day</string>
@@ -147,8 +144,6 @@
     <string name="colors_navigation_bar_summary">Choose the colors to colorize the icons and ripple effect on the navigation bar</string>
 
     <!-- Theme SystemUI -->
-    <string name="theme_systemui_settings_title">SystemUI</string>
-    <string name="theme_systemui_settings_summary">Choose if the global \'Day/Night theme\' or an own \'Day/Night theme\' should be applied to the SystemUI</string>
     <string name="theme_systemui_overlay_mode_title">Theme mode</string>
     <string name="theme_systemui_overlay_mode_auto_default_title">Default,\nMaterial/Material Light theme:\n(Depending on the home screen wallpaper)</string>
     <string name="theme_systemui_overlay_mode_auto_dark_light_title">Auto, night theme / day theme:\n(Depending on the home screen wallpaper)</string>
