@@ -55,6 +55,66 @@
         <item>1</item>
     </string-array>
 
+    <string-array name="accent_color_entries">
+        <item>@string/accent_darkkat</item>
+        <item>@string/holo_blue_light</item>
+        <item>@string/material_blue_grey_500</item>
+        <item>@string/material_blue_500</item>
+        <item>@string/material_light_blue_500</item>
+        <item>@string/material_cyan_500</item>
+        <item>@string/material_deep_teal_500</item>
+        <item>@string/material_indigo_500</item>
+        <item>@string/material_purple_500</item>
+        <item>@string/material_deep_purple_500</item>
+        <item>@string/material_pink_500</item>
+        <item>@string/material_orange_500</item>
+        <item>@string/material_deep_orange_500</item>
+        <item>@string/material_red_500</item>
+        <item>@string/material_yellow_500</item>>
+        <item>@string/material_amber_500</item>>
+        <item>@string/material_green_500</item>
+        <item>@string/material_light_green_500</item>
+        <item>@string/material_lime_500</item>
+        <item>@string/black</item>
+        <item>@string/white</item>
+        <item>@string/blue</item>
+        <item>@string/purple</item>
+        <item>@string/orange</item>
+        <item>@string/red</item>
+        <item>@string/yellow</item>>
+        <item>@string/green</item>
+    </string-array>
+
+    <string-array name="accent_color_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+    </string-array>
+
     <string-array name="theme_systemui_overlay_mode_entries">
         <item>@string/theme_systemui_overlay_mode_auto_default_title</item>
         <item>@string/theme_systemui_overlay_mode_auto_dark_light_title</item>

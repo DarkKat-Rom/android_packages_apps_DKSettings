@@ -47,8 +47,8 @@ limitations under the License.
 	</PreferenceCategory>
 
     <PreferenceCategory
-        android:key="theme_day_night_cat_bars"
-        android:title="@string/theme_day_night_cat_bars_title">
+        android:key="theme_day_night_cat_colors"
+        android:title="@string/theme_day_night_cat_colors_title">
 
         <SwitchPreference
             android:key="customize_colors"
@@ -64,6 +64,20 @@ limitations under the License.
             app:pickerAdditionalSubtitle="@string/picker_fragment_additional_subtitle_theme_primary"
             app:resetColor1="@color/theme_primary"
             app:defaultColor="@color/theme_primary" />
+
+        <ListPreference
+            android:key="accent_color"
+            android:title="@string/accent_color_title"
+            android:summary="@string/list_preference_default_summary"
+            android:entries="@array/accent_color_entries"
+            android:entryValues="@array/accent_color_values"
+            android:defaultValue="0" />
+
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="theme_day_night_cat_bars"
+        android:title="@string/theme_day_night_cat_bars_title">
 
         <SwitchPreference
             android:key="colorize_navigation_bar"

@@ -20,4 +20,15 @@
     <color name="theme_primary">#ff2196f3</color>  <!-- material blue 500 -->
     <color name="theme_primary_dark">#ff1976d2</color>  <!-- material blue 700 -->
     <color name="theme_accent">#ff5a8596</color>  <!-- 12% holo blue light over material blue grey 500 -->
+
+    <!-- Alternative theme accent colors -->
+    <color name="material_blue_grey_500">#ff607d8b</color>
+    <color name="material_light_blue_500">#ff03a9f4</color>
+    <color name="material_cyan_500">#ff00bcd4</color>
+    <color name="material_deep_purple_500">#ff673ab7</color>
+    <color name="material_pink_500">#ffe91e63</color>
+    <color name="material_deep_orange_500">#ffff5722</color>
+    <color name="material_amber_500">#ffffc107</color>
+    <color name="material_light_green_500">#ff8bc34a</color>
+    <color name="material_lime_500">#ffcddc39</color>
 </resources>
