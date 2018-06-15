@@ -40,12 +40,14 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "ThemeDayNight";
 
+    private static final String PREF_CAT_COLORS               = "theme_day_night_cat_colors";
     private static final String PREF_CAT_BARS                 = "theme_day_night_cat_bars";
     private static final String PREF_DAY_NIGHT_MODE           = "day_night_mode";
     private static final String PREF_NIGHT_THEME              = "night_theme";
     private static final String PREF_DAY_THEME                = "day_theme";
     private static final String PREF_CUSTOMIZE_COLORS         = "customize_colors";
     private static final String PREF_PRIMARY_COLOR            = "primary_color";
+    private static final String PREF_ACCENT_COLOR             = "accent_color";
     private static final String PREF_COLORIZE_NAVIGATION_BAR  = "colorize_navigation_bar";
     private static final String PREF_USE_LIGHT_STATUS_BAR     = "use_light_status_bar";
     private static final String PREF_USE_LIGHT_NAVIGATION_BAR = "use_light_navigation_bar";
@@ -57,6 +59,7 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
     private ListPreference mDayTheme;
     private SwitchPreference mCustomizeColors;
     private ColorPickerPreference mPrimaryColor;
+    private ListPreference mAccentColor;
     private SwitchPreference mColorizeNavigationBar;
     private SwitchPreference mUseLightStatusBar;
     private SwitchPreference mUseLightNavigationBar;
@@ -94,12 +97,15 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
         mDayTheme.setValue(String.valueOf(dayTheme));
         mDayTheme.setOnPreferenceChangeListener(this);
 
+        PreferenceCategory catColors =
+                (PreferenceCategory) findPreference(PREF_CAT_COLORS);
+
         PreferenceCategory catBars =
                 (PreferenceCategory) findPreference(PREF_CAT_BARS);
 
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
-            catBars.removePreference(findPreference(PREF_CUSTOMIZE_COLORS));
+            catColors.removePreference(findPreference(PREF_CUSTOMIZE_COLORS));
         } else {
             mCustomizeColors =
                     (SwitchPreference) findPreference(PREF_CUSTOMIZE_COLORS);
@@ -111,13 +117,19 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())
                 || !ThemeColorHelper.customizeColors(getActivity())) {
-            catBars.removePreference(findPreference(PREF_PRIMARY_COLOR));
+            catColors.removePreference(findPreference(PREF_PRIMARY_COLOR));
+            catColors.removePreference(findPreference(PREF_ACCENT_COLOR));
         } else {
             int defaultPrimaryColor = getActivity().getColor(R.color.theme_primary);
             mPrimaryColor = (ColorPickerPreference) findPreference(PREF_PRIMARY_COLOR);
             int intColor = ThemeColorHelper.getPrimaryColor(getActivity(), defaultPrimaryColor);
             mPrimaryColor.setNewColor(intColor);
             mPrimaryColor.setOnPreferenceChangeListener(this);
+
+            mAccentColor = (ListPreference) findPreference(PREF_ACCENT_COLOR);
+            final int accentColor = ThemeColorHelper.getIndexForAccentColor(getActivity());
+            mAccentColor.setValue(String.valueOf(accentColor));
+            mAccentColor.setOnPreferenceChangeListener(this);
         }
 
         if (ThemeHelper.isNightMode(getActivity())
@@ -147,6 +159,7 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
         if (ThemeHelper.isBlackoutTheme(getActivity())
                 || ThemeHelper.isWhiteoutTheme(getActivity())) {
             catBars.removePreference(findPreference(PREF_COLORIZE_NAVIGATION_BAR));
+            removePreference(PREF_CAT_COLORS);
             removePreference(PREF_CAT_BARS);
         } else {
             mColorizeNavigationBar =
@@ -199,6 +212,12 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.Secure.putInt(mResolver,
                     Settings.Secure.THEME_PRIMARY_COLOR, intHex);
+            ((MainActivity) getActivity()).recreateForThemeChange();
+            return true;
+        } else if (preference == mAccentColor) {
+            intValue = Integer.valueOf((String) newValue);
+            Settings.Secure.putInt(mResolver,
+                    Settings.Secure.THEME_ACCENT_COLOR, intValue);
             ((MainActivity) getActivity()).recreateForThemeChange();
             return true;
         } else if (preference == mUseLightStatusBar) {
