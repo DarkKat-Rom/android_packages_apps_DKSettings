@@ -52,6 +52,7 @@ public class MainActivity extends Activity implements
     private boolean mLightNavigationBar = false;
     private boolean mIsBlackoutTheme = false;
     private boolean mIsWhiteoutTheme = false;
+    private int mThemeOverlayAccentResId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,8 +93,9 @@ public class MainActivity extends Activity implements
         }
         setTheme(mThemeResId);
 
-        if (ThemeColorHelper.getThemeOverlayAccentResId(this) > 0) {
-            getTheme().applyStyle(ThemeColorHelper.getThemeOverlayAccentResId(this), true);
+        mThemeOverlayAccentResId = ThemeColorHelper.getThemeOverlayAccentResId(this);
+        if (mThemeOverlayAccentResId > 0) {
+            getTheme().applyStyle(mThemeOverlayAccentResId, true);
         }
 
         int oldFlags = getWindow().getDecorView().getSystemUiVisibility();
@@ -216,5 +218,10 @@ public class MainActivity extends Activity implements
     @Override
     public boolean isBlackoutTheme() {
         return mIsBlackoutTheme;
+    }
+
+    @Override
+    public int getThemeOverlayAccentResId() {
+        return mThemeOverlayAccentResId;
     }
 }
