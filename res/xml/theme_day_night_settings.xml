@@ -65,12 +65,13 @@ limitations under the License.
             app:resetColor1="@color/theme_primary"
             app:defaultColor="@color/theme_primary" />
 
-        <ListPreference
+        <net.darkkatrom.dkcolorpicker.preference.ColorPickerListPreference
             android:key="accent_color"
             android:title="@string/accent_color_title"
             android:summary="@string/list_preference_default_summary"
             android:entries="@array/accent_color_entries"
             android:entryValues="@array/accent_color_values"
+            app:entryColors="@array/accent_color_entry_colors"
             android:defaultValue="0" />
 
 	</PreferenceCategory>

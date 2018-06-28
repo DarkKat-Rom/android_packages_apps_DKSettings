@@ -115,6 +115,36 @@
         <item>26</item>
     </string-array>
 
+    <string-array name="accent_color_entry_colors" translatable="false">
+        <item>#ff5a8596</item>
+        <item>#ff33b5e5</item>
+        <item>#ff607d8b</item>
+        <item>#ff2196f3</item>
+        <item>#ff03a9f4</item>
+        <item>#ff00bcd4</item>
+        <item>#ff009688</item>
+        <item>#ff3f51b5</item>
+        <item>#ff9c27b0</item>
+        <item>#ff673ab7</item>>
+        <item>#ffe91e63</item>
+        <item>#ffff9800</item>
+        <item>#ffff5722</item>
+        <item>#fff44336</item>
+        <item>#ffffeb3b</item>
+        <item>#ffffc107</item>
+        <item>#ff4caf50</item>
+        <item>#ff8bc34a</item>>
+        <item>#ffcddc39</item>
+        <item>#ff000000</item>
+        <item>#ffffffff</item>
+        <item>#ff0000ff</item>
+        <item>#ff800080</item>
+        <item>#ffffa500</item>
+        <item>#ffff0000</item>
+        <item>#ffffff00</item>
+        <item>#ff00ff00</item>
+    </string-array>
+
     <string-array name="theme_systemui_overlay_mode_entries">
         <item>@string/theme_systemui_overlay_mode_auto_default_title</item>
         <item>@string/theme_systemui_overlay_mode_auto_dark_light_title</item>

@@ -135,7 +135,7 @@
     <string name="primary_color_title">Primäre Farbe</string>
     <string name="primary_color_summary">Mit dieser Farbe werden die Hintergründe der Aktions- und (optional) Navigationsleiste eingefärbt. Der Hintergrund der Statusleiste wird mit einer dunkleren Variante dieser Farbe eingefäbt.</string>
     <string name="accent_color_title">Akzent Farbe</string>
-    <string name="accent_darkkat">Akzcent Darkkat</string>
+    <string name="accent_darkkat">Akzent Darkkat</string>
     <string name="holo_blue_light">Holo Blue Light</string>
     <string name="material_blue_grey_500">Material Blue Grey 500</string>
     <string name="material_blue_500">Material Blue 500</string>
