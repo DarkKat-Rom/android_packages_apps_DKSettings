@@ -163,7 +163,7 @@
     <string name="yellow">Gelb</string>
     <string name="green">Grün</string>
     <string name="colorize_navigation_bar_title">Navigationsleiste einfärben</string>
-    <string name="colorize_navigation_bar_summary">Aktivieren um den Hintergrund der Navigationsleiste mit der Primären Farbe einzufärben.\nWenn \"Farben anpassen\" nicht aktiviert ist, ist die Primäre Farbe immer \"Material Blue 500\".</string>
+    <string name="colorize_navigation_bar_summary">Aktivieren um den Hintergrund der Navigationsleiste mit der Primären Farbe einzufärben.\nWenn \"Farben anpassen\" nicht aktiviert ist, ist die Primäre Farbe fast immer \"Material Blue 500\".</string>
     <string name="use_light_status_bar_title">Helle Status- &amp; Aktionsleiste</string>
     <string name="use_light_status_bar_summary">Helle Status- &amp; Aktionsleiste benutzen,\n(nicht alle Apps und UI-Elemente die Tag/Nacht Themes unterstützen, unterstützen auch diese Funktion).</string>
     <string name="use_light_navigation_bar_title">Helle Navigationsleiste</string>
