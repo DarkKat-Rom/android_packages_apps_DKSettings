@@ -163,7 +163,7 @@
     <string name="yellow">Yellow</string>
     <string name="green">Green</string>
     <string name="colorize_navigation_bar_title">Colorize navigation bar</string>
-    <string name="colorize_navigation_bar_summary">Enable to colorize the navigation bar background using the primary color.\nIf \'Customize colors\' isn\'t enabled the primary color is always \'Material Blue 500\'.</string>
+    <string name="colorize_navigation_bar_summary">Enable to colorize the navigation bar background using the primary color.\nIf \'Customize colors\' isn\'t enabled the primary color is almost always \'Material Blue 500\'.</string>
     <string name="use_light_status_bar_title">Light status- &amp; action bar</string>
     <string name="use_light_status_bar_summary">Use a light status- &amp; action bar,\n(not all apps and ui elements which are supporting day/night themes, will also support this function).</string>
     <string name="use_light_navigation_bar_title">Light navigation bar</string>
