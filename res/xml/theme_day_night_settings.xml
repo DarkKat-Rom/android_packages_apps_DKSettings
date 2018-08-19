@@ -62,8 +62,8 @@ limitations under the License.
             android:summary="@string/primary_color_summary"
             app:pickerSubtitle="@string/action_bar_picker_subtitle_theme_primary"
             app:pickerAdditionalSubtitle="@string/picker_fragment_additional_subtitle_theme_primary"
-            app:resetColor1="@color/theme_primary"
-            app:defaultColor="@color/theme_primary" />
+            app:resetColor1="@android:color/primary_color_darkkat"
+            app:defaultColor="@android:color/primary_color_darkkat" />
 
         <net.darkkatrom.dkcolorpicker.preference.ColorPickerListPreference
             android:key="accent_color"

@@ -32,6 +32,7 @@ import com.android.internal.util.darkkat.ThemeHelper;
 
 import net.darkkatrom.dkcolorpicker.fragment.ColorPickerFragment;
 import net.darkkatrom.dkcolorpicker.preference.ColorPickerPreference;
+import net.darkkatrom.dkcolorpicker.util.ThemeInfo;
 import net.darkkatrom.dksettings.fragments.PowerButtonSettings;
 import net.darkkatrom.dksettings.fragments.MainSettings;
 
@@ -39,20 +40,6 @@ public class MainActivity extends Activity implements
         PreferenceFragment.OnPreferenceStartFragmentCallback, ColorPickerPreference.OwnerActivity {
 
     public static final String EXTRA_SHOW_FRAGMENT = ":android:show_fragment";
-
-    private int mThemeResId = 0;
-    private boolean mCustomizeColors = false;
-    private int mStatusBarColor = 0;
-    private int mDefaultPrimaryColor = 0;
-    private int mPrimaryColor = 0;
-    private int mNavigationColor = 0;
-    private boolean mColorizeNavigationBar = false;
-    private boolean mLightStatusBar = false;
-    private boolean mLightActionBar = false;
-    private boolean mLightNavigationBar = false;
-    private boolean mIsBlackoutTheme = false;
-    private boolean mIsWhiteoutTheme = false;
-    private int mThemeOverlayAccentResId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,41 +53,27 @@ public class MainActivity extends Activity implements
     }
 
     private void updateTheme() {
-        mCustomizeColors = ThemeColorHelper.customizeColors(this);
-        mDefaultPrimaryColor = getColor(R.color.theme_primary);
-        mStatusBarColor = ThemeColorHelper.getStatusBarBackgroundColor(this, mDefaultPrimaryColor);
-        mPrimaryColor = ThemeColorHelper.getPrimaryColor(this, mDefaultPrimaryColor);
-        mNavigationColor = ThemeColorHelper.getNavigationBarBackgroundColor(this, mDefaultPrimaryColor);
-        mColorizeNavigationBar = ThemeColorHelper.colorizeNavigationBar(this);
-        mLightStatusBar = ThemeColorHelper.lightStatusBar(this, mDefaultPrimaryColor);
-        mLightActionBar = ThemeColorHelper.lightActionBar(this, mDefaultPrimaryColor);
-        mLightNavigationBar = ThemeColorHelper.lightNavigationBar(this, mDefaultPrimaryColor);
-        mIsBlackoutTheme = ThemeHelper.isBlackoutTheme(this);
-        mIsWhiteoutTheme = ThemeHelper.isWhiteoutTheme(this);
+        int defaultPrimaryColor = getColor(com.android.internal.R.color.primary_color_darkkat);
+        int themeResId = ThemeHelper.getDKThemeResId(this);
+        int themeOverlayAccentResId = ThemeColorHelper.getThemeOverlayAccentResId(this);
+        boolean lightStatusBar = ThemeColorHelper.lightStatusBar(this, defaultPrimaryColor);
+        boolean lightNavigationBar = ThemeColorHelper.lightNavigationBar(this, defaultPrimaryColor);
+        int statusBarColor = ThemeColorHelper.getStatusBarBackgroundColor(this, defaultPrimaryColor);
+        int primaryColor = ThemeColorHelper.getPrimaryColor(this, defaultPrimaryColor);
+        boolean customizeColors = ThemeColorHelper.customizeColors(this);
+        int navigationColor = ThemeColorHelper.getNavigationBarBackgroundColor(this, defaultPrimaryColor);
 
-        if (mLightActionBar && mLightNavigationBar) {
-            mThemeResId = mLightStatusBar
-                    ? R.style.AppTheme_LightStatusBar_LightNavigationBar
-                    : R.style.AppTheme_LightActionBar_LightNavigationBar;
-        } else if (mLightActionBar) {
-            mThemeResId = mLightStatusBar
-                    ? R.style.AppTheme_LightStatusBar
-                    : R.style.AppTheme_LightActionBar;
-        } else if (mLightNavigationBar) {
-            mThemeResId = R.style.AppTheme_LightNavigationBar;
-        } else {
-            mThemeResId = R.style.AppTheme;
+        if (themeResId > 0) {
+            setTheme(themeResId);
         }
-        setTheme(mThemeResId);
 
-        mThemeOverlayAccentResId = ThemeColorHelper.getThemeOverlayAccentResId(this);
-        if (mThemeOverlayAccentResId > 0) {
-            getTheme().applyStyle(mThemeOverlayAccentResId, true);
+        if (themeOverlayAccentResId > 0) {
+            getTheme().applyStyle(themeOverlayAccentResId, true);
         }
 
         int oldFlags = getWindow().getDecorView().getSystemUiVisibility();
         int newFlags = oldFlags;
-        if (!mLightStatusBar) {
+        if (!lightStatusBar) {
             boolean isLightStatusBar = (newFlags & View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
                     == View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             // Check if light status bar flag was set.
@@ -109,7 +82,7 @@ public class MainActivity extends Activity implements
                 newFlags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             }
         }
-        if (!mLightNavigationBar) {
+        if (!lightNavigationBar) {
             // Check if light navigation bar flag was set
             boolean isLightNavigationBar = (newFlags & View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
                     == View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
@@ -122,12 +95,13 @@ public class MainActivity extends Activity implements
             getWindow().getDecorView().setSystemUiVisibility(newFlags);
         }
 
-        if (mCustomizeColors && !mIsBlackoutTheme && !mIsWhiteoutTheme) {
-            getWindow().setStatusBarColor(mStatusBarColor);
-            getActionBar().setBackgroundDrawable(new ColorDrawable(mPrimaryColor));
+        if (customizeColors && !ThemeHelper.isBlackoutTheme(this)
+                    && !ThemeHelper.isWhiteoutTheme(this)) {
+            getWindow().setStatusBarColor(statusBarColor);
+            getActionBar().setBackgroundDrawable(new ColorDrawable(primaryColor));
         }
-        if (mNavigationColor != 0) {
-            getWindow().setNavigationBarColor(mNavigationColor);
+        if (navigationColor != 0) {
+            getWindow().setNavigationBarColor(navigationColor);
         }
     }
 
@@ -166,37 +140,7 @@ public class MainActivity extends Activity implements
     }
 
     @Override
-    public boolean supportsTheming() {
-        return true;
-    }
-
-    @Override
-    public int getThemeResId() {
-        return R.style.AppTheme;
-    }
-
-    @Override
-    public int getThemeLightActionBarResId() {
-        return R.style.AppTheme_LightActionBar;
-    }
-
-    @Override
-    public int getThemeLightStatusBarResId() {
-        return R.style.AppTheme_LightStatusBar;
-    }
-
-    @Override
-    public int getThemeLightNavigationBarResId() {
-        return R.style.AppTheme_LightNavigationBar;
-    }
-
-    @Override
-    public int getThemeLightActionBarLightNavigationBarResId() {
-        return R.style.AppTheme_LightActionBar_LightNavigationBar;
-    }
-
-    @Override
-    public int getThemeLightStatusBarLightNavigationBarResId() {
-        return R.style.AppTheme_LightStatusBar_LightNavigationBar;
+    public ThemeInfo getThemeInfo() {
+        return null;
     }
 }
