@@ -120,7 +120,8 @@ public class ThemeDayNight extends SettingsColorPickerFragment implements
             catColors.removePreference(findPreference(PREF_PRIMARY_COLOR));
             catColors.removePreference(findPreference(PREF_ACCENT_COLOR));
         } else {
-            int defaultPrimaryColor = getActivity().getColor(R.color.theme_primary);
+            int defaultPrimaryColor =
+                    getActivity().getColor(com.android.internal.R.color.primary_color_darkkat);
             mPrimaryColor = (ColorPickerPreference) findPreference(PREF_PRIMARY_COLOR);
             int intColor = ThemeColorHelper.getPrimaryColor(getActivity(), defaultPrimaryColor);
             mPrimaryColor.setNewColor(intColor);
